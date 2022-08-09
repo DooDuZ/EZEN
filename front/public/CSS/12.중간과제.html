@@ -7,10 +7,15 @@
 
 <style type="text/css">
 
-*{
 
+form{
+	
 	margin : 0 auto;
 	
+}
+
+table{
+	margin : 0 auto;
 }
 
 .선택{
@@ -22,14 +27,23 @@
 
 
 td{
+	
 	color : black ; 
 	font-weight : bold;
 	
 }
+
 td input{
 		width : 300px;
 		height : 20px ;
 }
+
+.short td{
+	width : 100px;
+	height : 20 px;
+}
+
+
 
 
 </style>
@@ -69,7 +83,7 @@ td input{
 		<tr>
 			<td>생년월일</td>
 		</tr>
-		<tr>
+		<tr class='short'>
 			<td><input type="text" placeholder="년(4자)"></td>
 			<td>
 				<select>
