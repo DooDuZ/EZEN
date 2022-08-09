@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+*{ font-family: "돋움"; }
+
+/*
+	display : 
+		1. inline	한줄로 표시
+		*span, a , img 등
+		2. block 	
+		3.
+		
+
+
+
+*/
+
+*{ font-family: "돋움"; }
+
+h3{ text-align : center; }
+
+.signbox{
+	width : 600px;
+	margin : 0 auto;
+	border-top : solid 2px red;
+	border-bottom : solid 2px red;
+	padding : 30px; 
+	
+}
+
+/* class가 cols라는 식별자 하위에 포함된 모든 li 꾸미기 */
+.cols li{display : inline-block;}
+
+
+li{ list-style-type: none;}
