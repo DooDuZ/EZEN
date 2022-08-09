@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	let x = Number(prompt('줄 수'))
+	output = ''
+
+	for(let i = 1 ; i<= x ; i++){
+		for(let b = 1 ; b<=(i-1) ; b++){
+			output+= ' '
+		}for(let s = 1 ; s<=(2*(x-i)+1) ; s++ ){
+			output+='*'
+		}for(let b = 1 ; b<=(i-1) ; b++){
+			output+=' '
+		}output+='\n'
+	}	
+	console.log(output)
+	
+	
+	
+</script>
+	
+</body>
+</html>
