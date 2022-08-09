@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	//메모는 메모
+	
+	
+	
+	//문제 1 . 
+	/*
+	let x = Number(prompt('별'))
+	output = ''
+	
+	for(let i = 1 ; i<= x ; i++){
+		output+='*'
+	}
+	console.log(output)
+	
+	*/
+	// 문제 2 
+	/*
+	
+	let x = Number(prompt('별'))
+	output = ''
+	
+	for(let i = 1 ; i<=x ; i++){
+		output+= '*'
+		if(i%5==0){
+			output+='\n'
+		}
+	}
+	
+	console.log(output)
+	
+	*/
+	
+	let x =  Number(prompt('줄 수'))
+	output = ''
+	
+	for(let i ; i <=x ; i++){
+		for(let b ; b <=x-i+1 ;b++){output = ' ' }
+		for(let s ; s<=x ; s++){output = '*' }
+	}output = '\n'
+	
+	console.log(output)
+	
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+		조건 : 반복문X 입력:prompt 출력 : console , alert
+		 문제 1 : 2개의 정수 를 입력받아서 더 큰수를 출력 
+		 문제 2 : 3개의 정수 를 입력받아서 더 큰수를 출력 
+		 문제 3 : 4개의 정수 를 입력받아서 더 큰수를 출력 
+		 
+		 문제 4 : 3개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+		 문제 5 : 4개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+		 
+		 문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
+		 문제 7 : 점수를 입력받아 점수 90점이상 A등급 출력 
+		 							80점이상 B등급 출력 
+		 							70점이상 C등급 출력  
+		 							그외 재시험
+		 문제 8 : 아이디와 비밀번호 입력받기 
+		 		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 
+		 										아니면 로그인실패 출력
+	 -->
+	 
+	 
+	 <script type="text/javascript">
+	 //문제 1 : 2개의 정수 를 입력받아서 더 큰수를 출력 
+	 	const a = Number(prompt('숫자'))
+	 	const b = Number(prompt('숫자'))
+	 	if(a>b){
+	 		alert(a)
+	 	}else{
+	 		alert(b)
+	 	}
+	 //문제 2 : 3개의 정수 를 입력받아서 더 큰수를 출력 
+	 //일부러 다르게 풀어봤어요
+	 	
+	
+	 	const a2 = Number(prompt('숫자'))
+	 	const b2 = Number(prompt('숫자'))
+	 	const c2 = Number(prompt('숫자'))
+	 	if( a2 > b2 && a2 > c2 ){
+	 		alert(a2)
+	 	}else if( b2 > a2 && b2 > c2 ){
+	 		alert(b2)
+	 	}else if( c2 > a2 && c2 > b2){
+	 		alert(c2)
+	 	}
+	 		
+	 	
+	 
+	 
+	 //문제 3 : 4개의 정수 를 입력받아서 더 큰수를 출력
+	 //얘도요
+	 
+	 	let a3 = Number(prompt('숫자'))
+	 	let b3 = Number(prompt('숫자'))
+	 	let c3 = Number(prompt('숫자'))
+	 	let d3 = Number(prompt('숫자'))
+	 	let 최대값 = a3
+	 	
+	 	if(최대값<b3){
+	 		최대값 = b3
+	 		b3=c3
+	 		c3=d3
+	 		d3=a3
+	 	}
+	 	if(최대값<c3){
+	 		최대값=c3
+	 		c3=d3
+	 		d3=a3
+	 	}
+	 	if(최대값<d3){
+	 		최대값 = a3
+	 		a3=b3
+	 		b3=c3
+	 		c3=d3
+	 	}
+	 	alert(최대값)
+	 
+	 	//문제 4 : 3개의 정수 를 입력받아서 오름차순/내림차순 출력 
+	 	
+	 	/* 컴퓨터는 미지수 개념을 모르므로 이런건 될 수가 없음
+	 	
+	 		let a4 = Number(prompt('숫자'))
+	 		let b4 = Number(prompt('숫자'))
+	 		let c4 = Number(prompt('숫자'))
+	 		
+	 		if(a4>b4 && a4>c4){a4 = f }
+	 		else if(a4 < b4 && a4 < c4){a4 = t }
+	 		else{a4 = s }
+	 	
+	 		if(b4>c4 && b4>a4){ b4 = f }
+	 		else if(b4>c4 && b4<a4){b4= t }
+	 		else{ b4= s }
+	 		
+	 		if(a4==f || b4==f){
+	 			if(a4==s || b4==s){c4=t}
+	 		}else if(a!=s && b4!= s){c4=s}
+	 		else{c4=f}
+	 			
+	 		
+	 		console.log(f + "" + s + "" + t)
+	 		
+	 		*/
+	 		
+	 		//시행착오 드럽게 많이해서 대입 연산자 이제야 이해 했습니다. 드럽게 허무하네요.
+	 		
+			let x = Number(prompt('숫자'))
+	 		let y = Number(prompt('숫자'))
+	 		let z = Number(prompt('숫자'))
+	 		let t = 0
+	 		
+	 		if(x>y){
+	 			t = x
+	 			x = y
+	 			y = t
+	 		}
+	 		
+	 		if(x>z){
+	 			t=x
+	 			x=z
+	 			z=t
+	 		}
+	 		if(y>z){
+	 			t=y
+	 			y=z
+	 			z=t
+	 		}
+	 		
+	 		
+	 		alert(x + "" + y + "" + z)
+	 		alert(z + "" + y + "" + x)
+	 		
+	 	//문제 5 : 3개의 정수 를 입력받아서 내림차순 출력
+	 	
+	 	
+	 	let a4 = Number(prompt('숫자'))
+	 	let b4 = Number(prompt('숫자'))
+	 	let c4 = Number(prompt('숫자'))
+	 	let d4 = Number(prompt('숫자'))
+	 	
+	 		if(a4>b4){
+	 			t=a4
+	 			a4=b4
+	 			b4=t
+	 		}t
+	 		if(a4>c4){
+	 			t=a4
+	 			a4=c4
+	 			c4=t
+	 		}
+	 		if(a4>d4){
+	 			t=a4
+	 			a4=d4
+	 			d4=t
+	 		}
+	 		if(b4>c4){
+	 			t=b4
+	 			b4=c4
+	 			c4=t
+	 		}
+	 		if(b4>d4){
+	 			t=b4
+	 			b4=d4
+	 			d4=t
+	 		}
+	 		if(c4>d4){
+	 			t=c4
+	 			c4=d4
+	 			d4=t
+	 		}
+	 		
+	 		alert(a4 + "" + b4 + "" + c4 + "" + d4)
+	 		alert(d4 + "" + c4 + "" + b4 + "" + a4)
+	 	//문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
+	 
+	 	
+	 	const 점수 = Number(prompt(" 점수 "))
+	 		if(점수 >= 90){
+	 			alert("합격")
+	 		}else{
+	 			alert("탈락")
+	 		}
+	 	/*		 문제 7 : 점수를 입력받아 점수 90점이상 A등급 출력 
+		 							80점이상 B등급 출력 
+		 							70점이상 C등급 출력  
+		 							그외 재시험
+	 	*/
+	 	
+	 	if(점수 >=90){
+	 		alert("A등급")
+	 	}else if(점수>= 80){
+	 		alert("B등급")
+	 	}else if(점수>=70){
+	 		alert("C등급")
+	 	}else{
+	 		alert("재시험")
+	 	}
+	 	
+	 	/* 문제 8 : 아이디와 비밀번호 입력받기 
+ 		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 
+ 										아니면 로그인실패 출력
+	 	*/
+	 	
+	 	const ID = prompt("id")
+	 	const password = prompt("password")
+	 	
+	 	if(ID=='frank'){
+	 		if(password=='ocean'){
+	 			alert('로그인 성공')
+	 		}else{alert('로그인 실패')}
+	 	}
+	 		
+	 	// ID 및 Password 오류 문구 출력
+	 	
+	 	const ID2 = prompt("id")
+		const password2 = prompt("password")
+		
+		if(ID2=='channel'){
+			if(password2=='orange'){
+				alert('로그인성공')
+			}else{
+				alert('비밀번호가 틀렸습니다')
+			}
+		}else{
+			alert('ID가 틀렸습니다')
+		}
+	 	
+
+	 	
+	 </script>
+
+</body>
+</html>

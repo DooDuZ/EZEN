@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+
+form{
+	width : 700px;
+	margin : 0 auto;
+}
+
+
+table{
+	width : 700px;
+	border-top : solid 3px black;
+}
+
+td{
+	border-bottom : solid 1px #eeeeee;
+	padding : 5px ;
+}
+
+td input{
+	width : 500px;
+	height : 30px;
+}
+
+td textarea{
+	width: 500px;
+	height : 150px;
+}
+
+.file{
+	border-bottom : dotted 1px gray;
+
+}
+
+.btnbox{ text-align : right; }
+.btnbox input{ 
+	padding : 5p 20px ; 
+	margin : 20px 5px ;	
+	}	
+
+
+</style>
+
+
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+			<td>이름</td>
+			<td>홍길동</td>
+		</tr>
+		<tr>
+			<td>제목</td>
+			<td><input type='text'></td>
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td><textarea rows="10" cols="60"></textarea></td>
+		</tr>
+		<tr>
+			<td>첨부파일 </td>
+			<td><input type='file' value = '파일 선택'> </td>
+		</tr>
+		
+	</table>
+	
+	<div class=btnbox>
+			<input type="submit" value="저장하기">
+			<input type="submit" value="목록보기">
+	</div>
+	
+</form>
+</body>
+</html>

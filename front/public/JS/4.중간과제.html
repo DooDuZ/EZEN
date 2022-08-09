@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+		JS1일차 정리
+			1. 기본 자료형[ 1.number 2.string 3. boolean ]
+				1. 변수와 상수
+					*데이터 1개를 저장할 수 있는 메모리 공간
+					상수 : 고정된 수[값]		키워드 : const
+					변수 : 변하는 수[값]		키워드 : let
+					[ 선언 ] 키워드 변수명 = 값
+					[ 호출 ] 변수명
+					[ 변경 ] 변수명 = 새로운 값
+					
+				2. 형변환
+					Number(데이터)
+					String(데이터)
+					Boolean(데이터)
+			2. 연산자
+				1. 산술연산자			/ 사칙연산
+				2. 비교연산자			/ == != > < >= <= 
+				3. 관계(논리)연산자		/ && || ! 
+				4. 대입연산자			/ = += -= *= /= %=
+				5. 증감연산자			/ ++ -- 
+				6. 연결연산자			/ +
+			3. 출력 / 입력
+				1. 콘솔 출력 console.log
+				2. 경고 alert
+				3. 문자열 입력 prompt()
+				4. 불 입력 confirm() 
+	
+	 -->
+
+	<script type="text/javascript">
+	
+	//문제1
+		const price = prompt("가격 입력")
+		console.log("십만원권 :" + price[0])
+		console.log("만원권:" + price[1])
+		console.log("천원권:" + price[2])
+	
+	//문제2
+		const r = prompt("반지름")
+		console.log(r*r*3.14)
+		
+	//문제3
+	
+		const x1 =prompt("숫자 입력")
+		console.log(x1 % 3==0)
+	
+	//문제4
+		const 숫자=prompt("숫자 입력")
+		console.log(Number(숫자)%2==1)
+	//문제5	
+		const x = prompt("숫자 입력")
+		const y = prompt("숫자 입력")
+		console.log(x/y *100 + "%")
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+	
+
+	
+
+</body>
+</html>

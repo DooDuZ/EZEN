@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 1~2글자 입력 후 cntl + space bar = 자동완성 추천순 -->
+	<!--
+	  폼양식 : 사용자가 키보드로 입력하거나 마우스 선택할 수 있는 서식 
+		<input>
+			[속성]
+			1. type="text" 			 : 문자 입력 상자
+			   type="password"  	 : 가려진 문자
+			   type="radio" 		 : 동그라미 선택 버튼[name 동일한 경우 복수x]
+			   type="checkbox"		 : 네모 선택버튼 [복수o]
+			   type="button"		 : 버튼 상자
+			   type="submit"			 : 폼 전송[java로 이동할 예정]
+			   type="reset"			 : 폼 내용 초기화
+			   type="color"			 : 색상 선택
+			   type="date"			  날짜 선택
+			   type="datetime-local" : 날짜/시간 선택
+			   type="email"			 : 이메일 (@미입력 시 제출되지 않음)
+			   type=time/week/month  : 시간/주/월 단위 시간 선택
+			   type=number	min/max	 : 숫자 값
+			   type=range  min/max	 : 범위 값
+			2. value="값" 			 : 상자 안에 넣을 데이터[값]
+			3. readonly="readonly" 	 : 읽기모드[수정불가]
+			4. placeholder="" 		 : 입력 가이드라인  
+			5. autofocus="autofocus" : 포커스[커서 깜빡임] 위치
+			6. disabled="disabled" 	 : 사용 불가모드
+			7. name="이름"			 : 태그 식별 이름[별명]
+			8. checked="checked"	 : 체크된 상태
+		<select> 					 : 목록 상자
+			<option></option> 		 : 목록의 항목 값
+		</select>
+		<textarea>					 : 긴 글 텍스트
+			[속성]
+			rows					 : 가로 텍스트 수
+			cols 					 : 세로 텍스트 수
+	-->
+	<form><!-- from s -->
+		이름 : <input type="text" value="유재석" readonly="readonly"><br>
+		아이디 : <input type="text" placeholder="" autofocus="autofocus"><br>
+		회원등급 : <input type="text" value="일반" disabled="disabled"><br>
+		비밀번호 : <input type="password"><br>
+		선택버튼[복수x] : <input type="radio" name="email"> 예
+				 	   <input type="radio" name="email"> 아니오 <br>
+		선택버튼[복수o] : <input type="checkbox" name="item1"> 뉴스
+					   <input type="checkbox" name="item1" checked="checked"> 드라마 
+					   <input type="checkbox" name="item1"> 스포츠<br>
+		목록상자 : <input type="text"> @
+					<select>
+						<option> 직접 입력 </option>
+						<option> naver.com </option>
+						<option> nate.com </option>
+						<option> daum.net </option>
+					</select><br>
+		자기소개 : <textarea rows="6" cols="30"></textarea><br>
+		버튼 : <input type="button" value="버튼">
+				<input type="submit" value="폼 전송버튼">
+				<input type="reset" value="다시쓰기">
+		색상 : <input type="color">
+		날짜 : <input type="date">
+		날짜/시간 : <input type="datetime-Local"><br>
+		이메일 : <input type="email"><br>
+		월단위 : <input type="month"><br>
+		시간단위 : <input type="time"><br>
+		주단위 : <input type="week"><br>
+		숫자범위 : <input type="number" min=0 max=10>
+		범위 : <input type="range" min=0 max=10 step="1">
+					   
+					  
+				 
+	</form><!--form e -->
+
+
+</body>
+</html>

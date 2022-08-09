@@ -29,6 +29,22 @@ h3{ text-align : center; }
 
 /* class가 cols라는 식별자 하위에 포함된 모든 li 꾸미기 */
 .cols li{display : inline-block;}
-
+.col1{ width : 150px; }
+.col2 input{ width : 250px; height: 25px;}
+.cols{ padding : 5px; }
+.col2 select{width : 100px; height : 30px;}
+.hello{ vertical-align: top; } /*텍스트 새로 정렬*/
+textarea{resize : none; } /*긴글 텍스트 박스 고정 */
 
 li{ list-style-type: none;}
+
+.buttonbox{
+		width : 600px;
+		margin : 0 auto;
+		text-align : right; /*박스 내용물[글자, 이미지, 버튼 등] 가운데 정렬*/
+}
+
+.buttonbox input{
+	padding : 10px 20px;
+	margin-top : 10px ;
+}
