@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+
+form{ width :700px;
+	margin : 0 auto;
+}
+td{ border-bottom : dotted 1px gray;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	 }
+td input{ width : 500px;
+		height : 30px;
+}
+table{border-top : solid 3px black;
+	width : 800px;
+	margin : 5px;
+}
+textarea{ width : 500px;}
+div{ text-align: right;}
+div input{margin : 5px;}

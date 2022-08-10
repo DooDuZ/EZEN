@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+form{width : 600px;
+	margin : 0 auto;
+}
+tr td{padding-top : 10px;
+	padding-bottom : 10px;
+}
+td{ border-bottom : solid 1px silver;}
+td input{width : 500px;
+		height : 30px;
+}
+table{ border-top : solid 3px black;}
+div{text-align: right;}
+div input{margin : 5px;}
+td textarea{ width : 500px;}
+
+
+/* 첨부파일 옆 input type file의 하단이 조금 잘려있습니다...
+이유가뭦..? padding도 넉넉한데요. / 일단은 해결...
+*/

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+form{ width : 700px;
+	margin : 0 auto;
+}
+table{border-top : solid 3px black;}
+td{border-bottom : solid 1px #eeeeee;
+	padding : 5px;
+}
+td input{ width : 500px; /* type=text 설정한건데.. file은 왜 그동안 안늘어나고 출력됏을가요..? */
+		height : 30px;
+ }
+textarea{ width : 500px; 
+		height : 150px;
+}
+
+div{text-align: right;
+	padding: 5px;
+	margin : 5px;
+}
+ 
+
+
+/* 원문의 td 태그들 사이와 div 태그들 사이의 거리랑
+지금 제가 작성한 파일의 거리가 미묘한 차이가 있습니다... 
+margin이나 padding은 f12눌러서 확인해도 비슷한데
+왜 출력이 다소 차이가 있는지 모르겠어유...
+
+일단 이렇게 마치겠습니다 ㅠㅠ
+*/

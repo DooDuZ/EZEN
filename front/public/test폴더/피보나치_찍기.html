@@ -7,6 +7,14 @@
 <body>
 
 <!--  
+
+
+예제 1 피라미드 만들기
+
+예제 2 피라미드에서 짝수칸 별 빼기
+
+
+예제 3
 	   *
 	  * *
 	 *****
@@ -17,9 +25,11 @@
 
 	 
  -->
+ 
+
 
 <script type="text/javascript">
-
+/* 
 	let x = Number(prompt('삼각형 높이'))
 	output = ''
 	
@@ -33,9 +43,57 @@
 	}
 	
 	console.log(output)
+ */
+
+ //예제 1 피라미드 만들기
+ 
+	let x = Number(prompt('삼각형 높이'))
+	output = ''
+	
+	for(let i = 1 ; i<=x ; i++){
+		for(let b=1 ; b<=x-i ; b++){output+=' '}
+		for(let s=1 ; s<=(2*i-1) ; s++){ output +='*'}
+		output+='\n'}
+	
+	console.log(output)
+	
+//예제 2 피라미드에서 짝수칸 별 빼기
+	
+	output=''
+	
+	for(let i = 1 ; i<=x ; i++){
+		for(let b=1 ; b<=x-i ; b++){output+=' '}
+		for(let s=1 ; s<=(2*i-1) ; s++){ 
+			if(s%2==0){output+=' '}
+			else{output +='*'}
+			}
+		output+='\n'}
+	
+	console.log(output)
+	
+//예제 3 예제2에서 if else 문법의 blank 입력 조건 추가
+	output=''
+	
+	for(let i = 1 ; i<=x ; i++){
+		for(let b=1 ; b<=x-i ; b++){output+=' '}
+		for(let s=1 ; s<=(2*i-1) ; s++){
+			if(i%2!=0){output+='*'}
+			else if(s%2==0){output+=' '}
+			else{output +='*'}
+			}
+		output+='\n'}
+	
+	console.log(output)
+	
+//예제 4 삼각형 그리기
+	
+ 
+ 
+ 
+</script>
 
 
-</script> 
+
 <!-- 
 			if(i%2==0){
 				if(s%2==0){output+=' '}

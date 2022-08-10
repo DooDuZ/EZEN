@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+form{ margin : 0 auto ;} /* 적용이 안됩니더 ㅠㅠ */
+/*다음엔 form에 width지정 해두고 해보겠음니다 */
+
+h3{ text-align: center ;
+	margin : 10px;
+}
+*{ margin : 0 auto ;} /* 역시 h만 빼고 적용 */
+button{ padding : 20px; }
+input{ height : 20px; }
+table{ padding : 10px; 
+		margin : 0 auto;
+}

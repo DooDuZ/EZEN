@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+h3{ text-align: center;}
+ /* 전체에 적용 했는데 h3태그에는 적용이 안되네요
+h태그의 특성인가요? 아니면 제가 뭘 잘못입력한걸까요? */
+/* 전체적인 모양은 비슷하고 px값 입력한 것들이 조금씩 차이 나는 것 같은데
+	혹시나 빠진 게 있을까봐 확인을 계속하게 되긴 합니다. 
+	마진이나 패딩같은 경우는 입력값이 크지 않은 경우 눈치 못챌 수도 있을 것 같은데
+	그런 경우는 F12로 페이지 정보를 확인하는 게 최선일까요?
+	혹은 다른 확인 방법이 있을까요?
+	*/
+
+table{ margin : 0 auto; 
+		padding : 5px;
+}
+button{ padding : 20px;}
+input{height : 20px;}
+
+
+</style>
+</head>
+<body>
+	<h3> 로그인 </h3>
+		<table>
+			<tr>
+				<td> 아이디 </td>
+				<td> <input type="text"></td>
+				<td rowspan="2"><button> 로그인 </button>
+			</tr>
+			<tr>
+				<td> 비밀번호 </td>
+				<td> <input type="password"></td>		
+		</table>
+
+</body>
+</html>
