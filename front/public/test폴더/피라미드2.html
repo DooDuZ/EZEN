@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	let x = Number(prompt(' 1번 피라미드 높이 '))
+	output = ''
+
+	for( let i ; i<=x ; i++ ){
+		for(let b = 1 ; b<=(x-i) ; b++) {
+			output+=' '
+		}for( let s = 1 ; s<=(2*i-1) ; s++){
+			output+= '*'
+		}output+= '\n'
+	}
+	console.log(output)
+
+</script>
+
+</body>
+</html>

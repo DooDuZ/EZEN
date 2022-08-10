@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+let x = Number(prompt('피라미드의 높이'))
+output = ''
+
+for(let i = 1 ; i<=x ; i++ ){
+	 for(let b = 1 ; b<=i ; b++){
+		 output+=' '
+	 }for(let s = 1 ; s<=(2*x-1-2*i) ; s++){
+		 output+='*'
+	 }output+='\n'
+}
+console.log(output)
+</script>
+
+</body>
+</html>

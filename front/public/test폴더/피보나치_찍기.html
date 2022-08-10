@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--  
+	   *
+	  * *
+	 *****
+	* * * *
+   *********
+  * * * * * * 
+
+       *
+	  * *
+	 *   *
+	*     *
+   ********* 
+	 
+ -->
+
+<script type="text/javascript">
+
+	let x = Number(prompt('삼각형 높이'))
+	output = ''
+	
+	for(let i = 1 ; i<= x ; i++){
+		for(let b = 1 ; b<=x-i ; b++){output+=' '}
+		for(let s = 1; s<=(2*i-1); s++){
+			if(i%2==0){
+				if(s%2==0){ output+=' ' }
+			}else{output+='*'}
+		}output+='\n'
+	}
+	
+	console.log(output)
+
+
+</script> 
+<!-- 
+			if(i%2==0){
+				if(s%2==0){output+=' '}
+				else if(s%2==1){output+='*'}
+			}output+='*'
+		}output+='\n'
+	}
+	console.log(output)
+ -->
+
+</body>
+</html>

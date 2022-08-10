@@ -32,10 +32,10 @@
 	let x = Number(prompt("별의 줄 수"))
 	output = ''
 	
-	for(let i = 1 ; i<=x ; i++){ 
-		for(let b = 1 ; b<=x-i ; b++){output+=' '}
-		for(let s = 1 ; s<=(2*i-1) ; s++){output+='*'}
-		for(let b = 1; b<=x-i ; b++){output+=' '}
+	for(let i = x ; i>=1 ; i--){ 
+		for(let b = 1 ; b<=i ; b++){output+= ' '}
+		for(let s = 1 ; s<=(2*(x-1-i)+1) ; s++ ){output+='*'}
+		for(let b = 1 ; b<=i ; b++){output+=' '	}
 		output+='\n'
 	}for(let i = 1 ; i<= x-1 ; i++){
 		for(let b = 1 ; b<=i ; b++){output+= ' '}
