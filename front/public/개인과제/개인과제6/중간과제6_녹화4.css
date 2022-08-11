@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{border : solid 1px red; } /* 레이아웃 가이드라인 */
+#header{ width : 1280px; height : 100px; margin : 0 auto ;}
+.hd_top{ text-align: right ; height : 20px; background-color: green; color : white;}
+
+.hd_sub{ height : 80px; }
+
+.logo{ float : left; width : 250px; height : 70px;  }
+.menu{ float : left; width : 700px; height : 70px;  }
+.search{ float : right; width : 300px; height : 70px;  }
+
+
+#contents{ width : 1280px ; height : 700px; margin : 0 auto; }
+
+.sec01{ width : 1200px; height : 360px; margin : 0 auto; }
+.main_img{ width : 700px; height : 340px; float : left; }
+.main_bn{ width : 300px;  height : 340px; float : right}
+
+
+.sec02{ width : 1200px; height : 300px; margin : 0 auto; }
+.sec02 div{ width : 250px; height : 250px; float : left; margin : 24px;}
+
+#footer{clear : both ; background-color: navy; color: white;}
+.ft_box{width : 1280px; margin : 0 auto ; height : 200px;}
+.ft_info{ float : left ;}
+.ft_ect{ float : right ;}

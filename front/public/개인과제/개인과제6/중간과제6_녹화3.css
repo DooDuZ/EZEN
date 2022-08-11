@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+*{ border : solid 1px red ; }
+
+#header{ width : 1280px; height : 100px; margin : 0 auto;}
+.hd_top{ background-color: green ;  
+	width : 100% ; height : 20px; 
+	text-align: right;}
+	
+.logo{ width : 200px; height : 80px; float : left ;}
+.menu{ width : 700px; height : 80px; float : left ;}
+.search{ width : 250px; height : 80px; float : left ;}
+
+
+#contents{ width : 1280px; height : 700px; margin : 0 auto;}
+.m_img{float: left; width : 700px; height : 350px; } 
+.m_bn{float: right; width : 400px; height : 350px; }
+
+.sec02{ width : 1280px; height : 300px; clear:both;} /* float왼쪽 정렬이라 마진으로 조절이 안됌*/
+.sec02 div{ float : left ; width : 280px; height : 220px; margin : 10px;}
+
+
+#footer{ clear : both ; height : 100px; background-color: navy; color: white;}
+.ft_box{ width : 1280px; margin : 0 auto ; }
+.ft_info{ width : 400px ; float : left;}
+.ft_ect{ width : 400px ; float : right;}

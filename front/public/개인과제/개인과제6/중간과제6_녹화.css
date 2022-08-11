@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+*{ border : solid 1px red; }
+
+
+#header{ width : 1280 px; height : 100px; margin : 0 auto;}
+.header_top{ background-color: green ; 
+		text-align: right; 
+		height : 20px; color:white;
+		
+}
+.logo{ width : 250px ; height : 70px; float : left; }
+.menu{ width : 650px ; height : 70px; float : left; }
+.search{ width : 280px ; height : 70px; float : left; }
+
+#main{ width : 1280px; margin : 0 auto;}
+.m_img {float : left;
+	width : 900px; height : 400px;
+}
+.main_b{float : right;
+	width : 300px ; height : 400px;
+}
+
+
+.m_sec02{ clear : both; }
+.box{ float : left; 
+	width : 300px;
+	height : 200px;
+	background-color: orange;
+}
+
+
+
+
+#footer{ clear : both;
+	background-color: navy;
+	height : 125px;
+	color: white;
+}
+.ft_box{ margin : 0 auto;
+	width: 1200px; height : 120px;}
+.ft_info{float : left ; width : 300px; }
+.ft_ect{float : right; width : 300px; }
+

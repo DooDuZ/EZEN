@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{border : solid 1px red ;}
+
+.hd_top{ width : 1280 px; height : 20px; 
+	text-align: right; margin : 0 auto;
+	background-color: green;
+}
+.hd_bottom{ width : 1280 px; height : 50px; 
+	 margin : 0 auto;}
+
+.logo{ width : 300px; height : 50px; float : left ; }
+.menu{ width : 600px; height : 50px; float : left ; }
+.search{ width : 300px; height : 50px; float : left ; }
+
+
+
+.m_sec01{ margin : 0 auto ;
+	width : 1280px; height : 340px;
+}
+.main_img{float : left ; width : 800px ; height : 300px;}
+.main_b{float : right; width : 340px; height : 300px;}
+
+.m_sec02{
+	clear : both;
+	width : 1280 px; height : 250px;
+	margin : 0 auto;
+	}
+.m_sec02 div{ 	width : 300px; height : 200px; float : left ;}
+
+
+#footer{ clear : both; }
+.foot_bx{height : 100px; width : 1280px; margin : 0 auto;}
+.ft_left{float : left; width : 400px; height : 80px;}
+.ft_right{float : right ; width : 400px; height : 80px;}

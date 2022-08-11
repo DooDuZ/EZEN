@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{border : solid 1px red ; }
+
+
+.hd_top{ background-color: green; color : white; 
+		text-align: right; width: 1280px; height : 20px;
+		margin: 0 auto;
+		}
+		
+.hd_btm{ width : 1280px; height : 100px; margin : 0 auto;}
+.logo{ width : 300px; height : 80px; float : left ;}
+.menu{ width : 600px; height : 80px; float : left ;}
+.search{ width : 300px; height : 80px; float : right ;}
+
+#contents{ width : 1280px; margin : 0 auto;}
+.main_img{width : 700px; height : 200px; float : left;}
+.main_bn{width : 300px; height : 200px; float : right; margin : 0px;}
+
+.sec02{ width : 1280px ; height : 300px; clear : both;}
+.sec02 div{float : left ; width : 260px; height : 220px; margin : 28px; }
+
+#footer{ clear : both; background-color: navy; color: white;}
+.ft_box{width : 1280px; height:100px; margin : 0 auto;}
+.ft_info{ float : left ; width : 400px; height : 80px;}
+.ft_ect{ float : right; width : 400px; height : 80px;}
+

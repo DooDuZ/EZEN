@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<!-- 
+		조건 : 반복문X 입력:prompt 출력 : console , alert
+		 문제 1 : 2개의 정수 를 입력받아서 더 큰수를 출력 
+		 문제 2 : 3개의 정수 를 입력받아서 더 큰수를 출력 
+		 문제 3 : 4개의 정수 를 입력받아서 더 큰수를 출력 
+		 
+		 문제 4 : 3개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+		 문제 5 : 4개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+		 
+		 문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
+		 문제 7 : 점수를 입력받아 점수 90점이상 A등급 출력 
+		 							80점이상 B등급 출력 
+		 							70점이상 C등급 출력  
+		 							그외 재시험
+		 문제 8 : 아이디와 비밀번호 입력받기 
+		 		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 
+		 										아니면 로그인실패 출력
+	 -->
+	 
+	 
+	 
+	 
+	 <script type="text/javascript">
+	 
+	 //28분44초
+	 
+	 //문제 1 : 2개의 정수 를 입력받아서 더 큰수를 출력
+/* 	 
+	 const x = Number(prompt('x'))
+	 const y = Number(prompt('y'))
+	 
+	 if(x>y){ console.log(x)}
+	 else{console.log(y)}
+	  */
+	 // 문제 2 : 3개의 정수 를 입력받아서 더 큰수를 출력
+	 
+	 
+	 
+/*   const x = Number(prompt('x'))
+	 const y = Number(prompt('y'))
+	 const z = Number(prompt('z'))
+	 
+	 max = x 
+	 
+	 if(y>max){max=y}
+	 else if(z>max){max=z}
+	 
+	 
+	 console.log(max) */
+	 
+	 //문제 3 : 4개의 정수 를 입력받아서 더 큰수를 출력 
+	 
+/* 	 const a = Number(prompt('a'))
+	 const b = Number(prompt('b'))
+	 const c = Number(prompt('c'))
+	 const d = Number(prompt('d'))
+	 
+	 max = a
+	 
+	 if(max<b){ max=b}
+	 if(max<c){ max=c}
+	 if(max<d){ max=d}
+	 
+	 console.log(max) */
+	 
+	 //문제 4/5 : 3개의 정수 를 입력받아서 오름차순 / 내림차순 출력
+	 
+/* 	 let x = Number(prompt('x'))
+	 let y = Number(prompt('y'))
+	 let z = Number(prompt('z'))
+	 
+	 let i = 0
+	 
+	 if(x>y){
+		 i=x
+		 x=y
+		 y=i
+	}
+	 if(x>z){
+		 i=x
+		 x=z
+		 z=i
+	 }
+	 if(y>z){
+		 i=y
+		 y=z
+		 z=i
+	 }
+	 
+	 console.log(x+''+y+''+z) 
+	 console.log(z + "" + y + "" + x)
+	 */
+	 
+	 // 문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
+	 
+/* 	 const x = Number(prompt('점수'))
+	 
+	 if(x>=90){ alert('합격')}
+	 else{alert('탈락')}
+ */
+ /* 문제 7 : 점수를 입력받아 점수 90점이상 A등급 출력 
+	80점이상 B등급 출력 
+	70점이상 C등급 출력  
+	그외 재시험  */
+ 		
+/* 	const x = Number(prompt('점수')) 
+	
+	if(x>=90){alert('A등급')}
+	else if(x>=80){alert('B등급')}
+	else if(x>=70){alert('c등급')}
+	else{alert(' 탈락 ')}
+		 */
+		 
+	/* 	 문제 8 : 아이디와 비밀번호 입력받기 
+	 		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 
+	 										아니면 로그인실패 출력
+	 */
+/* 	 
+	 const id = prompt('id')
+	 const password = prompt('비밀번호')
+	 
+	if(id=='admin'){
+		if(password=='1234'){
+			alert('로그인성공')
+		}else{alert('로그인 실패')}
+	}else{alert('로그인 실패')} */
+	
+/* 	 문제 1 : 2개의 정수 를 입력받아서 더 큰수를 출력 
+	 문제 2 : 3개의 정수 를 입력받아서 더 큰수를 출력 
+	 문제 3 : 4개의 정수 를 입력받아서 더 큰수를 출력 
+	 
+	 문제 4 : 3개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+	 문제 5 : 4개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+	 
+	 문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
+	 문제 7 : 점수를 입력받아 점수 90점이상 A등급 출력 
+	 							80점이상 B등급 출력 
+	 							70점이상 C등급 출력  
+	 							그외 재시험
+	 문제 8 : 아이디와 비밀번호 입력받기 
+	 		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 
+	 										아니면 로그인실패 출력 */
+	
+	//문1
+	
+/* 	const a = Number(prompt('숫자'))
+	const b = Number(prompt('숫자'))
+	
+	if(a>b){alert(a)}
+	else{alert(b)} */
+	
+	//문2 
+/* 	const a = Number(prompt('숫자'))
+	const b = Number(prompt('숫자'))
+	const c = Number(prompt('숫자'))
+
+	let max = a
+	
+	if(b>max){ max = b }
+	if(c>max){ max = c }
+	
+	alert(max) */
+	
+
+	//문3
+/* 	const a = Number(prompt('숫자'))
+	const b = Number(prompt('숫자'))
+	const c = Number(prompt('숫자'))
+	const d = Number(prompt('숫자'))
+	
+	let max = a
+	
+	if(b>max){ max = b}
+	if(c>max){ max = c}
+	if(d>max){ max = d}
+	
+	alert(max)
+	 */
+	 
+	 
+/* 	 //문4 오름/내림차순
+	let a = Number(prompt('숫자'))
+	let b = Number(prompt('숫자'))
+	let c = Number(prompt('숫자'))
+	let i = 0
+	
+	if(a>b){
+		i=a
+		a=b
+		b=i		
+	}
+	if(a>c){
+		i=a
+		a=c
+		c=i
+	}
+	if(b>c){
+		i=b
+		b=c
+		c=i
+	}
+	 
+	alert(a+""+b+""+c)
+	alert(c+""+b+""+a) */
+	 
+	//문5 숫자4개 오름 / 오림차순 
+/* 	let a = Number(prompt('숫자'))
+	let b = Number(prompt('숫자'))
+	let c = Number(prompt('숫자'))
+	let d = Number(prompt('숫자'))
+	let i = 0
+	
+	if(a>b){
+		i=a
+		a=b
+		b=i
+	}
+	if(a>c){
+		i=a
+		a=c
+		c=i
+	}
+	if(a>d){
+		i=a
+		a=d
+		d=i
+	}
+	if(b>c){
+		i=b
+		b=c
+		c=i
+	}
+	if(b>d){
+		i=b
+		b=d
+		d=i
+	}
+	if(c>d){
+		i=c
+		c=d
+		d=i
+	}
+	 alert(a+""+b+""+c+""+d)
+	 alert(d+""+c+""+b+""+a)
+	  */
+	 //문6 
+	 
+/* 	 const a = Number(prompt('점수'))
+ 	 
+	 if(a>=90){ alert('합격')
+	}else{alert('탈락')}
+	  
+	  
+	  
+	 if(a>=90){
+		 alert('A등급')
+	 }else if(a>=80){
+		 alert('B등급')
+	 }else if(a>=70){
+		 alert('C등급')
+	 }else{alert('재시험')} */
+	 
+	 
+	 //문8
+/* 	 const id = prompt('아이디')
+	 const password = prompt('비밀번호')
+	 
+	 if(id=='admin'){
+		 if(password=='1234'){
+			 alert('로그인성공')
+		 }else{alert('로그인실패')}
+	 }else{alert('로그인실패')}
+	  */
+	 //20분 50초
+	 
+	 
+/* 	 	<!-- 
+		조건 : 반복문X 입력:prompt 출력 : console , alert
+		 문제 1 : 2개의 정수 를 입력받아서 더 큰수를 출력 
+		 문제 2 : 3개의 정수 를 입력받아서 더 큰수를 출력 
+		 문제 3 : 4개의 정수 를 입력받아서 더 큰수를 출력 
+		 
+		 문제 4 : 3개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+		 문제 5 : 4개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+		 
+		 문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력 
+		 문제 7 : 점수를 입력받아 점수 90점이상 A등급 출력 
+		 							80점이상 B등급 출력 
+		 							70점이상 C등급 출력  
+		 							그외 재시험
+		 문제 8 : 아이디와 비밀번호 입력받기 
+		 		회원아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 출력 
+		 										아니면 로그인실패 출력
+	 --> */
+	 
+		//문제1
+		
+/* 		const a = Number(prompt('숫자'))
+		const b = Number(prompt('숫자'))
+		
+		if(a>b){alert(a)}
+		else{alert(b)}
+	  */
+	  
+	  
+	  
+	  //문제2
+/* 	  const a = Number(prompt('숫자'))
+	  const b = Number(prompt('숫자'))
+	  const c = Number(prompt('숫자'))
+	  
+	  let max=a
+	  
+	  if(b>max){max = b}
+	  if(c>max){max= c}
+	  
+	  alert(max)
+	   */
+	  
+	//문제3
+	
+/* 	const a = Number(prompt('숫자'))
+	const b = Number(prompt('숫자'))
+	const c = Number(prompt('숫자'))
+	const d = Number(prompt('숫자'))
+	
+		  
+	 let max=a
+	 
+	  if(b>max){max=b}
+	  if(c>max){max=c}
+	  if(d>max){max=d}
+	  
+	  alert(max) */
+	  
+	  // 문제 4 : 3개의 정수 를 입력받아서 오름차순 / 내림차순 출력 
+/* 	  
+	let a = Number(prompt('숫자'))
+	let b = Number(prompt('숫자'))
+	let c = Number(prompt('숫자'))
+	
+	let i = 0
+	  
+	  if(a>b){
+		  i=a
+		  a=b
+		  b=i
+	  }
+	  if(a>c){
+		  i=a
+		  a=c
+		  c=i
+	  }
+	  if(b>c){
+		  i=b
+		  b=c
+		  c=i
+	  }
+	  
+	  console.log( a + "" + b + "" + c)
+	  console.log( c + "" + b + "" + a)
+	   */
+	  
+	  //문5 숫자 4개
+/* 	let a = Number(prompt('숫자'))
+	let b = Number(prompt('숫자'))
+	let c = Number(prompt('숫자'))
+	let d = Number(prompt('숫자'))
+	
+	let i = 0
+	
+	if(a>b){
+		i=a
+		a=b
+		b=i
+	}
+	  if(a>c){
+		  i=a
+		  a=c
+		  c=i
+	  }
+	  if(a>d){
+		  i=a
+		  a=d
+		  d=i
+	  }
+	  if(b>c){
+		  i=b
+		  b=c
+		  c=i
+	  }
+	  if(b>d){
+		  i=b
+		  b=d
+		  d=i
+	  }
+	  if(c>d){
+		  i=c
+		  c=d
+		  d=i
+	  }
+	  console.log( a + "" + b + "" + c + "" + d)
+	  console.log( d + "" + c + "" + b + "" + a) */
+	  
+	  // 문 6 
+	  
+/* 	  const x = Number(prompt('점수'))
+	  
+	  if(x>=90){alert('합격')}
+	  else{alert('불합격')} */
+	  
+	  //문제7
+	  
+/* 	  const x = Number(prompt('점수'))
+	  
+	  if(x>=90){
+		  alert('A등급')
+	  }else if(x>=80){
+		  alert('b등급')
+	  }else if(x>=70){
+		  alert('c등급')
+	  }else{alert('재시험')} */
+	  
+	  
+	  ///문8
+	  
+/* 	  const id = prompt('id')
+	  const password = prompt('password')
+	  
+	  if(id=='admin'){
+		  if(password=='1234'){
+			  alert('로그인 성공')
+		  }else{alert('로그인 실패')}
+	  }else{alert('로그인 실패')} */
+	  
+	  
+	  // 14분 56초
+	  
+	  //문1
+	  
+/* 	  const x = Number(prompt('숫자'))
+	  const y = Number(prompt('숫자'))
+	  
+	  if(x>y){alert(x)}
+	  else{alert(y)} */
+	  
+	  //문2
+	  
+/* 	  const x = Number(prompt('숫자'))
+	  const y = Number(prompt('숫자'))
+	  const z = Number(prompt('숫자'))
+	  
+	  let max = x
+	  
+	  if(y>max){max=y}
+	  if(z>max){max=z}
+	  
+	  alert(max)
+	   */
+	  
+
+/* 	   //문4
+	  const x = Number(prompt('숫자'))
+	  const y = Number(prompt('숫자'))
+	  const z = Number(prompt('숫자'))
+	  const t = Number(prompt('숫자'))
+	  
+	  
+	  let max = x
+	  
+	  if(y>max){max=y}
+	  if(z>max){max=z}
+	  if(t>max){max=t}
+	  
+	  alert(max)
+	    */
+
+	    
+	    //문5
+	    
+/* 	  let x = Number(prompt('숫자'))
+	  let y = Number(prompt('숫자'))
+	  let z = Number(prompt('숫자'))
+	  
+	  let i = 0
+	    
+	  if(x>y){
+		  i=x
+		  x=y
+		  y=i
+	  }
+	  if(x>z){
+		  i=x
+		  x=z
+		  z=i
+	  }
+	  if(y>z){
+		  i=y
+		  y=z
+		  z=i
+	  }
+	    console.log(x + "" + y + "" + z)
+	    console.log(z + "" + y + "" + x)
+	     */
+/* 	      let a = Number(prompt('숫자'))
+		  let b = Number(prompt('숫자'))
+		  let c = Number(prompt('숫자'))
+		  let d = Number(prompt('숫자'))
+	    
+		  let i = 0
+		  
+		  if(a>b){
+			  i=a
+			  a=b
+			  b=i
+		  }if(a>c){
+			  i=a
+			  a=c
+			  c=i
+		  }if(a>d){
+			  i=a
+			  a=d
+			  d=i
+			 
+		  }if(b>c){
+			  i=b
+			  b=c
+			  c=i
+		  }if(b>d){
+			  i=b
+			  b=d
+			  d=i
+		  }if(c>d){
+			  i=c
+			  c=d
+			  d=i
+		  }
+		  
+		  console.log(a + "" + b + "" + c + "" + d)
+		  console.log(d + "" + c + "" + b + "" + a) */
+		  
+		  //문 6,7
+		  
+/* 		  const x = Number(prompt('점수'))
+		  
+		  if(x>=90){
+			  alert('합격')
+		  }else{alert('탈락')}
+		  
+		  
+		  if(x>=90){
+			  alert('a등급')
+		  }else if(x>=80){
+			  alert('b등급')
+		  }else if(x>=70){
+			  alert('c등급')
+		  }else{alert('재시험')} */
+		  
+		  //문8
+		  
+/* 		  const id = prompt('id')
+		  const password = prompt('password')
+		  
+		  if(id=='admin'){
+			  if(password=='1234'){
+				  alert('로그인성공')
+			  }else{alert('로그인실패')}
+		  }else{alert('로그인실패')}
+		   */
+		  //15분
+		  
+		  
+		  
+		  //문1
+		  
+		  const a = Number(prompt('숫지'))
+		  const b = Number(prompt('숫지'))
+		  
+		  if(a>b){alert(a)}
+		  else{alert(b)}
+		   
+		  //문2
+		   
+		   const a2 = Number(prompt('숫지'))
+		   const b2 = Number(prompt('숫지'))
+		   const c2 = Number(prompt('숫지'))
+		   
+		   max = a2
+		   
+		   if(b2>max){max = b2}
+		   if(c2>max){max = c2}
+		   
+		   alert(max)
+		   
+		   //문3
+		   
+		   const a3 = Number(prompt('숫지'))
+		   const b3 = Number(prompt('숫지'))
+		   const c3 = Number(prompt('숫지'))
+		   const d3 = Number(prompt('숫지'))
+		   
+		   max = a3
+		   
+		   if(b3>max){ max = b3 }
+		   if(c3>max){ max = c3 }
+		   if(d3>max){ max = d3 }
+		   
+		   alert(max)
+		   
+		   //문4/5 오름내림차순
+		   
+/* 		   let x = Number(prompt('숫지'))
+		   let y = Number(prompt('숫지'))
+		   let z = Number(prompt('숫지'))
+		   
+		   let i = 0
+		   
+		   if(x>y){
+			   i=x
+			   x=y
+			   y=i
+		   }if(x>z){
+			   i=x
+			   x=z
+			   z=i
+		   }if(y>z){
+			   i=y
+			   y=z
+			   z=i
+		   }
+		   
+		   console.log(x + "" + y + "" + z)
+		   */
+		  
+/* 		   let x = Number(prompt('숫지'))
+		   let y = Number(prompt('숫지'))
+		   let z = Number(prompt('숫지'))
+		   let t = Number(prompt('숫지'))
+		   
+		   let i = 0 
+		   
+		   if(x>y){
+			   i=x
+			   x=y
+			   y=i
+		   }if(x>z){
+			   i=x
+			   x=z
+			   z=i
+		   }if(x>t){
+			   i=x
+			   x=t
+			   t=i
+		   }if(y>z){
+			   i=y
+			   y=z
+			   z=i
+		   }if(y>t){
+			   i=y
+			   y=t
+			   t=i
+		   }if(z>t){
+			   i=z
+			   z=t
+			   t=i
+		   }
+		  
+		   console.log( x + "" + y + "" + z + "" + t )
+		   console.log( t + "" + z + "" + y + "" + x )
+		  
+		  
+		   */
+		   
+		  //문 6,7
+		  
+		  const x = Number(prompt('점수'))
+		  
+		  if(x>=90){
+			  alert('합격')
+		  }else{alert('불합격')}
+		   
+		   
+		   if(x>=90){
+			   alert('a등급')
+		   }else if(x>=80){
+			   alert('b등급')
+		   }else if(x>=70){
+			   alert('c등급')
+		   }else{alert('재시험')}
+		   
+		   //문 8 
+		   
+		   const id = prompt('id')
+		   const password = prompt('password')
+		   
+		   if(id=='admin'){
+			   if(password=='1234'){
+				   alert('로그인 성공')
+			   }else{alert('로그인 실패')}
+		   }else{alert('로그인 실패')}
+		  
+		  //12분 31초
+		  // const Numbers = [ 28분44초, 20분50초, 14분 56초, 15분 43초, 12분 31초 ]
+		  
+	 </script>
+
+</body>
+</html>
