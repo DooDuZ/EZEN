@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 
+	
+		함수의 기본 형태
+			
+		함수 = 미리 정의된 코드
+			1. (재활용성) 한 번 정의하고 반복사용
+			2. 메모리의 효율성이 좋다. [ 함수 안에서 실행된 메모리는 함수 종료시 초기화 ]+
+			3. 인수에 따른 서로 다른 결과값 
+			
+		함수 형태 : 
+			1. 매개변수(인수)	2. 함수의 이름( vs 익명 ) 3. 리턴( 반환 / 결과 ) 4. 함수 정의
+			
+			매개변수(인수) : 함수 안으로 들어가는 수 (데이터)
+				* 함수 안으로 들어가는 수
+				1. 인수x리턴x 2.인수o리턴x 3. 인수o리턴o 4. 인수x리턴o
+	
+		[선언]
+			1. function 함수명( 인수1, 인수2, 인수3 ~~ ){
+					코드정의
+					}
+			2. [익명함수] function ( 인수1, 인수2, 인수3 ~~ ){
+			}
+	
+	 -->
+	 
+	 
+	 <script type="text/javascript">
+	 	
+	 
+	 	//p.197 익명 함수
+	 
+	 	const 함수 = function(){		//익명함수 정의 --> 변수에 저장
+	 		console.log('함수 내부의 코드입니다... 1')
+	 		console.log('함수 내부의 코드입니다... 2')
+	 		console.log('함수 내부의 코드입니다... 3')
+	 		console.log('함수 내부의 코드입니다... 4')
+	 		console.log('함수 내부의 코드입니다... 5')
+	 		console.log('')
+	 	}
+	 	
+	 	
+	 	//함수 호출
+	 	
+	 	함수()
+	 	함수()
+	 		
+	 	// 출력 typeof 변수 => 자료형 확인
+	 	console.log( typeof 함수)
+	 	console.log( 함수 )
+	 	
+	 	// p.199 선언적 함수
+	 	
+	 	function 함수2() {	 		
+	 		console.log('함수 내부의 코드입니다... 1')
+	 		console.log('함수 내부의 코드입니다... 2')
+	 		console.log('함수 내부의 코드입니다... 3')
+			console.log('')
+		}
+	 	//함수 호출
+	 	
+	 	함수2()
+	 	함수2()
+	 		
+	 	// 출력 typeof 변수 => 자료형 확인
+	 	console.log( typeof 함수2 )
+	 	console.log( 함수2 )
+	 		
+	 	// p. 201
+	 	
+	 	function f(x) { //f라는 이름으로 함수 선언 하는데 매개변수는 x }
+				return x*x		//함수가 종료되면서 돌려주는 값
+								// --> 해당 함수를 호출했던 위치로 값 돌려주기
+	
+	 	} //  f end
+	 	
+	 	// 함수 호출 
+	 	console.log( f(3) )
+	 	// 함수 리턴 값을 변수에 저장
+	 	
+	 	let result = f(5)
+	 	console.log( result )
+	 	
+	 	
+	 
+	 
+	 
+	 </script>
+
+
+</body>
+</html>
