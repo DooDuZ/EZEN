@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+*{margin : 0; padding:0; font-family:"맑은 고딕"}
+a{text-decoration: none; color : black ; }
+a:hover{ color : gray; }
+li{list-style-type: none;}
+
+
+#header{ height : 20px; width : 700px; margin : 0 auto;}
+.logo{float : left; color:blue;}
+.logo span{color:black;}
+.menu{float : right; }
+.menu ul li{
+	padding : 10px;
+	text-align : right;
+	display : inline; }
+	
+#contents{height : 800px; }
+
+.sec01{width : 1280px ;margin : 0 auto;}
+.main_img img{ width : 1280px; height : 450px;}
+
+
+.main_btm{width : 1100px; margin : 0 auto; height : 150px;}
+.btm_left{ float : left ; width :"300px"; height : 120px; padding : 10px; }
+.btm_right{ float : right ; width :"300px"; height : 120px; padding : 10px; }
+.btm_text{width : 300px; height : 100px; float : right; padding : 10px;}
+.btm_img{ float : left;}
+
+.sec02{ clear : both;  background-color: #eeeeee; height: 200px;}
+.sec02_tray { width : 1000px ; margin : 0 auto; padding: 20px 20px; height : 160px;}
+.sec02 img{width : 150px; height : 100px;}
+.sec02_box{float : left ; padding-left : 10px;}
+
+
+#footer{ clear : both; background-color: #292c32; Height : 150px;}
+.ft_box{ width : 1280px; height : 100px ; margin : 0 auto; color: white;}
+.ft_left{float : left; width : 300px; font-size : 20px; padding-top : 20px;}
+.ft_main{ float : left;  width : 500px;  padding-top : 20px; padding-bottom : 20px;}
+.ft_main li{ display : inline; }
+.ft_menu li a{ color: white;}
+.ft_sns{ width : 200px ; float : right; padding-top : 20px;}
+
+
+
+/* reserved */
+
+
+*reservation{ height : 900px; }
+.rsv_sec01{width : 1280px; height : 400px; margin : 0 auto; background-image: url("img/sub_reservation.jpg"); }
+.sec01_text{ width: 400px; height : 200px; margin : 0 auto; text-align: center; }
+.sec01_text h{ text-align: center;}
+.rsv_sec01 img{padding-top: 40px; width: 1280px; height : 300px; }
+.rsv_sec02{width : 850px; height : 700px; margin : 0 auto; }
+.calendar{ float:left; height : 600px; background-color: #fcf9ea;  text-align: center;
+	padding-top : 20px; 
+ }
+ 
+.date_change{ margin: 0 auto; padding-top : 20px;}
+button img{ width : 20px; height : 20px; }
+
+.cal_table{ padding : 40px; margin : 0 auto;}
+.cal_table th{text-align: center;}
+.cal_table td{ width : 70px; height : 70px; text-align: left; vertical-align: top;}
+
+.cols_1{color: red; }
+
+.rsv_info{ width : 200px; height : 300px; float: right; }
+.rsv_info h3{ border-left : solid 10px gray; padding-left: 5px; }
+.rsv_info ul{ padding-left : 30px; padding-bottom: 10px;}
+.rsv_info ul li{ list-style-type: disc; padding-bottom : 10px;}
+.rsv_info p { color : green; }
+
