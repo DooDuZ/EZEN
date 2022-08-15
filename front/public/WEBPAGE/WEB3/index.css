@@ -46,11 +46,11 @@ li{list-style-type: none;}
 /* reserved */
 
 
-*reservation{ height : 900px; }
-.rsv_sec01{width : 1280px; height : 400px; margin : 0 auto; background-image: url("img/sub_reservation.jpg"); }
+*reservation{ height : 900px; padding : 20px; }
+.rsv_sec01{width : 1280px; height : 220px; margin : 0 auto; background-image: url("img/sub_reservation.jpg"); }
 .sec01_text{ width: 400px; height : 200px; margin : 0 auto; text-align: center; }
 .sec01_text h{ text-align: center;}
-.rsv_sec01 img{padding-top: 40px; width: 1280px; height : 300px; }
+.rsv_sec01 img{padding-top: 40px; width: 1280px; height : 200px; }
 .rsv_sec02{width : 850px; height : 700px; margin : 0 auto; }
 .calendar{ float:left; height : 600px; background-color: #fcf9ea;  text-align: center;
 	padding-top : 20px; 

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+*{margin : 0; padding:0; font-family:"맑은 고딕"}
+a{text-decoration : none; color : black ;}
+a hover{ color : gray;}
+li{list-style-type: none;}
+
+/* header */ 
+
+.h_box{ width : 1000px; height : 20px; margin : 0 auto;}
+.h_logo{ font-weight : bold; width : 300px; height : 25px; float: left; }
+.h_logo span{color : blue;}
+.h_menu{float : right; width : 500px; height : 25px; }
+.h_menu ul li{display : inline-block; margin-right : 10px;}
+
+
+/* contents */ 
+
+#contents{margin : 10px;}
+.m_img{width : 1280px; height : 490px; margin : 0 auto; }
+.m_img img{width : 1280px; height : 490px;}
+
+
+.m_sec01{width : 1000px; height : 200px; margin : 0 auto; 
+		padding-top : 85px; }
+.sec01_left{width : 480px; height : 75px; float : left; }
+.sec01_right{width : 480px; height : 75px; float : right; }
+
+.sec01_img{width : 70px; height : 70px; float : left;
+		 margin-right : 15px; display : inline;}
+.sec01_text{width : 380px; height : 70px; float : right ; }
+
+.m_sec02{height : 300px; background-color: #eeeeee; }
+.sec02_box{ width : 1000px; height : 300px; margin : 0 auto;}
+.sec02_con{width : 230px; height : 250px; float : left; 
+		margin-right : 10px; margin-top : 30px; line-height : 150%; }
+.sec02_con img{width : 230px; height : 180px;}
+
+
+
+
+/* footer */
+
+#footer{background-color: #292c32; height : 240px; color : white ; }
+.ft_box{width : 1280px; height : 240px; margin : 0 auto; }
+.ft_tel{float : left ; width : 400px; height : 220 px; margin-top : 10px; font-size : 30px; padding-top : 20px;}
+.ft_tel p{ font-size : 50px; font-weight: bold; }
+.ft_info{width : 400px; height : 220px; margin-top : 10px ; margin-left : 40px; float: left; padding-top : 20px;}
+.ft_sns{width : 100px ; height : 220px; margin-top : 10px; float : right; padding-top : 20px; pading : 10px;}
+.ft_sns img{ width : 20px; height : 20px; }
