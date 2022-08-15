@@ -1,8 +1,11 @@
 /**
+
+//이클립스 수정사항 계속 반영 안댐 ㅠㅠㅠㅠㅠ intellij 작성 후 복붙
+
  	함수 : 미리 정의된 코드 집함
  		alert() prompt() -> js 내장함수
- 	함수 만들기(정의) : 
- 		function 함수명( 매개변수 1 , 매개변수 2 ~~){ 
+ 	함수 만들기(정의) :
+ 		function 함수명( 매개변수 1 , 매개변수 2 ~~){
  			실행코드
  			return 리턴값
  		}
@@ -11,15 +14,61 @@
  		html : 이벤트속성 -> ex)<button on click>
  			onclick : 클릭했을때
  			onclick = "함수명(매개변수1, 매개변수2)"
- 	
+
  */
- 
+
  //1. 매개변수x 리턴값x 함수 정의
- 
- function 함수1(){ alert('함수 1 실행')}
- 
+
+ function 함수1(){ // f s
+    alert('함수 1 실행')
+ } // f end
+
+ //2. 매개변수o 리턴값x 함수 정의
+ function 함수2(value){ // f s
+	alert('함수2 실행 매개변수 : ' + value)
+}// f end
+
+
+//3. 매개변수o 리턴값o 함수 정의
+function 함수3( value1 , value2 ){ //f s
+    alert('함수3실행 매개변수 : ' + value1+value2 )
+	return value1 + value2
+
+} // f end
+//4. 매개변수x 리턴값o
+function 함수4(){ // f s
+    alert('함수4실행')
+    return 10
+}// f end
+
+
  //호출
  함수1() // js에서 정의된 함수 호출
- 함수2('js매개변수입니다.') //함수 호출시 
+ 함수2('js매개변수입니다.') //함수 호출시 매개변수 전달
+ let result = 함수3(3, 5)
+ let result2 = 함수4()
+ 
+ 
+ 
+ 
+ // p.204 최소값 구하기 함수
+ 	// min 이름으로 함수선언하는데 매개변수 array 
+ function min(array){
+	let output = array[0] // array에서 0번째 인덱스를 호출해서 output에 저장
+	for( const item of array ){
+		// 배열에 요소를 하나씩 아이템에 대입 반복
+			// for( 변수 in 배열 ) : 배열내 인덱스를 하나씩 대입 반복
+			// for( 변수 of 배열 ) : 배열내 요소의 값을 하나씩 대입 반복
+			if(output > item ){ //해당 값이 output보다 작으면
+				output = item // output을 해당 값으로 교체
+			} // if end 
+	}//for end 
+	return output
+} //f end 
+ 
+const testArray = [52, 273, 32, 103, 275, 24, 57]  // 배열을 선언하고 7개의 값을 초기화
+console.log(`${testArray}중에서`)		//	배열 출력 
+console.log(`최소값 = ${min(testArray)}`)  // 함수 결과를 출력
+	// console.log() : js 내장 함수 [ 콘솔에 메시지를 출력하는 함수 ]
  
  
