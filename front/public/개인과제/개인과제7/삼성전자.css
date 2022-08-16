@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+*{margin : 0; padding:0; font-family:"맑은 고딕"}
+a{text-decoration : none; color : black ;}
+a hover{ color : gray;}
+li{list-style-type: none;}
+div{box-sizing : border-box;}
+
+header{height : 60px; border-bottom : solid 1px #eeeeee;}
+.hd_box{width : 1159px; height : 59px; margin : 0 auto; position : relative; }
+.hd_logo{width : 222px; height : 20px; position : absolute; left : 10px; top : 16px;}
+.hd_logo img{width : 222px; height : 20px;}
+.hd_menu{width:528px; height : 27px; position : absolute; left : 316px; top : 16px;}
+.hd_menu li{display : inline-block; font-size : 16px;}
+.hd_icon{width : 146px; height : 30px; position : absolute; left : 1000px; top : 16px;}
+.hd_icon img{width : 24px; height : 24px;}
+
+
+.main_img{width : 1920px; height : 500px; margin : 0 auto; position : relative;
+			background-color: orange;
+			}
+.main_img_txt{width : 1390px; height:250px; position : absolute; left : 133px; top: 125px;
+		background-color: yellow;
+		}
+		
+.main_sec02{width : 1920px; height : 200px; margin : 0 auto; background-color: green; position : relative;}
+.main_sec02 h3{width: 250px; height : 30px; position : absolute; left : 835px; top: 30px; 
+	text-align: center;
+}
+.main_sec02 input{width : 500px; height : 30px; position : absolute; left: 710px; top: 85px;}
+.sec02_searchtag{
+	width : 400px; height : 30px;
+	position : absolute; left : 760px; top: 130px; }
+.sec02_searchtag a{ color: #eeeeee;}
+
+.main_sec03{background-color: #eeeeee;}
+.main_sec03_box{width : 1920px; height : 700px; margin : 0 auto; position : relative;}
+.sec03_txt{width : 1920px; height : 150px; text-align: center; padding-top : 40px;}
+.main_sec03_c{width : 1500px; height : 270px; margin : 0 auto; }
+.sec03_img{ width : 13% ; height : 195px; background-color: red; display : inline-block;}
+
+.main_sec04 h3{ text-align: center; padding-top : 30px; padding-bottom : 40px;}
+.main_sec04_c{ width : 1500px; height : 400px; margin : 0 auto;}
+.sec04_img{ width : 460px; height : 200px; background-color: black; color : white;}
+.main_sec04_c li{float : left;}
+
+.main_sec05 h3{ text-align: center; padding-top : 30px; padding-bottom : 40px; }
+.
+

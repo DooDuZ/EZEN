@@ -5,24 +5,28 @@
     <title>Title</title>
 
   <script type="text/javascript">
-
   
-	let x = Number(prompt("별의 줄 수"))
-	output = ''
-	
-	for(let i = 1 ; i<=x ; i++){ 
-		for(let b = 1 ; b<=x-i ; b++){output+=' '}
-		for(let s = 1 ; s<=(2*i-1) ; s++){output+='*'}
-		for(let b = 1; b<=x-i ; b++){output+=' '}
-		output+='\n'
-	}for(let i = x-1 ; i>= 1 ; i--){
-		for(let b = 1 ; b<=x-i ; b++){output+=' '}
-		for(let s = 1 ; s<=(2*i-1) ; s++){output+='*'}
-		for(let b = 1; b<=x-i ; b++){output+=' '}
-		output+='\n'
-	}	
-	console.log(output)
+  function CollapseEx() {
+	  const { isOpen, onToggle } = useDisclosure()
 
+	  return (
+	    <>
+	      <Button onClick={onToggle}>Click Me</Button>
+	      <Collapse in={isOpen} animateOpacity>
+	        <Box
+	          p='40px'
+	          color='white'
+	          mt='4'
+	          bg='teal.500'
+	          rounded='md'
+	          shadow='md'
+	        >
+	          <Lorem count={1} />
+	        </Box>
+	      </Collapse>
+	    </>
+	  )
+	}
   </script>
 
 </head>
