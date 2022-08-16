@@ -46,11 +46,15 @@ function 버튼선택( i ){
             let rand = Math.floor( Math.random()*9 ) // 0~8 사이의 난수 발생
             if( !중복검사(rand) ){
             document.getElementById( rand ).innerHTML = 'X'
-            게임상황[rand] = 'x'
+            게임상황[rand] = 'X'
             break
             }// if end
         }// while end
-      } // f end
+            if( 게임결과( )){// 게임결과 함수에서 true가 리턴되면 
+        	alert('게임종료 승리 : ' + 승리 )
+        	return // 함수 강제 종료
+      		} //if end
+      }// f end
 
 // 3. 현재 위치에 앓이 있는지 검사하는 함수 [중복검사]
 function 중복검사( i ){
@@ -109,6 +113,7 @@ function 게임결과(){
 		}
 	}if(무승부 == 9){
 		alert('무승부 입니다.')
+		return
 	}
 }
 
