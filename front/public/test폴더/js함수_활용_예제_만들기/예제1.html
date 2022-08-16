@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="예제1.js">
+
+</script>
+
+
+</head>
+<body>
+
+
+<h3> 디데이 계산기 </h3>
+
+<script type="text/javascript">
+
+let today = Number(prompt('오늘 날짜 입력 m.dd'))
+let Dday = Number(prompt('Dday 입력 m.dd'))
+
+
+let output =  0
+let monthdata = 0
+let daydata1 = 0
+let daydata2 = 0
+
+const m_day = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ] 
+
+for(let m = Math.floor(today) ; m <= Math.floor(Dday) ; m++){
+	monthdata += m_day[m-1]
+}
+
+daydata1 = 100*today - 100*(Math.floor(today))
+daydata2 = 100*Dday - 100*(Math.floor(Dday))
+
+console.log(daydata1)
+console.log(m_day[Math.floor(Dday)-1])
+
+output = monthdata - daydata1 - (m_day[Math.floor(Dday)-1]-daydata2)
+
+console.log('D-day까지 ' + output + '일' )
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
