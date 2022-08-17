@@ -86,7 +86,7 @@ function lotto_result(){
 	for(let i of select_number){
 		for(let j of getrich){
 			if(i==j){
-				count += i   //왜 되냐...? //count.push(i) 
+				count.push(i) 
 			}
 		}
 	}
