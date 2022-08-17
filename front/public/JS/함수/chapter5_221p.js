@@ -95,6 +95,3 @@ console.log('원래 배열 : ' + numbers )
 console.log('짝수 배열 : ' + evenNumbers)
 
 
-
-
-

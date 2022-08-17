@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="예제2.js"></script>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+	
+	// a까지의 b의 배수들의 합 구하기 
+	
+	let a = Number(prompt('a배수'))
+	let b = Number(prompt('범위 입력-까지 '))
+	
+	let sum = 0
+	
+	
+	//b 범위까지 a배수 더하기
+	
+	for(let i = 1 ; i<=b ; i++){
+		if(i%a==0){
+			sum += i
+		}
+	}
+	
+	console.log(sum)
+	
+	//for 문은 조건이 변경 될 때마다 각각의 변수를 새로 선언하거나 페이지 새로고침을 해서 값을 한개씩 출력 해야함
+	
+	
+	</script>
+
+
+</body>
+</html>
