@@ -1,7 +1,7 @@
 /**
  * 
  */
- 
+
  
  const x = Number(prompt('현재층'))
  const y = Number(prompt('목표층'))
