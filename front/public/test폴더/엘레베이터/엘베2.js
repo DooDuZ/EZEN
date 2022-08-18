@@ -2,17 +2,18 @@
  * 
  */
  
- let rooftop = Number(prompt('최고 층수'))
+
+let z = 20
 
 
-
-let btn_board = ''
-function make_btn(){
-		for(let i = 1 ; i <= rooftop ; i++){	
-			btn_board += `<button>${i}</button>`
-					
-		}
-		document.getElementById('select_floor').innerHTML = btn_board
+let floor_img = ''
+function ev_img(){
+	for(let i = z ; i>=1 ; i--){
+		floor_img += `<div>${i}</div>`		
+	}
+	document.getElementById('select_floor').innerHTML = floor_img
 }
 
-make_btn()
+
+
+ev_img()
