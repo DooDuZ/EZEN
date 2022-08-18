@@ -29,6 +29,7 @@ function input_floor( rooftop ){
 // 2. up, down 버튼 생성
 function up_f(){
 	z++
+	ev_img()
 	console.log(z)
 	if(z>20){
 		alert('최고 층수 입니다.')
@@ -38,6 +39,7 @@ function up_f(){
 
 function down_f(){
 	z--
+	ev_img()
 	console.log(z)
 	if(z<1){
 		alert('최저 층수 입니다.')
@@ -99,15 +101,19 @@ function make_btn(){
 
 
 // ev img 
-let floorimg = ''
+
 function ev_img(){
+	let floorimg = ''
 	for(let i = rooftop ; i>=1 ; i--){
-		floorimg += `<div class="box_${i}">${i}</div>`		
+		if(i!=z){
+			floorimg += `<div class="box_${i}">${i}</div>`
+		}else if(i==z){
+			floorimg += `<div class="box_${i}" style='border: solid 3px red;'>${i}</div>`
+		}
+				
 	}
 	document.getElementById('ev_img').innerHTML = floorimg
 }
-
-ev_img()
 
 
 function start_ev( i ){
