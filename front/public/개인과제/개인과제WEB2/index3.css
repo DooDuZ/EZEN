@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+*{padding : 0 ; margin : 0; box-sizing : border-box; font-family: '굴림';}
+li{list-style-type: none;}
+a{text-decoration: none; color : black;}
+a hover{color : gray ;}
+
+.hd_box{width : 1280px; height : 100px; margin : 0 auto; position : relative;}
+.logo{ width : 200px; height : 50px; position : ablsolute ; left : 10px; top: 25px;}
+.hd_top{ font-size : 10px; position : absolute; right : 5px; top : 5px;}
+.hd_menu{font-size: 25px; font-weight : bold; width : 400px; 
+height : 50px; margin-right : 30px; position: absolute; right : 5px; bottom : 5px; }
+.hd_menu li {display : inline;}
+
+.main_img{width : 1920px; height : 300px; margin : 0 auto;}
+.main_img img{width : 1920px; height : 300px;}
+
+.main_box{width : 1280px; height : 600px; margin : 0 auto; display : flex; justify-content: space-between;}
+.left_top {width : 250px; }
+.left_top h3{ background-color : #0ca9a3; color : white; font-size: 30px; padding: 5px;}
+.left_top div{ line-height : 150% ; padding-top : 20px; padding-left : 5px;}
+
+.left_list h3{border-top : solid 3px black; border-bottom : solid 1px #eeeeee;}
+.main_left input{width : 180px; height : 30px;}
+.main_left button{height : 30px;}
+.left_list li{padding : 10px; font-size : 20px;}
+
+.main_center{width:440px; } 
+
+.ct_title{border-bottom : 3px solid black;}
+.main_right{width : 500px;}
+.main_right li{float : left;}
+
+.ct_title li{ display: flex; justify-content: space-between;}
+.ct_title span{display : inline-block;}
+
+.center_box li{display : flex ; justify-content: space-between; 
+font-size : 20px; }
+
+
+footer{ background-color : #05354e; color : white; height : 300px; }
+
+.ft_box{width: 1280px; margin: 0 auto;}
+.ft_top{width : 400px; }
+.ft_btm{display:flex ; display : flex; justify-content: space-between;
+	margin-top : 60px;
+}

@@ -1,1 +1,51 @@
 @charset "UTF-8";
+
+*{padding: 0 ; margin: 0 ; box-sizing : border-box;}
+a{text-decoration: none; color : black;}
+a hover{color : gray;}
+li{list-style-type: none;}
+
+.hd_box{width : 1280px; height : 80px; margin : 0 auto; position : relative;}
+.logo{width : 150px; height : 40px; position : absolute; left : 10px; top : 20px;}
+.logo img{width : 150px; height : 40px;}
+.hd_top{font-size : 10px; position : absolute; right : 5px; top : 5px;}
+.hd_menu{ font-size : 20px; font-weight : bold;
+		position : absolute; right : 5px; bottom: 10px;}
+.hd_menu span{display : inline-block; padding-left : 20px;}
+
+
+.main_img{width : 1920px; height : 300px; margin : 0 auto;}
+.main_img img{width : 1920px; height : 300px;}
+
+.main_content{width : 1280px; height : 600px; margin : 0 auto;
+		display : flex; justify-content: space-between;}
+
+.ct_left{width : 220px; }
+.sc_box h3{background-color : #0ca9a3; color : white; height : 40; padding : 8px 5px; }
+.sc_box p{height : 100px; line-height : 150%; padding-left : 5px; padding-top : 10px;  }
+.sc_box input{width : 180px; height : 25px;}
+.sc_box button{height : 25px;}
+
+.ct_left_btm h3{border-bottom : 1px solid #eeeeee; height : 40px; 
+border-top : solid 3px black; padding : 5px 10px 0 5px;}
+.ct_left_btm{height : 300px; padding : 10px;}
+.ct_left_btm ul{height : 100px;}
+.ct_left_btm ul li{padding : 5px;}
+
+.ct_center {width : 400px; line-height : 150% ; padding: 10px;}
+.ct_center h3{border-bottom : solid 3px black;}
+.ct_center li{display : flex ; justify-content: space-between; 
+font-size : 20px; }
+
+.img_top, .img_btm{display : flex; padding-top : 10px;}
+
+
+
+footer{background-color : #05354e; color : white; }
+footer a{color : white; padding-right : 15px; font-weight : bold;}
+.ft_box{width : 1280px; height : 300px; margin : 0 auto; position : relative;}
+.ft_box h5{ color: #077161; font-size: 20px;}
+.ft_btm{display : flex; justify-content: space-between; margin-top : 50px;}
+.ft_b_left, .ft_b_center, .ft_b_right{padding : 10px;}
+.ft_b_left p, .ft_b_center p, .ft_b_right p{padding-left : 20px; padding-top : 20px; line-height : 150%;}
+.phone{font-size : 25px;}
