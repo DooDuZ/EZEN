@@ -1,23 +1,18 @@
 /**
  * 
  */
+ 
+ let rooftop = Number(prompt('최고 층수'))
 
- 
- const x = Number(prompt('현재층'))
- const y = Number(prompt('목표층'))
- const z = Number(prompt('엘레베이터 위치'))
- 
- let ev_display = z
- 
- function ev_up(x, z){
-	if(x>z){
-	ev_display += 1
-	document.getElementById('f_dp').innerHTML = ev_display
-	}else if(x==z){
-		alert('엘레베이터 도착')
-	}else if(x<z){
-		alert('하강 버튼을 눌러주세요.')
-	}
-	
-	return
+
+
+let btn_board = ''
+function make_btn(){
+		for(let i = 1 ; i <= rooftop ; i++){	
+			btn_board += `<button>${i}</button>`
+					
+		}
+		document.getElementById('select_floor').innerHTML = btn_board
 }
+
+make_btn()
