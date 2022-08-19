@@ -7,76 +7,89 @@
  
  
  */ 
- 
 
- const li_floor = [ ]
- let rooftop = Number(prompt('최고 층수'))
+
+/*
+
+elevator(ev) 만들기
+
+ev = 하나의 정해진 범위의 Line 안에서 규정된 값만큼 이동할 수 있는 object
+const ev = {
+	
+	
+	
+	
+} 
+
+
+ */
+
+
+
+let rooftop = Number(prompt('최고 층수'))
  // let x = Number(prompt('목표 층수'))
- let y = Number(prompt('출발 층수'))
- let z = Number(prompt('EV 현재 위치'))
+let start_position = Number(prompt('출발 층수')) 
+/* 호출 버튼을 반복해서 누르는 경우 엘레베이터가 최초 입력층으로 계속해서 돌아오는 문제 발생  
+실제 엘레베이터에 가깝게 구현하려고 하면, 탑승자가 목표층에 도달 후 계단을 통해 다른 곳으로 이동하지 않는다고 가정했을 때
+'새로운 출발층 = 이전에 엘레베이터를 통해 내렸던 목표층' 이므로
+호출 버튼이 계속해서 최초 입력한 start_position으로 EV를 이동시키는 건 EV구동 목적에 맞지 않음.
+따라서 출발층을 최초에 입력받는다고 가정하면 호출 직후 HTML에 입력된 <button> 자리를 공백으로 채워서
+계속해서 원래의 출발층으로 재호출 되는 일이 없도록 해야함
+
+다른 해결책으로 호출 버튼을 누를 때마다 계속해서 출발층을 재입력 받도록 함수를 수정하는 방법이 있으나
+실제 우리가 EV이용 시에 층 정보를 집적 입력하지 않으므로
+페이지 출력 시 최초에만 출발 층을 입력하고 호출 버튼은 최초 엘레베이터 탑승 시에만 작동하도록 작동 직후 innerHTML에 공백을 입력하여 삭제처리 하였음 
+*/
+let current_position = Number(prompt('EV 현재 위치'))
  
-document.getElementById('ev_display').innerHTML = `현재 엘레베이터의 위치는 ${z}층 입니다.`
+document.getElementById('ev_display').innerHTML = `현재 엘레베이터의 위치는 ${current_position}층 입니다.`
+
+ev_img()
 
 
 
-// 1. 엘레베이터 층 배열 생성
-function input_floor( rooftop ){
-	for(let i = 1 ; i<=rooftop ; i++ ){
-		if(i>0){li_floor.push(i)} // if end
-	}//for end
-}
-
-// 2. up, down 버튼 생성
+// 1. up, down 버튼 생성
 function up_f(){
-	z++
+	current_position++
 	ev_img()
-	console.log(z)
-	if(z>rooftop){
+	if(current_position>rooftop){
 		alert('최고 층수 입니다.')
 		return
-	}document.getElementById('ev_display').innerHTML = `현재 엘레베이터의 위치는 ${z}층 입니다.` ;
+	}
+	document.getElementById('ev_display').innerHTML = `현재 엘레베이터의 위치는 ${current_position}층 입니다.` ;
 }
 
 function down_f(){
-	z--
+	current_position--
 	ev_img()
-	console.log(z)
-	if(z<1){
+	if(current_position<1){
 		alert('최저 층수 입니다.')
 		return
-	}document.getElementById('ev_display').innerHTML = `현재 엘레베이터의 위치는 ${z}층 입니다.`  ;
+	}document.getElementById('ev_display').innerHTML = `현재 엘레베이터의 위치는 ${current_position}층 입니다.` ;
 }
 
 
-//3. 엘레베이터 호출
+// 2. 엘레베이터 호출
 
 function call_ev(){
-			if(y<z){
+			if(start_position<current_position){
 			let stop = setInterval( ()=> { 
-					let count = 0
 					down_f() 
-					count++
-					if(count == z-y+1){
+					if(current_position==start_position){
 						clearInterval(stop)
-						
 						alert('엘레베이터에 탑승해주세요.')
 					}
-					
-					}, 1*1000) 
-			}else if(y>z){
+					}, 1*1000)
+			}else if(start_position>current_position){
 			let stop = setInterval( ()=> { 
-					let count = 0
 					up_f() 
-					count++
-					if(count == y-z+1){
+					if(current_position==start_position){
 						clearInterval(stop)
-						
-						alert('엘레베이터에 탑승해주세요.')
+						alert('엘레베이터에 탑승해주세요.') 					
 					}
-					
-					}, 1*1000) 
+					}, 1*1000)
 			}
-			
+			document.getElementById('callbtn').innerHTML =''	
 }
 
 //4. 엘레베이터 탑승 후 버튼 출력
@@ -85,9 +98,10 @@ function call_ev(){
 let btn_board = ''
 function make_btn(){
 		for(let i = rooftop ; i >= 1 ; i--){
-			if(z!=y){
+			if(current_position!=start_position){
 				alert('엘레베이터를 호출해 주세요.')
-				return}
+				return
+			}
 			btn_board += `<button id="${i}" onclick="start_ev(${i})">${i}</button>`
 			if(i%2==1){
 				btn_board+= '<br>'
@@ -105,145 +119,32 @@ function make_btn(){
 function ev_img(){
 	let floorimg = ''
 	for(let i = rooftop ; i>=1 ; i--){
-		if(i!=z){
+		if(i!=current_position){
 			floorimg += `<div class="box_${i}">${i}</div>`
-		}else if(i==z){
+		}else if(i==current_position){
 			floorimg += `<div class="box_${i}" style='border: solid 3px red;'>${i}</div>`
-		}
-				
+		}				
 	}
 	document.getElementById('ev_img').innerHTML = floorimg
 }
 
 
 function start_ev( i ){
-			if(i<z){
+			if(i<current_position){
 			let stop = setInterval( ()=> { 
-					let count = 0
 					down_f() 
-					count++
-					if(count == z-i+1){
+					if(current_position==i){
 						clearInterval(stop)
-						
+						alert('목적지에 도착했습니다.')
+					}			
+					}, 1*1000) 
+			}else if(i>current_position){
+			let stop = setInterval( ()=> { 
+					up_f() 
+					if(current_position==i){
+						clearInterval(stop)
 						alert('목적지에 도착했습니다.')
 					}
-					
-					}, 1*1000) 
-			}else if(i>z){
-			let stop = setInterval( ()=> { 
-					let count = 0
-					up_f() 
-					count++
-					if(count == i-z+1){
-						clearInterval(stop)
-						
-						alert('목적지에 도착했습니다.')
-					}
-					
 					}, 1*1000) 
 			}
 }
-
-
-
-
-
-/*
-function start_ev(i){
-			if(i<z){
-			let stop = setInterval( ()=> { 
-					let count = 0
-					down_f() 
-					count++
-					if(count == z-i+1){
-						clearInterval(stop)
-						
-						alert('목적지 도착')
-					}
-					
-					}, 1*1000) 
-			}else if(i>z){
-			let stop = setInterval( ()=> { 
-					let count = 0
-					up_f() 
-					count++
-					if(count == i-z+1){
-						clearInterval(stop)
-						
-						alert('목적지 도착')
-					}
-					
-					}, 1*1000) 
-			}
-			
-}
-
-*/
-
-
-/*
-function call_ev(){
-				
-				if(y>z){
-					let stop = setInterval( ()=> { 
-						let count = 0
-						down_f() 
-						count++
-						if(count == z-y+1){
-							clearInterval(stop)
-						}
-						
-						}, 1*1000)
-				}
-				else if(y<z){
-					let stop = setInterval( ()=> { 
-						let count = 0
-						down_u() 
-						count++
-						if(count == y-z){
-							clearInterval(stop)
-						}
-						
-						}, 1*1000)
-					
-					
-					
-				}
-}
-*/
-
-/*
-function call_ev(y, z){
-	let count = 0
-	if(y>z){
-		setInterval(
-			()=> {	up_f
-					count ++
-					if(count==(y-z)){
-						clearInterval(intervalId)
-			
-					}
-				}, 1*1000)
-			}
-}
-	
-	
-*/
-
-
-/*
-function call_ev(y ,z){
-	if(y>z){
-		for(let i = z ; i<=y ; i++ ){
-			up_f()
-		}document.getElementById('ev_display').innerHTML = `엘레베이터가 ${y}층에 도착했습니다.`
-	}else if(y<z){
-		for(let i = z ; i>=y ; i--){
-			down_f()
-		}document.getElementById('ev_display').innerHTML = `엘레베이터가 ${y}층에 도착했습니다.`
-	}else if(y==z){
-		document.getElementById('ev_display').innerHTML = `엘레베이터가 도착했습니다.`
-	}	
-}
-
-*/
