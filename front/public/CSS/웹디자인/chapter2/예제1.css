@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+
+
+body{
+	
+	background-image: url("imges/bread1.png"), url("imges/bread2.png") ;
+	background-position: left top, right top;
+			/* 첫번째 이미지 , 두번째 이미지 */
+	background-repeat: no-repeat;
+	text-align: center;
+}

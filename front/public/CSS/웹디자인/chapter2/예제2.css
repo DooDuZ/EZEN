@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+.container{
+	overflow: auto;
+/* 	scroll-snap-type : y; 부모요소 스크롤스냅 y축
+		x축도 가능
+	scroll-snap-type : y mandatory; 어느 지점에서든 다음 영역으로 빠르게 움직인다 */
+	scroll-snap-type : y proximity; 
+	height : 100vh;	
+}
+
+.area{
+		scroll-snap-align : center; /*멈추는 기준점 */
+		/* scroll-snap-align : end; */
+		/* scroll-snap-align : start; */
+		height : 70vh;
+}
+
+
+.area:nth-child(1){	
+	background : red;
+}
+/*동일 클래스가 많을때 .클래스명:nth-child(인덱스)*/
+.area:nth-child(2){
+	background : blue;	
+}
+.area:nth-child(3){
+	background : black;	
+}
+.area:nth-child(4){
+	background : orange;	
+}

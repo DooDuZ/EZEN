@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+
+
+body{background-color : #4a463a; color : white; }
+img{width : 250px; height : 250px;}
+
+.ict_box{width : 900px; margin : 0 auto;}
+.hd_title{font-family: 'NanumBarunGothicBold'; font-size : 80px; text-align: center;
+	margin-top : 50px; margin-bottom : 50px; }
+.intro_img{margin : 0 auto; width : 250px; height : 250px; margin-top : 50px; margin-bottom: 50px;}
+.intro_img img{float: right; width : 125px; height : 125px; }
+
+.intro_txt { text-align: center;}
+.sub_title{font-family: 'NanumBarunGothicBold'; font-size:30px;}
+.cont_txt{font-family: 'NanumBarunGothic'; font-size: 20px;}
+
+
+.content_box{width : 900px; height :300px;}
+.img_box{width : 250px; height : 250px; }
