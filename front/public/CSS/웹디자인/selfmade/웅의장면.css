@@ -2,19 +2,42 @@
 
 
 
-body{background-color : #4a463a; color : white; }
+body{background-color : black; color : white; }
 img{width : 250px; height : 250px;}
 
-.ict_box{width : 900px; margin : 0 auto;}
+.container{overflow: auto; scroll-snap-type : y proximity; height : 100vh; }
+
+.intro{height : 100vh; display : flex; scroll-snap-align : center; }
+.ict_box{width : 900px; margin : 0 auto; align-self : center;}
 .hd_title{font-family: 'NanumBarunGothicBold'; font-size : 80px; text-align: center;
-	margin-top : 50px; margin-bottom : 50px; }
-.intro_img{margin : 0 auto; width : 250px; height : 250px; margin-top : 50px; margin-bottom: 50px;}
-.intro_img img{float: right; width : 125px; height : 125px; }
+	 margin-bottom : 50px; }
+.intro_img{margin : 0 auto; width : 400px; height : 400px; margin-top : 50px; margin-bottom: 50px;}
+.intro_img img{float: right; width : 200px; height : 200px; }
 
-.intro_txt { text-align: center;}
-.sub_title{font-family: 'NanumBarunGothicBold'; font-size:30px;}
-.cont_txt{font-family: 'NanumBarunGothic'; font-size: 20px;}
+.intro_txt { text-align: center; }
+.i_sub_title{font-family: 'NanumBarunGothicBold'; font-size:30px; margin-bottom : 20px; font-style:  italic;}
+.i_cont_txt{font-family: 'NanumBarunGothic'; font-size: 17px; text-align: left;}
 
 
-.content_box{width : 900px; height :300px;}
-.img_box{width : 250px; height : 250px; }
+[class*="main"]{height : 100vh; display : flex; margin-bottom : 100px; scroll-snap-align : center; }
+
+.ct_box{width : 900px; margin : 0 auto; align-self : center;}
+.name_AB{font-family: 'NanumBarunGothicBold'; font-size:30px; margin-bottom : 10px; font-style:  italic; text-align: center;}
+.ct_img{width : 400px; height : 400px; margin : 0 auto;}
+.ct_img img{width : 400px; height : 400px; }
+.player{height : 250px; }
+
+
+
+/*
+
+.content_box_odd, .content_box_even{width : 900px; height : 250px; 
+margin : 0 auto; margin-top : 30px; margin-bottom : 30px;}
+
+.content_box_odd .txt_box{ float : left; width : 600px; height : 250px;}
+.content_box_odd .img_box{ float : right; }
+
+.content_box_even .txt_box{ float : right; width : 600px; height : 250px; }
+.content_box_even .img_box{ float : left; }
+
+*/

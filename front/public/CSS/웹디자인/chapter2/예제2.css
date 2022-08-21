@@ -6,7 +6,7 @@
 /* 	scroll-snap-type : y; 부모요소 스크롤스냅 y축
 		x축도 가능
 	scroll-snap-type : y mandatory; 어느 지점에서든 다음 영역으로 빠르게 움직인다 */
-	scroll-snap-type : y proximity; 
+	scroll-snap-type : y mandatory; 
 	height : 100vh;	
 }
 

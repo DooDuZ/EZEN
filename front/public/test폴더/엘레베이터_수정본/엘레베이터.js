@@ -8,7 +8,7 @@
  
  */ 
 
-
+ 
 /*
 
 elevator(ev) 만들기
@@ -90,6 +90,7 @@ function down_f(){
 
 // 2. 엘레베이터 호출
 
+
 function call_ev(){
 			if(start_position<current_position){
 			let stop = setInterval( ()=> { 
@@ -111,6 +112,8 @@ function call_ev(){
 			document.getElementById('callbtn').innerHTML =''	
 }
 
+
+
 /*
 최초 작성 함수
 
@@ -120,7 +123,12 @@ function call_ev(){
 			let stop = setInterval( ()=> {
 					down_f() 
 					count++
-					if(count== current_position - start_position  ) /* 현재 엘레베이터 위치에서 목적지 위치의 값을 차감 
+					if(count== current_position - start_position  )
+						clearInterval(stop)
+					}
+					}, 1*1000)	
+																	 
+																	 /* 현재 엘레베이터 위치에서 목적지 위치의 값을 차감 
 																	 count 값이 단위거리 1씩 움직이는 함수의 반복 1회마다 1씩 증가하여, 최초 계산한 거리의 값에 도달하면 함수 종료
 																	 해당 방식에는 치명적인 문제점이 있는데, down_f()함수가 작동할 때마다 current_position의 값을 1씩 줄이기 때문에
 																	 count 값이 증가할 때마다 current_position과 start_position 값의 차 또한 계속해서 줄어들게 됌
@@ -144,14 +152,25 @@ function call_ev(){
 																	 .
 																	 .
 																	 count와 current_position이 동시에 단위거리 1씩 증감하므로,
-																	 둘의 차가 홀수인 경우 count=current_position - start_position 이 될 수 없으므로
+																	 둘의 차가 홀수인 경우 count = (current_position - start_position) 이 될 수 없으므로
 																	 함수는 무한루프에 빠짐. 
 																	 함수 구동 실패	
 																	 */
 /*
 첫번째 수정 내용
-																	// 직전의 실행 결과가 무한루프에 빠졌고, setInterval의 작동 방식에 대한 이해가 부족했으므로
-																	// 함수 내부 식 혹은 변수에 문제가 있을 것으로 생각
+
+function call_ev(){
+			if(start_position<current_position){
+			let stop = setInterval( ()=> {
+				let count = 0
+				down_f() 
+				count++
+				if(count== current_position - start_position  )
+						clearInterval(stop)
+					}
+					}, 1*1000)					
+					
+																	// 직전의 실행 결과가 무한루프에 빠진 원인을 setInterval의 함수 내부 식 혹은 변수에 문제가 있을 것으로 생각																	
 																	// setInterval에 대한 이해 부족으로 let count의 선언 위치가 문제일 수 있겠다는 오판을 함.
 																	// let count를 함수 내부로 이동하자 무한루프는 사라지고 목표값보다 항상 1부족한 결과가 도출되어
 																	// 각 항목의 console.log를 해본 결과
@@ -180,19 +199,22 @@ function call_ev(){
 																	 // 그러므로 언제나 원하는 수치에서 1만큼 부족한 값이 수정되어 출력
 																	 // +1 보정 값을 주어 값은 해결했으나
 																	 // 여전히 논리적으로 세세한 구동 방식이 해결되지 않은 채 과제 제출함...ㅠㅠㅠㅠㅠㅠ
-																	 //해결 방법
-																	 //if문구에 변수들간의 차(current_position과 목적지 사이의 거리)를 기준으로 잡지 않고
-																	 //current_position = 목적지<button>의 값 으로 조건을 변경
-																	 	ㄴ양측 데이터의 차를 이용하지 않고 위치를 이용
-																	
-																	
-function call_ev(){
-			let count = 0
+ //해결 방법
+ //if문구에 변수들간의 차(current_position과 목적지 사이의 거리)를 기준으로 잡지 않고
+ //current_position == 목적지<button>의 값 으로 조건을 변경
+ 	ㄴ양측 데이터의 차(거리)를 이용하지 않고 비교연산자를 통한 boolean 이용'
+ 	
 			if(start_position<current_position){
-			let stop = setInterval( ()=> {
+			let stop = setInterval( ()=> { 
 					down_f() 
-					count++
-					if(count== current_position - start_position  )
+					if(current_position==start_position){
+						clearInterval(stop)
+					}
+					}, 1*1000)
+					
+//다른 해결 방법 찾기
+ 1. 함수 실행 전 current_position의 값을 상수로 선언하여 고정된 값을 이용. -> up_f() down_f() 자체가
+
 
 
 
