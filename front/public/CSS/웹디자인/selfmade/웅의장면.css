@@ -27,9 +27,9 @@ img{width : 250px; height : 250px;}
 .ct_img img{width : 400px; height : 400px; }
 
 .ct_sub_title{font-family: 'NanumBarunGothicBold'; font-size:20px; margin-bottom : 10px; margin-top : 10px ;}
-.ct_txt{font-family: 'NanumBarunGothic'; font-size: 17px;}
-.ct_txt p{ font-style : italic; }
-.player{height : 250px; }
+.ct_txt{font-family: 'NanumBarunGothic'; font-size: 17px; }
+.ct_txt p{ font-style : italic; margin-bottom : 10px;}
+.player{height : 250px; margin-top: 10px;}
 
 
 
