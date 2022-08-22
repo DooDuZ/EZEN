@@ -28,6 +28,7 @@
 let studentlist = [ ] // *여러개 학생 객체를 저장하는 배열 [ 함수 밖에 선언한 이유 : 여러 함수들에서 사용하기 위해서]
 학생출력()
 
+
 function 점수등록(){ // 2. 점수 등록 버튼을 눌렀을때
 	// 1. 학생 객체 : HTML 입력받은 데이터로 선언
 		// document.getElementById('kor').value : input에 입력된 무조건 문자열 가져오기
@@ -36,9 +37,10 @@ function 점수등록(){ // 2. 점수 등록 버튼을 눌렀을때
 		name : document.getElementById('name').value ,	/* 이름 속성[키:값] */
 		kor : Number( document.getElementById('kor').value ) ,		/* 국어 속성 */
 		eng : Number( document.getElementById('eng').value ),		/* 영어 속성 */
-		mat : Number( document.getElementById('mat').value )		/* 수학 속성 */
+		mat : Number( document.getElementById('mat').value ),		/* 수학 속성 */
+		sum : Number( document.getElementById('kor').value ) + Number( document.getElementById('eng').value ) + Number( document.getElementById('mat').value ), 
+		avg : (Number( document.getElementById('kor').value ) + Number( document.getElementById('eng').value ) + Number( document.getElementById('mat').value ))/3 ,
 	}
-	
 	// * 배열에 저장하기전[ 학생등록 전 ]에 중복체크!!!
 	if( 이름중복체크( student.name )  ) { // 이름중복체크 함수에서 결과[return]가 true 이면 
 		return // return 함수 종료 하는 의미로 return 될 경우에는 아래코드는 실행되지 않는다.
@@ -46,9 +48,9 @@ function 점수등록(){ // 2. 점수 등록 버튼을 눌렀을때
 	
 	// 2. 객체를 배열에 담기 
 	studentlist.push( student ) // 배열명.push( 데이터 ) : 배열에 데이터 추가 
+
 	// 3. 알림/확인 
 	alert('학생 점수 등록이 되었습니다.')
-	console.log( studentlist )
 	// 4. HTML에 입력된 내용 지우기
 	document.getElementById('name').value = ''
 	document.getElementById('kor').value = ''
@@ -56,6 +58,7 @@ function 점수등록(){ // 2. 점수 등록 버튼을 눌렀을때
 	document.getElementById('mat').value = ''
 	// 5. 등록할때마다 테이블내 html 재호출
 	학생출력()
+
 	
 } // f end 
 
@@ -72,29 +75,62 @@ function 이름중복체크( name ) { // 학생 이름 중복체크 함수 정�
 	return false // 배열내 name 동일한 이름이 없다. 
 } // f end 
 
+
 function 학생출력() {
 	// 1. 변수에 html태그[문자열]를 저장하기 
 	let html = '<tr><th>등수</th><th>학생명</th><th>국어</th><th>영어</th><th>수학</th><th>총점</th><th>평균</th><th>비고</th></tr>'
 	// *** 배열내 객체들을 하나씩 꺼내기 -> 객체 정보를 html 화 
+	         
 	for( let i = 0 ; i<studentlist.length ; i++ ){
 		// i는 0부터 배열내 마지막인덱스까지[ 배열의길이-1 ] 1씩 증가반복
-		
+		/*
 		// 총점  = 국어 + 영어 + 수학 
 		let sum = studentlist[i].kor +  studentlist[i].eng +  studentlist[i].mat
 		// 평균 = 총점 / 과목수 
 		let avg = sum / 3 
-		
+		*/
 		// 객체에 들어있는 데이터를 html로 출력 
-		html += '<tr>' + 
-					'<th>등수</th>'+
+		ranking(i)
+	
+		
+				html += 
+				'<tr>' + 
+				'<th>'+studentlist[i].rnk+'</th>'+
+				'<th>'+studentlist[i].name+'</th>'+
+				'<th>'+studentlist[i].kor+'</th>'+
+				'<th>'+studentlist[i].eng+'</th>'+
+				'<th>'+studentlist[i].mat+'</th>'+
+				'<th>'+studentlist[i].sum+'</th>'+
+				'<th>'+studentlist[i].avg+'</th>'+
+				'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
+				'</tr>' 
+
+	/*
+		if(studentlist[i].rnk === 1 ){
+			html += '<tr>' + 
+					'<th>'+studentlist[i].rnk+'</th>'+
 					'<th>'+studentlist[i].name+'</th>'+
 					'<th>'+studentlist[i].kor+'</th>'+
 					'<th>'+studentlist[i].eng+'</th>'+
 					'<th>'+studentlist[i].mat+'</th>'+
-					'<th>'+sum+'</th>'+
-					'<th>'+avg+'</th>'+
+					'<th>'+studentlist[i].sum+'</th>'+
+					'<th>'+studentlist[i].avg+'</th>'+
 					'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
-				'</tr>' 
+			'</tr>' 
+			}
+				if(studentlist[i].rnk === 2 ){
+			html += '<tr>' + 
+					'<th>'+studentlist[i].rnk+'</th>'+
+					'<th>'+studentlist[i].name+'</th>'+
+					'<th>'+studentlist[i].kor+'</th>'+
+					'<th>'+studentlist[i].eng+'</th>'+
+					'<th>'+studentlist[i].mat+'</th>'+
+					'<th>'+studentlist[i].sum+'</th>'+
+					'<th>'+studentlist[i].avg+'</th>'+
+					'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
+			'</tr>' 
+			}
+	*/
 		// 변수는 문자처리 X // 변수는 앞전에 미리 정의된 단어[ 키워드 = 컴퓨터가 알고 있는 단어 ]
 	} // for end 
 	// 2. 해당 변수를 html에 출력하기
@@ -106,3 +142,17 @@ function 학생삭제( i ) { // 학생 삭제하는 함수 [ 매개변수 : 삭�
 	studentlist.splice( i , 1 ) // i번째 인덱스의 객체 1개 삭제 
 	학생출력() // 5. 삭제 할때마다 테이블내 html 재호출
 }
+
+let grade = 0
+
+function ranking(i){
+	grade = 1
+	for(let j = 0 ; j < studentlist.length ; j++ ){
+		if(studentlist[i].avg < studentlist[j].avg){
+			grade+=1
+		}
+	}
+	studentlist[i].rnk = grade	
+}	
+
+
