@@ -97,3 +97,24 @@ function 점수수정kor(i){
 		
 		점수출력()
 }
+
+function 점수수정mat(i){
+		const correctscore = Number(prompt('새로운 점수를 입력해 주세요.'))
+		studentlist[i].sum = (studentlist[i].sum - (studentlist[i].mat-correctscore))
+		studentlist[i].avg = studentlist[i].sum/3 
+		studentlist[i].kor = correctscore
+		
+		alert('점수 수정이 완료 되었습니다.')
+		
+		점수출력()
+}
+function 점수수정eng(i){
+		const correctscore = Number(prompt('새로운 점수를 입력해 주세요.'))
+		studentlist[i].sum = (studentlist[i].sum - (studentlist[i].eng-correctscore))
+		studentlist[i].avg = studentlist[i].sum/3 
+		studentlist[i].kor = correctscore
+		
+		alert('점수 수정이 완료 되었습니다.')
+		
+		점수출력()
+}
