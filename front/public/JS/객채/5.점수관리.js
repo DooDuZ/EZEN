@@ -80,62 +80,25 @@ function 학생출력() {
 	// 1. 변수에 html태그[문자열]를 저장하기 
 	let html = '<tr><th>등수</th><th>학생명</th><th>국어</th><th>영어</th><th>수학</th><th>총점</th><th>평균</th><th>비고</th></tr>'
 	// *** 배열내 객체들을 하나씩 꺼내기 -> 객체 정보를 html 화 
-	         
+	inputrank()
 	for( let i = 0 ; i<studentlist.length ; i++ ){
-		// i는 0부터 배열내 마지막인덱스까지[ 배열의길이-1 ] 1씩 증가반복
-		/*
-		// 총점  = 국어 + 영어 + 수학 
-		let sum = studentlist[i].kor +  studentlist[i].eng +  studentlist[i].mat
-		// 평균 = 총점 / 과목수 
-		let avg = sum / 3 
-		*/
-		// 객체에 들어있는 데이터를 html로 출력 
-		ranking(i)
-	
 		
-				html += 
-				'<tr>' + 
-				'<th>'+studentlist[i].rnk+'</th>'+
-				'<th>'+studentlist[i].name+'</th>'+
-				'<th>'+studentlist[i].kor+'</th>'+
-				'<th>'+studentlist[i].eng+'</th>'+
-				'<th>'+studentlist[i].mat+'</th>'+
-				'<th>'+studentlist[i].sum+'</th>'+
-				'<th>'+studentlist[i].avg+'</th>'+
-				'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
-				'</tr>' 
+			html += 
+			'<tr>' + 
+			'<th>'+(i+1)+'</th>'+
+			'<th>'+studentlist[i].name+'</th>'+
+			'<th>'+studentlist[i].kor+'</th>'+
+			'<th>'+studentlist[i].eng+'</th>'+
+			'<th>'+studentlist[i].mat+'</th>'+
+			'<th>'+studentlist[i].sum+'</th>'+
+			'<th>'+studentlist[i].avg+'</th>'+
+			'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
+			'</tr>'
 
-	/*
-		if(studentlist[i].rnk === 1 ){
-			html += '<tr>' + 
-					'<th>'+studentlist[i].rnk+'</th>'+
-					'<th>'+studentlist[i].name+'</th>'+
-					'<th>'+studentlist[i].kor+'</th>'+
-					'<th>'+studentlist[i].eng+'</th>'+
-					'<th>'+studentlist[i].mat+'</th>'+
-					'<th>'+studentlist[i].sum+'</th>'+
-					'<th>'+studentlist[i].avg+'</th>'+
-					'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
-			'</tr>' 
-			}
-				if(studentlist[i].rnk === 2 ){
-			html += '<tr>' + 
-					'<th>'+studentlist[i].rnk+'</th>'+
-					'<th>'+studentlist[i].name+'</th>'+
-					'<th>'+studentlist[i].kor+'</th>'+
-					'<th>'+studentlist[i].eng+'</th>'+
-					'<th>'+studentlist[i].mat+'</th>'+
-					'<th>'+studentlist[i].sum+'</th>'+
-					'<th>'+studentlist[i].avg+'</th>'+
-					'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
-			'</tr>' 
-			}
-	*/
-		// 변수는 문자처리 X // 변수는 앞전에 미리 정의된 단어[ 키워드 = 컴퓨터가 알고 있는 단어 ]
-	} // for end 
-	// 2. 해당 변수를 html에 출력하기
+	}
+	
 	document.getElementById('listtable').innerHTML = html
-} // f end 
+} 
 
 function 학생삭제( i ) { // 학생 삭제하는 함수 [ 매개변수 : 삭제할 식별번호(배열내 저장된 순서번호=인덱스) ]
 	alert( studentlist[i].name + '의 점수를 삭제 합니다.')
@@ -143,16 +106,18 @@ function 학생삭제( i ) { // 학생 삭제하는 함수 [ 매개변수 : 삭�
 	학생출력() // 5. 삭제 할때마다 테이블내 html 재호출
 }
 
-let grade = 0
 
-function ranking(i){
-	grade = 1
-	for(let j = 0 ; j < studentlist.length ; j++ ){
-		if(studentlist[i].avg < studentlist[j].avg){
-			grade+=1
+
+function inputrank( ){
+	
+	for(let i = 0 ; i < studentlist.length ; i++ ){
+		for( let j = i+1 ; j<studentlist.length; j++ ){
+			if( studentlist[i].sum > studentlist[j].sum ){
+				let temp = studentlist[i]
+				studentlist[i] = studentlist[j]
+				studentlist[j] = temp
+			}
 		}
 	}
-	studentlist[i].rnk = grade	
-}	
-
+}
 
