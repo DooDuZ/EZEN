@@ -94,9 +94,7 @@ function 학생출력() {
 			'<th>'+studentlist[i].avg+'</th>'+
 			'<th><button onclick="학생삭제('+i+')" >삭제</button></th>'+
 			'</tr>'
-
-	}
-	
+	}	
 	document.getElementById('listtable').innerHTML = html
 } 
 
