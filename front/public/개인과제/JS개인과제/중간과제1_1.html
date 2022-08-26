@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+			/*
+			 문제1 : prompt함수 로 금액을 입력받아서 지폐 세기 
+				// 예) 356789 입력했을경우 
+				// 결과 예상 출력 [  console.log ] : 
+					십만원 : 3장
+					만원 : 5장
+					천원 : 6장
+					백원 : 7개
+			// 문제2 : prompt함수 로 반지름 입력받아 원 넓이 출력 
+				// 원 넓이 공식  : 반지름 * 반지름 * 원주율[3.14]
+			// 문제3 : prompt함수 로 숫자를 입력받아  입력받은 값이 3의 배수인지 체크
+				// 결과 예상 출력 
+					// 3의 배수이면 true 출력 / 아니면 false
+			// 문제4 : prompt함수 로 숫자를 입력받아  입력받은 값이 홀수인지 체크
+				// 결과 예상 출력 
+					// 홀수이면 true 출력 / 짝수이면 false
+			// 문제5 : 두 실수를 입력받아 앞실수의 값이 뒤 실수의 값의 몇% 인지 출력하기 
+				// 예) 54.5    84.3 이면    결과 : 64.~~%
+			*/
+		
+			
+			//문제1 : prompt함수 로 금액을 입력받아서 지폐 세기 
+			
+			let price = Number(prompt('가격'))
+			let 오만원권 = (price - (price%50000))/50000
+			let 만원권 = (price%50000 - (price%50000)%10000)/10000 
+			let 천원권 = Math.floor((price%10000)/1000) 
+			let 짤짤이 = Math.floor((price%1000)/100)
+			
+			
+			console.log('5만원 : ' + 오만원권 + '장')
+			console.log('만원 : ' + 만원권 + '장')
+			console.log('천원 : ' + 천원권 + '장')
+			console.log('백원 : ' + 짤짤이 + '개')
+			
+			//문제2 :  prompt함수 로 반지름 입력받아 원 넓이 출력 
+				// 원 넓이 공식  : 반지름 * 반지름 * 원주율[3.14]
+			
+				let r = Number(prompt('반지름'))
+				
+				console.log(r*r*3.14)
+				
+			// 문제3 : prompt함수 로 숫자를 입력받아  입력받은 값이 3의 배수인지 체크
+				// 결과 예상 출력 
+					// 3의 배수이면 true 출력 / 아니면 false
+			let 삼배수 = Number(prompt('3배수 체크'))
+			
+			if(삼배수%3==0){
+				console.log(true)
+			}else{
+				console.log(false)
+			}
+			// 문제4 : prompt함수 로 숫자를 입력받아  입력받은 값이 홀수인지 체크
+				// 결과 예상 출력 
+					// 홀수이면 true 출력 / 짝수이면 false
+			let ran_numb = Number(prompt('홀짝체크'))
+			
+			if(ran_numb%2==1){
+				console.log(true)
+			}else{
+				console.log(false)
+			}
+			
+			// 문제5 : 두 실수를 입력받아 앞실수의 값이 뒤 실수의 값의 몇% 인지 출력하기 
+			
+			let x = Number(prompt('분자'))
+			let y = Number(prompt('분모'))
+			
+			console.log(x/y*100 + '%')
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+</body>
+</html>

@@ -12,7 +12,7 @@
  const plusBtn = document.querySelector('#plus')
  const minusBtn = document.querySelector('#minus')
  
- /*
+
   const listener = () => {h1.textContent = `클릭횟수 : ${counter++}`}
   const listener2 = () =>{h1.textContent = `클릭횟수 : ${counter--}`}
  
@@ -36,9 +36,9 @@
 		isConnect = false
 	}	
 })
- */
- 
 
+ 
+ /*
  // 출력하는 함수
 function display(){h1.textContent = `클릭횟수 : ${counter}`}
  
@@ -60,6 +60,9 @@ function display(){h1.textContent = `클릭횟수 : ${counter}`}
  
  
  //2.연결해제
+ //새로운 함수 똑같은 모양이라도 식별 불가 / remove 안됌
+ 
+
  disconnectBtn.addEventListener( 'click', ()=> {
 	if( isConnect == true ){
 		plusBtn.removeEventListener( 'click' ,()=> {
@@ -75,6 +78,7 @@ function display(){h1.textContent = `클릭횟수 : ${counter}`}
 	}	
 })
 
+*/
 //3. 증가/ 감소 버튼
 
  

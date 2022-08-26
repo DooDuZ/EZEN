@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+		
+		/*
+		문제1 : prompt함수 로 금액을 입력받아서 지폐 세기 
+			// 예) 356789 입력했을경우 
+			// 결과 예상 출력 [  console.log ] : 
+				십만원 : 3장
+				만원 : 5장
+				천원 : 6장
+				백원 : 7개
+		// 문제2 : prompt함수 로 반지름 입력받아 원 넓이 출력 
+			// 원 넓이 공식  : 반지름 * 반지름 * 원주율[3.14]
+		// 문제3 : prompt함수 로 숫자를 입력받아  입력받은 값이 3의 배수인지 체크
+			// 결과 예상 출력 
+				// 3의 배수이면 true 출력 / 아니면 false
+		// 문제4 : prompt함수 로 숫자를 입력받아  입력받은 값이 홀수인지 체크
+			// 결과 예상 출력 
+				// 홀수이면 true 출력 / 짝수이면 false
+		// 문제5 : 두 실수를 입력받아 앞실수의 값이 뒤 실수의 값의 몇% 인지 출력하기 
+			// 예) 54.5    84.3 이면    결과 : 64.~~%
+		*/
+
+		//문제1
+		
+		const price = prompt('가격')
+		
+		for(let i = price.length-1 ; i>=0 ; i--){
+			console.log(10**i+'원권 : '+price[(price.length-i-1)] + '장')			
+		}
+			
+		//문제2
+		
+		const r = Number(prompt('반지름'))
+		
+		console.log('원의 반지름이 '+ r + '일때 원의 넓이 : ' + r*r*3.14)
+		
+		//문제3,4 prompt함수 로 숫자를 입력받아  입력받은 값이 3의 배수/홀수인지 체크
+		
+		const times = Number(prompt('배수체크'))
+		
+		if(times%3==0){
+			console.log(true)			
+		}else{
+			console.log(false)
+		}
+		
+		if(times%2!=0){
+			console.log(true)			
+		}else{
+			console.log(false)
+		}
+		
+		//문제 5 비율 구하기
+		
+		const x = Number(prompt('숫자1'))
+		const y = Number(prompt('숫자2'))
+		
+		console.log(x/y*100 + '%')
+		
+		
+
+
+</script>
+
+</body>
+</html>
