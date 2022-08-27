@@ -15,7 +15,7 @@
 	if(input.value.trim()===''){		//	input박스에서 가져온 값의 좌우값을 모두 제거한 뒤, 남은 값이 빈칸이면
 		alert('할 일을 입력해주세요.')		//	빈칸 추가 불가능 alert
 		return		// 위 alert실행 됐으므로 return. 하단 추가 문구 저장하지 않고 탈출
-	}	
+	}
 	
 	
 	const item = document.createElement('div')			//<div></div> 태그를 생성해 저장하는 객체 -> 표현 부정확한듯 함
@@ -45,7 +45,7 @@
 	button.addEventListener('click', ()=>{	//button에 click이벤트 추가, click할 때마다 key변수값을 매개변수로 하는 removeTodo(i)함수 실행
 		removeTodo(key)						//removeTodo(i)는 아직 선언되지 않음 / 하단에 선언
 	})
-input.value=''								//input.value값의 초기화 -> html 인풋박스 내용물 삭제
+	input.value=''								//input.value값의 초기화 -> html 인풋박스 내용물 삭제
 }
 
 
