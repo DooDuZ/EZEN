@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+li{
+   list-style:none;
+}
+a{
+   text-decoration: none;
+   color: #000;
+}
+
+/*wrap*/
+
+
+/*header section*/
+.header_wrap{
+   width: 100%;
+   background: #1c3761;    
+}
+.header{
+   width: 1280px;
+   height: 80px;
+    margin: 0 auto;    
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    
+}
+.header a{
+   color:#fff;
+}
+.logo_section{
+   width: 200px;
+   height: 50px;
+   background: #ccc;
+}
+.right_section{
+   height:70px;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.lognin_section{
+   display:flex;
+   justify-content: flex-end;
+   font-size: 14px;
+}
+.lognin_section li{
+   margin:0 10px;
+}
+.gnb{
+   display:flex;
+}
+.gnb li{
+   margin:0 10px;
+}
+
+.contaeinr{
+	font-family: 'Pretendard-Regular';
+   width:100%;
+   margin:0 auto;
+}
+
+.main_wrap{width: 1280px; margin : 0 auto;}
+.main_wrap h3{margin-top : 10px; margin-bottom: 10px;}
+.logo, .id_box, .info_box , .btn_box{width : 480px; margin : 0 auto;}
+.logo{margin-top:30px; margin-bottom:30px;} 
+.logo_img{width : 250px; height : 100px; margin:0 auto;}
+.logo_img img{width : 100%; height : auto;}
+
+.id_box input{width : 480px; height : 40px;}
+.info_box input, select{width : 480px; height : 40px;}
+#birth_input{display: flex; justify-content: space-between;}
+#birth_box input, select{ width : 150px;}
+.sexuality select{width : 480px; height : 40px;}
+.btn_box{margin-top:20px; margin-bottom:30px;}
+.btn_box span{color:white; font-size : 15px; font-weight: bold;}
+.btn_box button{ width : 480px; height : 40px; cursor : pointer;
+border-style : none; background-color: #1c3761;}
+
+/*footer section*/
+.footer_wrap{
+   width: 100%;
+   background: #1c3761; 
+   padding:10px 0;
+}
+
+.footer{
+   width:1280px;
+   margin:0 auto;
+   font-size:14px;
+   text-align:center;
+   color:#fff;   
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>댕댕이유치원</title>
+
+<link rel="stylesheet" href="sign_up.css">
+
+
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="header_wrap">
+			<div class="header">
+				<div class="left_section">
+					<div class="logo_section">로고이미지 영역입니다</div>
+				</div><!-- left_section -->
+				<div class="right_section">
+					<ul class="lognin_section">
+						<li><a href="javascript:void(0)">로그인</a></li>
+						<li><a href="javascript:void(0)">회원가입</a></li>
+					</ul>
+				
+					<ul class="gnb">
+						<li><a href="javascript:void(0)">소개합니다</a></li>
+						<li><a href="javascript:void(0)">예약페이지</a></li>
+						<li><a href="javascript:void(0)">후기페이지</a></li>
+						<li><a href="javascript:void(0)">문의사항</a></li>		
+					</ul><!--  gnb-->
+				</div><!-- right_section -->			
+			</div><!-- header -->				
+		</div><!-- header_wrap -->
+		
+		<div class="contaeinr">
+			<div class="main_wrap">
+				<div class="logo">
+					<div class="logo_img">
+						<img src="shin/img/닥스훈트.png">
+					</div>
+				</div>
+				<div class="id_box">
+					<div>
+						<h3>아이디</h3>
+						<input id="id_input" type="text">
+						<p id="idp"></p>
+					</div>
+					<div>
+						<h3>비밀번호</h3>
+						<input id="pw_input" type="password">
+						<p id="pwp"></p>
+					</div>
+					<div>
+						<h3>비밀번호 확인</h3>
+						<input id="repeatPw" type="password">
+						<p id="pwtp"></p>
+					</div>				
+				</div>
+				<div class="info_box">
+					<div>
+						<h3>이름</h3>
+						<input id="name_input" type="text">
+					</div>
+					<div id="birth_box">
+						<h3>생년월일</h3>
+						<div id="birth_input">
+							<input type="text" placeholder="년(4자)">
+							<select>
+								<option>선택</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>	
+							<input type="text" placeholder="일">	
+						</div>			
+					</div>
+					<div class="sexuality">
+						<h3>성별</h3>
+						<select>
+							<option>선택안함</option>
+							<option>남자</option>
+							<option>여자</option>
+						</select>
+					</div>
+					<div>
+						<h3>이메일</h3>
+						<input id="email_input" type="email">
+						<p id="email_output"></p>
+					</div>
+				</div>
+				<div class="btn_box">
+					<button onclick="submit_info()"><span>회원가입</span></button>
+					<p id="btn_p"></p>
+				</div>
+			</div>			
+		</div><!-- contaeinr -->
+		
+		<div class="footer_wrap">		
+			<div class="footer">
+				<ul class="top_footer">
+					<li>BMSMILE Co., Ltd.</li>
+					<li>Tel.1644-9603 |</li>
+					<li>Email : contact@bmsmile.com |</li> 
+				</ul><!-- top_footer -->
+				<ul class="booter_footer">
+					<li>E-Commerce Registration : 2020-Seoul Gangnam-01687</li>
+					<li>Address : 4th floor, 8, Teheran-ro 44-gil, Gangnam-gu, Seoul, Republic of Korea |</li> 
+					<li>CEO : Bongsu ParkㅣPersonal Info Manager : Dongwook Lee |</li> 
+				
+				</ul><!-- booter_footer -->		
+			</div><!-- footer -->
+		</div><!-- footer_wrap -->		
+	</div><!-- wrap -->
+	
+	
+	
+	<script src="sign_up.js"></script>
+</body>
+</html>

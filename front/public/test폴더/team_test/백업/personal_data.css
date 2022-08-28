@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+
+li{
+   list-style:none;
+}
+a{
+   text-decoration: none;
+   color: #000;
+}
+
+/*wrap*/
+
+/*header section*/
+.header_wrap{
+   width: 100%;
+   background: #1c3761;    
+}
+.header{
+   width: 1280px;
+   height: 80px;
+    margin: 0 auto;    
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    
+}
+.header a{
+   color:#fff;
+}
+.left_section{}
+.logo_section{
+   width: 200px;
+   height: 50px;
+   background: #ccc;
+}
+.right_section{
+   height:70px;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.lognin_section{
+   display:flex;
+   justify-content: flex-end;
+   font-size: 14px;
+}
+.lognin_section li{
+   margin:0 10px;
+}
+.gnb{
+   display:flex;
+}
+.gnb li{
+   margin:0 10px;
+}
+
+
+
+/* -------------------------------- main ---------------------------- */
+
+
+
+.contaeinr{
+	font-family: 'Pretendard-Regular';
+   width:100%;
+   margin:0 auto;
+}
+button{width: 480px; height : 40px; border-style:none;
+font-size : 18px; font-weight : bold; color:white; 
+background-color: #1c3761; cursor: pointer;
+border-radius: 5px; margin: 5px 0;
+}
+
+.c_main_img{background-image: url("shin/img/puppy_cut.jpg"); background-size: cover; height: 24.4vh;}
+
+.main_wrap{width: 600px; margin : 0 auto; height : 500px; 
+display : flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.logo{margin-bottom : 20px;}
+.logo img{ width : 250px; height : auto;}
+.content_box{width : 480px ; height : auto; border : 1px solid #1c3761; }
+.content_box input{width : 20px; height : 20px; margin-right : 5px; cursor: pointer;}
+.check_all{display : flex; align-items: center; margin : 10px;}
+.check_sub li{margin-left : 30px; font-size : 18px; display : flex; align-items: center; margin-bottom : 5px;}
+.check_sub{margin-bottom: 10px;}
+.btn_box{display : flex; flex-direction: column; align-items: center;}
+#cancel{background-color: #8e8e8e; margin-top: 0 ;}
+
+
+
+
+
+/*footer section*/
+.footer_wrap{
+   width: 100%;
+   background: #1c3761; 
+   padding:10px 0;
+}
+
+.footer{
+   width:1280px;
+   margin:0 auto;
+   font-size:14px;
+   text-align:center;
+   color:#fff;   
+}
