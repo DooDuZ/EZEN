@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="personal_data.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="header_wrap">
+			<div class="header">
+				<div class="left_section">
+					<div class="logo_section">로고이미지 영역입니다</div>
+				</div><!-- left_section -->
+				<div class="right_section">
+					<ul class="lognin_section">
+						<li><a href="javascript:void(0)">로그인</a></li>
+						<li><a href="javascript:void(0)">회원가입</a></li>
+					</ul>
+					<ul class="gnb">
+						<li><a href="javascript:void(0)">소개합니다</a></li>
+						<li><a href="javascript:void(0)">예약페이지</a></li>
+						<li><a href="javascript:void(0)">후기페이지</a></li>
+						<li><a href="javascript:void(0)">문의사항</a></li>		
+					</ul><!--  gnb-->
+				</div><!-- right_section -->			
+			</div><!-- header -->				
+		</div><!-- header_wrap -->
+
+
+		<div class="container">
+			<div class="c_main_img"></div>
+			<div class="main_wrap">				
+				<div class="logo">
+					<img src="shin/img/닥스훈트.png">
+				</div>
+				<div class="content_box">
+					<div class="check_all">
+						<input id="check_all" type="checkbox"><h3>모두동의</h3>
+					</div>
+					<div class="check_sub">
+						<ul>
+							<li><input class="check_one" class="must_check" type="checkbox" onclick="select_one()"><a href="">[필수] 만 14세 이상입니다</a></li>
+							<li><input class="check_one" class="must_check"  type="checkbox" onclick="select_one()"><a href="">[필수] 이용약관 동의</a></li>
+							<li><input class="check_one" class="must_check"  type="checkbox" onclick="select_one()"><a href="">[필수] 개인정보 수집 및 이용 동의</a></li>
+							<li><input class="check_one" class="must_check"  type="checkbox" onclick="select_one()"><a href="">[필수] 개인정보 제3자 제공 동의</a></li>
+							<li><input class="check_one" type="checkbox" onclick="select_one()"><a href="">[선택] 광고성 목적의 개인정보 수집 및 이용 동의</a></li>
+							<li><input class="check_one" type="checkbox" onclick="select_one()"><a href="">[선택] 광고성 정보 수신 동의</a></li>
+						</ul>					
+					</div>
+				</div>
+				<div id="alertp"></div>
+				<div class="btn_box">
+					<button id="keepgoing" onclick="checking_must()">계속하기</button>
+					<button id="cancel" onclick="location.href='index.html'">취소하기</button>
+				</div>
+			</div>
+		</div>
+		
+				
+		<div class="footer_wrap">		
+			<div class="footer">
+				<ul class="top_footer">
+					<li>BMSMILE Co., Ltd.</li>
+					<li>Tel.1644-9603 |</li> 
+					<li>Email : contact@bmsmile.com |</li> 
+				</ul><!-- top_footer -->
+				<ul class="booter_footer">
+					<li>E-Commerce Registration : 2020-Seoul Gangnam-01687</li>
+					<li>Address : 4th floor, 8, Teheran-ro 44-gil, Gangnam-gu, Seoul, Republic of Korea |</li> 
+					<li>CEO : Bongsu ParkㅣPersonal Info Manager : Dongwook Lee |</li> 
+				
+				</ul><!-- booter_footer -->		
+			</div><!-- footer -->
+		</div><!-- footer_wrap -->		
+	</div><!-- wrap -->
+	
+
+<script src="personal_data.js"></script>
+</body>
+</html>

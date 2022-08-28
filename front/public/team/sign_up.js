@@ -3,10 +3,14 @@
  */
  
  const id_info = document.querySelector('#id_input')
+ const idp = document.querySelector('#idp')
  const pw_info = document.querySelector('#pw_input')
- const pw_again_info = document.querySelector('#pw_input_again')
+ const pwp = document.querySelector('#pwp')
+ const repeatPw_info = document.querySelector('#repeatPw')
+ const pwtp = document.querySelector('#pwtp')
  const email_input = document.querySelector('#email_input')
  const email_checked = document.querySelector('#email_output')
+
  
  
  let domain_box = ['com' , 'kr' , 'net']
@@ -15,12 +19,11 @@
  
  //1. 이메일 유효성 검사
 
-email_input.addEventListener('keyup' , ()=>{	
-	유효성검사()
+email_input.addEventListener('change' , ()=>{	
+	email_test()
 })
 
-
-function 유효성검사(){
+function email_test(){
 	
 	 let checking = email_input.value.indexOf('@');
 	 let checking_2nd = email_input.value.split('@');
@@ -54,3 +57,71 @@ function 유효성검사(){
 		email_checked.textContent = '이메일 형식이 아닙니다.'
 	}
 }
+
+
+id_info.addEventListener('keyup', ()=> {
+	console.log(id_info.value.length)
+	idlength_test()
+})
+
+
+pw_info.addEventListener('change', ()=>{
+	pwlength_test()	
+})
+
+repeatPw.addEventListener('change', ()=>{
+	repeatPw_test()	
+})
+
+//2. id유효성 검사 - 정규표현식x 단순 길이로만 체크
+
+function idlength_test(){
+	
+	if(id_info.value.length==0){
+		idp.textContent =''
+	}else if(id_info.value.length<5){
+		idp.style.color = 'red'
+		idp.textContent = 'ID가 너무 짧아요!'
+	}else{
+		idp.textContent =''
+		return true
+	}
+}
+
+
+//3. pw유효성 검사 - 정규표현식x 단순 길이 + 비밀번호 확인까지만 체크
+
+function pwlength_test(){
+	
+	if(pw_info.value.length==0){
+		pwp.textContent =''
+	}else if(pw_info.value.length<8){
+		pwp.style.color = 'red'
+		pwp.textContent = '비밀번호가 너무 짧아요!'
+	}else{
+		pwp.textContent =''
+	}
+}
+
+function repeatPw_test(){
+	if(repeatPw.value.length==0){
+		pwtp.textContent =''
+	}else if(pw_info.value!=repeatPw.value){
+		pwtp.style.color = 'red'
+		pwtp.textContent = '비밀번호가 달라요!'
+	}else{
+		pwtp.textContent =''
+		return true
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

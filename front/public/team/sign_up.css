@@ -44,7 +44,6 @@ a{
 .header a{
    color:#fff;
 }
-.left_section{}
 .logo_section{
    width: 200px;
    height: 50px;
@@ -108,8 +107,3 @@ border-style : none; background-color: #1c3761;}
    text-align:center;
    color:#fff;   
 }
-
-.top_footer{}
-.top_footer li{}
-.booter_footer{}
-.booter_footer li{}
