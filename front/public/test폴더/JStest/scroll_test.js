@@ -1,9 +1,9 @@
 /**
  * 
  */
- const dot_bar = document.querySelector('.dot_bar')
 
 
+/*
  let i = 210
  
  function scroll_down(){
@@ -15,19 +15,23 @@
 	i -= 10
 	dot_bar.style.height = i+'px'
 }
-//window.scrollY
-let height = []
+		window.scrollY 써야함!!
+
+*/
+
+const dot_bar = document.querySelector('.dot_bar')
 
 window.addEventListener('scroll', () => { 	
-		let j = 0
-		height.push(window.scrollY)
-		j++
 		
-		if(height[j]>height[j-1]){
-			scroll_down()
-		}else if(height[j]<height[j-1]){
-			scroll_up()
-		}	
+		let height = window.scrollY
+		
+		console.log(height)
+		
+		function scroll_move(){
+			dot_bar.style.height = height + 210 + 'px'
+		}
+		scroll_move()
+		console.log(dot_bar.style.height)
 })
 
 
