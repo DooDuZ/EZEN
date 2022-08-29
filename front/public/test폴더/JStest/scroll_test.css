@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+/* 본문 폰트 프리텐다드 */
+@font-face {   
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 타이틀 폰트 단감체 */
+@font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ---- main start ---- */
+
+.container{
+   margin-top: 100px;
+   margin-bottom: 100px;
+}
+
+
+main{
+   height: 550px;
+   background-color: #1c3761;
+}
+
+
+main .main_bg_img{
+   height: 350px;
+   background-image: url("../images/company_info_main_bg_img.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+
+.main_title .main_title_01{
+   color: #ffffff;
+   text-align: center;
+   font-size: 50px;
+   font-family: Pretendard-Regular;
+   margin-top: 50px;
+}
+
+.main_title .main_title_02{
+   color: #ffffff;
+   text-align: center;
+   font-size: 27px;
+   font-family: Pretendard-Regular;
+   font-weight: 100;
+   margin-top: 10px;
+}
+
+
+/* ---- main end ---- */
+
+
+
+
+
+
+
+
+
+article{
+   width: 1280px;
+   margin: 0 auto;
+   height: 3000px;
+}
+
+
+
+
+/* ---- container start ---- */
+
+.container{
+   background-image: url("img/dot.png");
+   background-repeat: repeat-y;
+   background-position: center;
+   height: 2090px;
+   position: relative;
+   border: 1px solid red;
+}
+
+
+/* ---- left_content start ---- */
+
+.left_content{
+   float: left;
+   margin-top: 10px;
+}
+
+
+.left_ct_2020{
+   margin-top: 300px;
+}
+
+
+.left_ct_2018{
+   margin-top: 420px;
+}
+
+
+.left_ct_2022, .left_ct_2020, .left_ct_2018{
+   width: 600px;
+   height: 650px;
+   text-align: right;
+}
+
+.left_ct_title{
+   font-family: CWDangamAsac-Bold;
+   font-size: 45px;
+   color: #1c3761;
+   
+   padding-right: 30px;
+   padding-top: 30px;
+}
+
+
+.left_text_box{
+   padding-right: 30px;
+   padding-top: 15px;
+}
+
+.left_ct_text_01 {
+   font-family: Pretendard;
+   font-weight: 200;
+   font-size: 20px;
+   padding-right: 15px;
+   
+   float: right;
+}
+
+
+.left_text_box_02{
+   clear: both;
+   padding-top: 10px;
+}
+
+.left_ct_text_02{
+   font-family: Pretendard;
+   font-weight: 600;
+   font-size: 20px;
+   
+   float: right;
+}
+
+.left_img_box{
+   clear: both;
+   width: 600px;
+   height: 300px;
+   padding-top: 35px;
+   padding-right: 30px;
+}
+
+.left_img{
+   float: right;
+   width: 500px;
+   height: 270px;
+   background-color: #8080ff;
+   background-image: url("../images/company_info_sub_img_01.jpg");
+   background-position: center;
+   background-size: 600px;
+}
+
+
+/* ---- left_content end ---- */
+
+
+
+
+
+/* ---- center_line start ---- */
+
+.center_line{
+   margin: 0 auto;
+}
+
+
+.dot_bar{
+   width: 3px;
+   height: 200px;
+   left: 638px;
+   background: #ffc303;
+   position: absolute;
+   z-index: 10;   
+}
+
+
+.dot_line{               /* 동그라미 라인 */
+   width: 40px;
+   height: 40px;
+   border: 1px solid #ffc303;
+   border-radius: 50%;
+   position: absolute;
+   left: 48.4%;
+   top: 43px;
+   background-repeat: no-repeat;
+}
+
+
+.dot_ffc303{
+   left: 49.4%;
+   position: absolute;
+}
+
+.dot_bg_01{               /* 채워진 동그라미 */
+   position: absolute;
+   top: 55px;
+   width: 15px;
+   height: 15px;
+   background: #ffc303;
+   border-radius: 50%;
+
+
+}
+
+.dot_bg_02{
+   position: absolute;
+   top: 400px;
+   width: 15px;
+   height: 15px;
+   background: #ffc303;
+   border-radius: 50%;
+
+}
+
+.dot_bg_03{
+   position: absolute;
+   top: 1010px;
+   width: 15px;
+   height: 15px;
+   background: #ffc303;
+   border-radius: 50%;
+
+}
+
+.dot_bg_04{
+   position: absolute;
+   top: 1530px;
+   width: 15px;
+   height: 15px;
+   background: #ffc303;
+   border-radius: 50%;
+
+}
+
+.dot_bg_05{
+   position: absolute;
+   top: 2080px;
+   width: 15px;
+   height: 15px;
+   background: #ffc303;
+   border-radius: 50%;
+
+}
+
+
+/* ---- center_line end ---- */
+
+
+
+
+/* ---- right_content start ---- */
+
+.right_content{
+   float: right;
+   margin-top: 350px;
+}
+
+.right_ct_2020{
+   margin-top: 480px;
+}
+
+.right_ct_2021, .right_ct_2020{
+   width: 600px;
+   height: 650px;
+   text-align: left;
+}
+
+.right_ct_title{
+   font-family: CWDangamAsac-Bold;
+   font-size: 45px;
+   color: #1c3761;
+   
+   padding-left: 30px;
+   padding-top: 30px;
+}
+
+
+.right_text_box{
+   padding-top: 15px;
+   padding-left: 30px;
+   
+   float: left;
+}
+
+.right_ct_text_01 {
+   font-family: Pretendard;
+   font-weight: 200;
+   font-size: 20px;
+   padding-left: 15px;
+
+}
+
+
+.right_text_box_01, .right_text_box_02, .right_text_box_03{
+   padding-top: 10px;
+
+   float: left;
+}
+
+.left_ct_text_01{
+   padding-left: 15px;
+   
+}
+
+
+.right_ct_text_02{
+   font-family: Pretendard;
+   font-weight: 600;
+   font-size: 20px;
+   float: left;
+}
+
+
+
+.right_img_box{
+   clear: both;
+   width: 600px;
+   height: 300px;
+   padding-top: 35px;
+   padding-left: 30px;
+   
+}
+
+.right_img{
+   width: 500px;
+   height: 270px;
+   background-color: #8080ff;
+   background-image: url("../images/company_info_sub_img_02.png");
+   background-position: center;
+   background-size: 550px;
+}
+
+.right_img2{
+   width: 500px;
+   height: 270px;
+   background-color: #8080ff;
+   background-image: url("../images/company_info_sub_img_03.jpg");
+   background-position: center;
+   background-size: 600px;
+}
+
+/* ---- right_content end ---- */
+
+
+
+/* ---- container end ---- */
+

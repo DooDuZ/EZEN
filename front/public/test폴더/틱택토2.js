@@ -1,8 +1,6 @@
  /**
  * 
  */
- 
-/*
  let 게임상황 = []
  let 승리 = ''
  
@@ -19,14 +17,12 @@
 	}
 }
  
- function 버튼선택(i){		
-		
+ function 버튼선택(i){
 		if( 중복검사(i) ){
 			alert('이미 둔 자리입니다.')
 			return
-		}
+		}			
 		
-					
 		document.getElementById(i).innerHTML = 'O'
 		게임상황[i] = 'O'		
 		
@@ -66,7 +62,6 @@ function 승리판단(){
 			승리=게임상황[i]
 			return
 		}
+	}
 }
 
-
-*/
