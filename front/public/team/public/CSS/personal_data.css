@@ -43,7 +43,6 @@ a{
 .header a{
    color:#fff;
 }
-.left_section{}
 .logo_section{
    width: 200px;
    height: 50px;
@@ -81,26 +80,35 @@ a{
    width:100%;
    margin:0 auto;
 }
-button{width: 480px; height : 40px; border-style:none;
+button{width: 350px; height : 50px; border-style:none;
 font-size : 18px; font-weight : bold; color:white; 
 background-color: #1c3761; cursor: pointer;
-border-radius: 5px; margin: 5px 0;
 }
 
-.c_main_img{background-image: url("shin/img/puppy_cut.jpg"); background-size: cover; height: 24.4vh;}
+.c_main_img{background-image: url("../images/puppy_cut.jpg"); background-size: cover; height: 24.4vh;}
 
-.main_wrap{width: 600px; margin : 0 auto; height : 500px; 
+
+.check_title{font-size: 30px; margin-bottom : 10px;}
+.check_title ::after{ width : 70px; height : 5px; background-color : #cccccc; display : block; content : '';
+margin : 0 auto; margin-top : 20px; margin-bottom: 20px; 
+}
+.main_wrap{width: 800px; margin : 0 auto; height : 700px; 
 display : flex; flex-direction: column; align-items: center; justify-content: center;
 }
-.logo{margin-bottom : 20px;}
-.logo img{ width : 250px; height : auto;}
-.content_box{width : 480px ; height : auto; border : 1px solid #1c3761; }
-.content_box input{width : 20px; height : 20px; margin-right : 5px; cursor: pointer;}
-.check_all{display : flex; align-items: center; margin : 10px;}
-.check_sub li{margin-left : 30px; font-size : 18px; display : flex; align-items: center; margin-bottom : 5px;}
+.logo{ background-image : url("");
+		margin-bottom : 20px;}
+.content_box{width : 600px ; height : 350px; border: solid 1px #eeeeee; 
+display: flex; align-items: center; padding-left : 50px; margin-bottom : 20px;
+}
+.content_box h3{font-size : 18px;}
+.content_box input{width : 14px; height : 14px; margin-right : 10px; cursor: pointer;}
+.check_all{display : flex; align-items: center; margin : 10px; margin-bottom : 20px;}
+.check_sub li{margin-left : 30px; font-size : 16px; display : flex; align-items: center; margin-bottom : 10px;}
 .check_sub{margin-bottom: 10px;}
 .btn_box{display : flex; flex-direction: column; align-items: center;}
-#cancel{background-color: #8e8e8e; margin-top: 0 ;}
+
+#keepgoing{margin-top : 20px;}
+#cancel{margin-top : 20px; ; background-color : white; border: 1px solid black; color : #1c3761}
 
 
 

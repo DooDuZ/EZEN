@@ -90,7 +90,7 @@ border-radius: 5px;
 
 .main_wrap{width: 1280px; margin : 0 auto; height : 500px;
 display : flex; align-items: center; justify-content: center;}
-.c_main_img{background-image: url("shin/img/puppy_cut.jpg"); background-size: cover; height: 24.4vh;}
+.c_main_img{background-image: url("../images/puppy_cut.jpg"); background-size: cover; height: 24.4vh;}
 .sign_container{ width : 1000px; height : 400px;
 	display: flex; justify-content: space-around; align-items : center;	
 }

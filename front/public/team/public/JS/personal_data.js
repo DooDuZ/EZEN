@@ -60,26 +60,10 @@ function checking_must(){
 		}
 	}	
 	if(count==check_must.length){
-		window.location.href="sign_up.html"
+		window.location.href="../HTML/sign_up.html"
 	}else{
 		alertp.style.color = 'red'
 		alertp.textContent = '필수 약관에 동의해 주세요.'
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
