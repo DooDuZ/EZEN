@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	
+	/* 
+	
+	function 기본단위(){
+		for(let s=1 ; s<=i; s++){
+			if(i==3 && s==2){
+				output+=' '
+			}else{
+			output+='*'
+			}
+		}for(let b=1 ; b<=5-i+1 ; b++){
+			output+='-'
+		}
+		
+	}
+	 */
+	
+	
+	
+	
+	
+	let output = ''
+
+	
+/* 	for(let i = 1 ; i<=height ; i++){
+		if(i%2==0){
+			output += '\n'
+		}else{
+			for(let b=1 ; b<=(height-i)/2 ; b++){
+				output+='-'
+			}
+			function 기본단위(){
+				for(let s=1 ; s<=i; s++){
+					if(i==3 && s==2){
+						output+=' '
+					}else{
+					output+='*'
+					}
+				}for(let b=1 ; b<=5-i+1 ; b++){
+					output+='-'
+				}				
+			}
+			기본단위()
+		}
+	} */
+	
+	for(let i = 1 ; i<=5 ; i++){
+		if(i%2==0){
+			output += '\n'
+		}else{
+			for(let b=1 ; b<=(5-i)/2 ; b++){
+				output+='-'
+			}
+			for(let s=1 ; s<=i; s++){
+				if(i==3 && s==2){
+					output+=' '
+				}else{
+				output+='*'
+				}
+			}for(let b=1 ; b<=5-i+1 ; b++){
+				output+='-'
+			}
+		}
+	}
+	
+	
+	
+	
+	console.log(output)
+
+</script>
+	
+	
+	
+
+
+
+</body>
+</html>

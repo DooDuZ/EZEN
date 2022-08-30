@@ -35,6 +35,45 @@ header .wrapper{
 	max-width : 1200px;
 	margin : 0 auto;
 }
+/*--------------------------------------------------------------------*/
+
+.form_page{
+	background-image: url("images/bg-form.jpg");
+	background-repeat: no-repeat;
+	background-position: right 100px;
+	background-size: 70vw;
+}
+
+input[type='text']::placeholder ,
+input[type='email']::placeholder ,
+input[type='url']::placeholder ,
+textarea::placeholder{
+	color : #bbbbbb;
+}
+
+input[type='checkbox']{
+	opacity : 0;
+	position : absolute;
+	appearance : none;
+}
+
+input[type='checkbox']+span::before{
+	display : inline-block;
+	content : '';
+	width : 1.5rem ; height : 1.5rem;
+	border : 1px solid #bbbbbb;
+	background-color: white;
+	margin : -0.125rem 0.5rem 0 0;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]:checked+span::before{
+	content : '\f00c';
+}
+
+
+
+/*--------------------------------------------------------------------*/
 
 .btn{padding : 10px 30px;
 text-align: center;
@@ -80,6 +119,62 @@ text-align: center;
 	background-color: #cccccc;
 	margin : 2rem 0 2.5rem;
 }
+/*---------------------------------------------job----------------------------------------*/
+
+
+.job_page{
+	background-image: url("img/bg-job.jpg");
+	background-repeat: no-repeat;
+	background-position: left 100px , 0 0 ;
+	background-size: 70vw ;
+}
+
+.text_center{
+	text-align: center;
+}
+
+.text_center::after{
+	margin : 30px auto;
+}
+/*---------------------------------------테이블----------------------------------------------*/
+.main{
+	max-width : 900px; margin: 100px auto;
+	background-color: white;
+	box-shadow: 0 0 6px #cccccc;
+}
+
+table{
+	margin : 3.5rem 0 ;
+	width : 100%;
+}
+th{
+	font-weight : normarl;
+	background-color: #f8f6f2;
+	vertical-align: middle;
+	padding : 1rem;
+}
+td{
+	padding: .75rem 1rem 1.75rem;
+	vertical-align: middle;
+}
+
+th, td{display : block;}
+/*---------------------------------------타임라인--------------------------------------*/
+.timeline{
+	list-style-type: decimal inside;
+}
+.timeline_item{
+	margin-bottom : 2rem;
+}
+.timeline_title{
+	display : inline-block;
+	font-size : 20px;
+	margin-bottom: 1rem;
+}
+
+
+
+/*------------------------------------------------------------------------------------*/
 
 footer{
 	height : 200px;
@@ -104,6 +199,55 @@ footer{
 .ct_left{display : flex; flex-direction: column;}
 
 @media(min-width : 600px){
+	.main{
+		padding : 4rem;
+	}
+	
+	th, td{
+		display: table-cell;
+	}
+	/* 가상클래스 : 동일한 식별자가 있을 경우 홀/짝/n 번째 선택*/
+	
+	tr:nth-child(odd){ background-color : #f8f6f2;}
+	tr:nth-child(even){ background-color : white;}
+	tr:nth-child(even) th{ background-color : white;}
+	
+	th{ width : 25%; }
+	td{ width : 75%; }
+	
+	.timeline_item{
+		display : flex;
+		margin-bottom : 0;
+	}
+	.timeline_title{
+		width : 24%;
+		text-align: right;
+		padding : 2rem 2.5rem 2rem 0 ;
+	}
+	.timeline_text{
+		width : 76%;
+		border-left:5px solid #f8f6f2;
+		padding : 1.5rem 0 1.5rem 2.5rem;
+		position : relative;
+	}
+	
+	.timeline_text::before{
+		position : absolute;
+		top : 1.5rem; left : -1.5rem;
+		display : block; width : 2.25rem ; height : 2.25rem ; background-color: #d0bea2;
+		text-align: center; padding : 0.1rem;		
+		/*폰트어썸*/
+		font-family: 'Font Awesome 5 Pro';
+		font-weight : 900;
+		color : white;
+		font-size : 1.25rem;
+	}
+	
+	.icon_file::before{ content : '\f56e';}
+	.icon_code::before{ content : '\f121';}
+	.icon_chat::before{ content : '\f086';}
+	.icon_hands::before{ content : '\f2b5';}
+		
 	.content{
 		display : flex;
 		justify-content: space-between;
@@ -162,3 +306,8 @@ footer{
 	}
 	.ft_menu li{margin : 0 20px;}
 }
+
+
+
+
+
