@@ -21,7 +21,9 @@ const point = document.querySelectorAll('.star')
 const post_text = document.querySelector('.post_text')
 const post_img = document.querySelector('.post_img')
 
-const name_box = [ ]
+let point_star = ''
+
+
 
 /*
 function 리뷰입력(){
@@ -31,24 +33,18 @@ function 리뷰입력(){
 }
 */
 
+
+
 let count = 0
 function 리뷰입력(){
 	count++
-	
-	name_box.push(name.value)
-	
-	console.log(count)
-	console.log(name_box[count-1])
-	console.log(post_text.value)
-
 
 	document.getElementById('review_get').innerHTML += 
-		'<div id="review_get">'+
 			'<div class="review_get_box">'+
 				'<div class="review_text">'+
 					'<div class="text_01"><div class="new_box">'+
-						'<div class="new_text">NEW</div></div>'+
-						'<div class="get_star">★★★★★</div>'+
+						'<div class="new_text">'+count+'</div></div>'+
+						'<div class="get_star">'+point_star+'</div>'+
 						'<div class="get_name">'+name.value+'</div>'+
 						'<div class="get_name2">견주님</div>'+
 					'</div>'+
@@ -57,10 +53,19 @@ function 리뷰입력(){
 				'<div class="review_img">'+
 					'<div class="get_img"> </div>'+
 				'</div>'+
-			'</div>'		 
-		'</div>'
-
+			'</div>'
 }
+
+point.forEach( (e) => {
+	e.addEventListener('change' , (event)=>{
+		const current = event.currentTarget
+		if( current.checked ){
+			point_star = current.value
+			console.log(current.value)
+		}		
+	})	
+})
+
 
 
 

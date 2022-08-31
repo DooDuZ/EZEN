@@ -24,7 +24,7 @@
 		return
 	}	
 	const cm = inch*2.54
-	p.textContent = `${cm} cm`
+	p.innerHTML = `${cm} cm`
 })
 
 
