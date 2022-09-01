@@ -20,6 +20,20 @@ for(let i = 1 ; i<=5 ; i ++){
 }
 
 
+let count2 = 0
+
+for(let i = 1 ; i<=4 ; i++ ){
+	if(i++){
+		
+	}
+	for(let b = 0 ; b<=2 ; b+=count){
+		output +=' '
+	}
+	for(let s = 1 ; s<= 13-count2 ; s++){
+		output+='*'
+	}output += '\n'
+}
+
 /*
 let 수열 = 0
 

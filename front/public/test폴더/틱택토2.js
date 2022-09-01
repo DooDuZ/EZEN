@@ -47,20 +47,20 @@ function 중복검사(i){
 
 
 function 승리판단(){
-	for(let i = 0 ; i<7 ; i+=3){
+	for(let i = 0 ; i<=6 ; i+=3){
 		if(게임상황[i]!=null && 게임상황[i]==게임상황[i+1] && 게임상황[i+1]==게임상황[i+2]){
 			승리=게임상황[i]
-			return
+			return true
 		}
 	}
 	for(let i = 0 ; i<=2 ; i++){
 		if(게임상황[i]!=null && 게임상황[i] == 게임상황[i+3] && 게임상황[i+3] == 게임상황[i+6]){
 			승리=게임상황[i]
-			return
+			return true
 		}
 	if(게임상황[0]!=null && 게임상황[0] == 게임상황[4] && 게임상황[4] == 게임상황[8]){
 			승리=게임상황[i]
-			return
+			return true
 		}
 	}
 }
