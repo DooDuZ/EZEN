@@ -15,26 +15,31 @@ for(let i = 1 ; i<=5 ; i ++){
 		output += ' '
 	}for(let s = 1 ; s<=2*count-1 ; s++){
 		output += '*'
-	}output += '\n'																//   2 1 0
-}																				// 0 2 3 3
-																				// 1 2 3 4 
-											 									// 0 i i i-1
+	}output += '\n'															
+}
+																		
 											 									
-let count2 = 0
+count = 0
 											 									
-for(let i = 0 ; i<4 ; i++){	
-	for(let b = 0 ; b<count2 ; b++){
+for(let i = 1 ; i<=4 ; i++){	
+	for(let b = 1 ; b<=count ; b++){
 		output += ' '		
 	}						
-	for(let s = 1 ; s<=13-2*count2 ; s++){
+	for(let s = 1 ; s<=13-2*count ; s++){
 	output += '*'
 	}output += '\n'
-	if(i==0){
-		count2 = 2 
+	if(i==1){
+		count = 2 
 	}else{
-		count2 = 3
+		count = 3
 	}
 }
+
+for(let i = 1 ; i <=2 ; i++){
+	
+}
+
+
 
 
 console.log(output)
