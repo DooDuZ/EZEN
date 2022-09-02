@@ -18,7 +18,7 @@ for(let i = 1 ; i<=5 ; i ++){
 	}output += '\n'															
 }
 																		
-											 									
+/*									 									
 count = 0
 											 									
 for(let i = 1 ; i<=4 ; i++){	
@@ -35,15 +35,32 @@ for(let i = 1 ; i<=4 ; i++){
 	}
 }
 
+*/
+
+count = 0	
+let count2 = 0
+
+						 									
+for(let i = 1 ; i<=4 ; i++){	
+	for(let b = 1 ; b<=count2 ; b++){
+		output += ' '		
+	}						
+	for(let s = 1 ; s<=13-2*count2 ; s++){
+	output += '*'
+	}output += '\n'
+	if(i==1){
+		count = 3
+	}
+	count--
+	count2 += count
+}
 for(let i = 1 ; i <=2 ; i++){
 	
 }
 
 
 
-
 console.log(output)
-
 
 /*
 let 수열 = 0

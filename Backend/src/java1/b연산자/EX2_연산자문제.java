@@ -88,25 +88,55 @@ public class EX2_연산자문제 {
 		System.out.println("길이(inch) : "); double inch = 답지.nextDouble();
 		System.out.println(inch + "inch : " + inch*2.54 + "cm");
 		
-		*/
 		
-		//문제13 :  중간고사, 기말고사, 수행평가를 입력받아 반영비율별 계산하기ㄴ
+		
+		//문제13 :  중간고사, 기말고사, 수행평가를 입력받아 반영비율별 계산하기
 		//소수 둘째 자리 까지 점수 출력하기
 		//중간고사 반영비율 => 30 %
 		//기말고사 반영비율 => 30 %
 		//수행평가 반영비율 => 40 %
 		
-		System.out.println("중간고사 : "); Double 중간점수 = 답지.nextDouble();
-		System.out.println("기말고사 : "); Double 기말점수 = 답지.nextDouble();
-		System.out.println("수행평가 : "); Double 수행평가 = 답지.nextDouble();
+		System.out.println("중간고사 : "); double 중간환산 = 0.3*답지.nextDouble();
+		System.out.println("기말고사 : "); double 기말환산 = 0.3*답지.nextDouble();
+		System.out.println("수행평가 : "); double 수행환산 = 0.4*답지.nextDouble();
 		
-		System.out.printf("중간비율 : " , "기말비율 : " , "수행평가비율 : " , 중간점수/(중간점수+기말점수+수행평가), 기말점수/(중간점수+기말점수+수행평가), 수행평가/(중간점수+기말점수+수행평가));
+		System.out.println(중간환산); System.out.println(기말환산); System.out.println(수행환산);
+		
+		System.out.printf("총점 : %.2f ", (중간환산+기말환산+수행환산));
+		
+		
 		
 		//문제14 :  연산 순서 나열 하고 x와 y값 예측하기
 			//int x = 10;
 		//int y = x-- + 5 + --x;
 		//printf(" x의 값 : %d , y의값 :  %d ", x, y)
+		*/
 		
-	}
-	
+		/*
+		  	문제15 :  정수3개 입력받아 오름차순 출력 
+		 	문제16 :  정수4개 입력받아 오름차순 출력 
+		 */
+		
+		System.out.println("오름차순1 : "); int x = 답지.nextInt();
+		System.out.println("오름차순2 : "); int y = 답지.nextInt();
+		System.out.println("오름차순3 : "); int z = 답지.nextInt();
+		
+		int temp = 0;
+		 
+		temp = x>y ? x : temp;
+		x = x>y ? y : x ;
+		y = x==y ? temp : y;
+		
+		temp = x>z ? x : temp;
+		x = x>z ? z : x ;
+		z = x==z ? temp : z;
+		
+		temp = y>z ? y : temp;
+		y = y>z ? z : y ;
+		z = y==z ? temp : z;
+		
+		System.out.println(x+" "+y+" "+z);
+		
+		
+	}	
 }
