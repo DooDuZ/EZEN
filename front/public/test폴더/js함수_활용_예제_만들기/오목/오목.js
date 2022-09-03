@@ -50,10 +50,10 @@ function click_btn(e){
 		return
 	}	
 	if(turn==0){
-		document.getElementById(e).innerHTML = '<img src="흑돌.png">'
+		document.getElementById(e).innerHTML = 'O'
 		turn++
 	}else{
-		document.getElementById(e).innerHTML = '<img src="백돌.png">'
+		document.getElementById(e).innerHTML = 'X'
 		turn--
 	}
 	if(check_winner()){
@@ -69,7 +69,7 @@ function click_btn(e){
 
 
 function click_test(e){
-	if(document.getElementById(e).innerText=='<img src="흑돌.png">' || document.getElementById(e).innerText=='<img src="백돌.png">'){
+	if(document.getElementById(e).innerText=='O' || document.getElementById(e).innerText=='X'){
 		return true
 	}	
 }
