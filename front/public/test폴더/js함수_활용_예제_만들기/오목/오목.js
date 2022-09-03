@@ -50,17 +50,17 @@ function click_btn(e){
 		return
 	}	
 	if(turn==0){
-		document.getElementById(e).innerHTML = 'O'
+		document.getElementById(e).innerHTML = '<img src="흑돌.png">'
 		turn++
 	}else{
-		document.getElementById(e).innerHTML = 'X'
+		document.getElementById(e).innerHTML = '<img src="백돌.png">'
 		turn--
 	}
 	if(check_winner()){
 		if(turn==1){
-			alert('O승리')
+			alert('흑돌 승리')
 		}else{
-			alert('X승리')
+			alert('백돌 승리')
 		}
 		turn = 2
 	}
@@ -69,7 +69,7 @@ function click_btn(e){
 
 
 function click_test(e){
-	if(document.getElementById(e).innerText=='O' || document.getElementById(e).innerText=='X'){
+	if(document.getElementById(e).innerText=='<img src="흑돌.png">' || document.getElementById(e).innerText=='<img src="백돌.png">'){
 		return true
 	}	
 }
