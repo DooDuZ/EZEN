@@ -27,7 +27,7 @@
 	const key = keyCount  // 앞에 선언된 keycount변수의 값을 상수로 바꿔서 선언 -> keycount는 함수가 실행될 때마다 값이 변하므로 선언된 상수 값을 이용 가능
 	keyCount += 1	//함수가 실행될 때마다 ketcount에 1을 더함
 	
-	item.setAttribute('data-key', key)		// item(div)값의 속성에 'data-key'=key 속성 부여 / data-key->name,id,class같은 역할 / 속성이란 표현이 맞는지 모르겠음. 추후 확인 / 
+	item.setAttribute('data-key', key)		// item(div)값의 속성에 'data-key'=key 속성 부여 / data-key->name ,id,class같은 역할 / 속성이란 표현이 맞는지 모르겠음. 추후 확인 / 
 	item.appendChild(checkbox)				// item(div)에 자식 속성 위에서 선언한 객체의 값 (input checkbox)를 추가 
 	item.appendChild(text)					// item(div)에 자식 속성 span추가
 	item.appendChild(button)				// item(div)에 자식 속성 button 추가
