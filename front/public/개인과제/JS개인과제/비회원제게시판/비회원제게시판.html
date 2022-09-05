@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style type="text/css">
+	
+	.container{display : flex; }
+	.box{ width : 33%; box-sizing : border-box; border : 2px solid red;
+			height : 600px; 
+		}
+	table{ width : 100% ; border : 1px solid black; border-collapse: collapse;}
+	td, th{ border : 1px solid black;}
+	
+	
+	
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="box"> 
+			<h3>글쓰기 페이지</h3>
+			작성자 : <input type="text" id="name"><br>
+			비밀번호 : <input type="text" id="password"><br>
+			제목 : <input type="text" id="title"><br>
+			내용 : <textarea rows="10" cols="30" id="content"></textarea>
+			<button onclick="글등록()">글등록</button>
+		 </div>
+		<div class="box">  
+			<h3> 글목록 페이지 </h3>
+			<table id="boardlist">
+				<tr> <th>번호위치</th> <th>제목위치</th> <th>작성자위치</th>	</tr>
+			</table>
+		</div>
+		<div class="box">
+			<h3>글보기 페이지</h3>
+			<div id="board_title"> 제목 표시 위치 </div>
+			<div id="board_name"> 작성자 표시 위치 </div>
+			<div id="board_content"> 본문 표시 위치 </div>		
+			<button id="delete" onclick="del_content(view_index)">삭제</button>
+		</div>	
+	</div>
+	
+
+
+
+	<script src="비회원제게시판.js"></script>
+</body>
+</html>

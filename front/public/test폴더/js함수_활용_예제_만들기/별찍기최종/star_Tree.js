@@ -2,60 +2,116 @@
  * 
  */
 		let tree = []
+ 		let output_start = '';
+ 		let output_end = '';
+ 		let output2 = '';
  		let output = '';
  		
  		let height = Number(prompt('단위 높이'))
  		let unit = height*6
  		
- 		 
- 		
+ 
+	
 		for(let i=1 ; i<=5 ; i++) {
 			if(i%2!=0) {
-				for(let b = 1 ; b<=(unit-i)/2 ; b++) {
-					output += '-';
+				for(let b = 1 ; b<=(5-i)/2 ; b++) {
+					output += ' ';
 				}for(let s= 1 ; s<=i ; s++) {
 					if(i==3 && s==2){
-						output+='-';
+						output+=' ';
 					}else {
 						output+='*';
 					}
 				}for(let b = 1 ; b<=(5-i)/2+1 ; b++) {
-					output+='-';
-				}
-				output+='\n';
-			}else {
-				output+='\n';
+					output+=' ';
+				}	
+						
+				output +='\n';
+			} else {
+				output +='\n';
 			}
 		}
 		
-		tree.push(output)
+	
 		
+function maketree(i){
+	for(let b = 1 ; b<=(5-i)/2 ; b++) {
+					output += ' ';
+				}for(let s= 1 ; s<=i ; s++) {
+					if(i==3 && s==2){
+						output+=' ';
+					}else {
+						output+='*';
+					}
+				}for(let b = 1 ; b<=(5-i)/2+1 ; b++) {
+					output+=' ';
+				}	
+}
+		
+		
+		
+		
+
+		
+		/*
+		
+			
+		for(let i=1 ; i<=5 ; i++) {
+			if(i%2!=0) {
+				for(let b = 1 ; b<=(5-i)/2 ; b++) {
+					output += ' ';
+				}for(let s= 1 ; s<=i ; s++) {
+					if(i==3 && s==2){
+						output+=' ';
+					}else {
+						output+='*';
+					}
+				}for(let b = 1 ; b<=(5-i)/2+1 ; b++) {
+					output+=' ';
+				}
+				
+				output +='\n';
+			}else {
+				output +='\n';
+			}
+		}
+		
+	
 		console.log(output)
 		
+		for(let i = 0 ; i<4 ; i++){
+			tree[i]
+		}
+		
+		
+			*/
+		
+	
+		/*
 		output = ''
 		
 		for(let i=1 ; i<=5 ; i++) {
 			if(i%2!=0) {
-				for(let b = 1 ; b<=(5-i)/2 ; b++) {
-					output += '-';
+				for(let b = 1 ; b<=(unit/height*(height-1)-i)/2 ; b++) {
+					output += ' ';
 				}for(let s= 1 ; s<=i ; s++) {
 					if(i==3 && s==2){
-						output+='-';
+						output+=' ';
 					}else {
 						output+='*';
 					}
 				}for(let b = 1 ; b<=(5-i)/2+1 ; b++) {
-					output+='-';
+					output+=' ';
 				}for(let b = 1 ; b<=(5-i)/2 ; b++) {
-					output += '-';
+					output += ' ';
 				}for(let s= 1 ; s<=i ; s++) {
 					if(i==3 && s==2){
-						output+='-';
+						output+=' ';
 					}else {
 						output+='*';
 					}
 				}for(let b = 1 ; b<=(5-i)/2+1 ; b++) {
-					output+='-';
+					output+=' ';
 				}
 				output+='\n';
 			}else {
@@ -63,8 +119,8 @@
 			}
 		}
 		console.log(output)
-
-
+	
+		*/
 		
 		/*
 		System.out.println("==========트리쌓기=========");
