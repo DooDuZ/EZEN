@@ -1,0 +1,584 @@
+@charset "UTF-8";
+
+/* 본문 폰트 프리텐다드 */
+@font-face {	
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 타이틀 폰트 단감체 */
+@font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+/*header section*/
+.header_wrap{
+   width: 100%;
+   height:90px;
+   background: #1c3761;    
+}
+.header{
+   width: 1280px;
+   height: 90px;
+    margin: 0 auto;      
+    display: flex;
+    align-items: center;
+    justify-content: space-between;       
+}
+
+.header a{
+   color:#fff;
+}
+.left_section{}
+.logo_section{
+   width: 200px;
+   height: 70px;   
+}
+
+.logo_section img{
+   width: auto;
+    height: 100%;
+}
+.right_section{
+   height:90px;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.lognin_section{
+   display:flex;
+   justify-content: flex-end;
+   font-size: 14px;
+   margin-top: 8px;
+    font-weight: bold;
+}
+.lognin_section li{
+   margin:0 10px;
+}
+.gnb{
+   display:flex;
+}
+.gnb li{
+   margin:0 10px;
+   font-size: 17px;
+}
+
+
+
+
+
+
+
+/* ---- main start ---- */
+
+.container{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+main{
+	width:100%;
+	margin:0 auto;		
+	position: relative;
+    background: #fff;
+    font-family: 'Pretendard-Regular';
+}
+
+
+main .main_bg_img{
+	width:100%;
+	height:48vh;
+	background-image: url("../images/trainer_img_bg.jpg");
+	background-position: 15% 23%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.main_title{
+	width:100%;
+	height:150px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	margin-top:50px;
+	color: #fff;
+	position: absolute;
+    top: 150px;
+  
+}
+
+.main_title .main_title_01{
+	font-size: 24px;
+	font-size: 50px;
+	letter-spacing: 10px;
+
+}
+
+.main_title .main_title_02{
+	font-size: 18px;
+	font-size: 20px;
+	margin: 10px 0;
+	letter-spacing: 3px;
+
+}
+
+
+/* ---- main end ---- */
+
+
+
+
+article{
+	width: 1280px;
+	margin: 0 auto;
+}
+
+
+/* ---- container start ---- */
+
+
+/* ---- title start ---- */
+
+.title{
+	height: 200px;
+	padding-top: 50px;
+}
+
+.title div:nth-child(2){
+	font-size: 70px;
+	font-family: CWDangamAsac-Bold;
+	color: #1c3761;
+	padding-top: 13px;
+	text-align: center;
+	
+}
+
+
+.title div:nth-child(1){
+	font-size: 25px;
+	font-family: Pretendard-Regular;
+	font-weight: 100;
+	color: #1c3761;
+    text-align: center;	
+    letter-spacing: -1.5px;
+	
+}
+
+
+/* ---- title end ---- */
+
+
+
+
+/* ---- trainer start ---- */
+
+
+
+/* ---- 트레이너 1 시작 ---- */
+
+.trainer_box{
+	margin: 0 auto;
+	width: 1200px;
+	height: 650px;
+	padding-top: 40px;
+}
+
+
+.id_img_box{
+	width: 600px;
+	height: 650px;
+	padding-top: 50px;
+	padding-left: 50px;
+	float: left;
+}
+
+.id_img{
+	width: 550px;
+	height: 550px;
+	background: #ffffff;
+	border-radius: 50%;
+	background-image: url("../images/trainer_img_03.jpg");
+	background-size: 550px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/* text box */
+
+
+
+.text_box{
+	width: 600px;
+	height: 650px;
+	padding-top: 100px;
+	padding-left: 80px;
+	float: left;
+	
+	
+}
+
+.text_box_01{
+	width: 450px;
+	height: 73px;
+	padding-top: 10px;
+	border-bottom: 2px solid #1c3761;
+	
+}
+
+.text_box_01 div:nth-child(1){
+	color: #1c3761;
+	font-size: 45px;
+	font-family: Pretendard-Regular;
+	font-weight: 600;
+	float: left;
+	
+	
+}
+
+.text_box_01 div:nth-child(2){
+	
+	color: #ffffff;
+	font-size: 18px;
+	font-family: Pretendard-Regular;
+	font-weight: 500;
+	background: #ffc303;
+	width: 100px;
+	height: 30px;
+	border-radius: 50px;
+	text-align: center;
+	padding-top: 5px;
+	
+	float: left;
+	
+	margin-top: 14px;
+	margin-left: 20px;
+}
+
+.text_box_02{
+	clear: both;
+	margin-top: 20px;
+	font-family: Pretendard-Regular;
+	font-size: 20px;
+	font-weight: 400;
+	
+	height: 400px;
+	line-height: 170%;
+
+
+}
+
+
+.text_box_02 li:nth-child(1), .text_box_02 li:nth-child(4){
+	font-size: 30px;
+	font-weight: 600;
+	padding: 15px 0;
+}
+
+
+
+.text_box_02 li:nth-child(2), .text_box_02 li:nth-child(3),
+.text_box_02 li:nth-child(5), .text_box_02 li:nth-child(6),
+.text_box_02 li:nth-child(7){
+	padding-left: 20px;
+	
+}
+
+.text_box_02 li:nth-child(3){
+	padding-bottom: 25px;
+}
+
+.text_box_02 li:nth-child(2)::before, .text_box_02 li:nth-child(3)::before,
+.text_box_02 li:nth-child(5)::before, .text_box_02 li:nth-child(6)::before,
+.text_box_02 li:nth-child(7)::before{
+	content: "·  "
+	
+}
+
+
+/* ---- 트레이너 2 시작 ---- */
+
+
+.trainer_box2{
+	margin: 0 auto;
+	width: 1200px;
+	height: 650px;
+}
+
+
+.id_img_box2{
+	width: 600px;
+	height: 650px;
+	padding-top: 50px;
+	padding-right: 50px;
+	float: right;
+}
+
+.id_img2{
+	width: 550px;
+	height: 550px;
+	background: #eceee8;
+	border-radius: 50%;
+	background-image: url("../images/trainer_img_02.jpg");
+	background-position: center;
+	background-size: 850px;
+	background-repeat: no-repeat;
+}
+
+
+/* text box */
+
+
+
+.text_box2{
+	width: 600px;
+	height: 650px;
+	padding-top: 100px;
+	padding-left: 80px;
+	float: left;
+	
+	
+}
+
+.text_box2_01{
+	width: 450px;
+	height: 73px;
+	padding-top: 10px;
+	border-bottom: 2px solid #1c3761;
+	
+}
+
+.text_box2_01 div:nth-child(1){
+	color: #1c3761;
+	font-size: 45px;
+	font-family: Pretendard-Regular;
+	font-weight: 600;
+	margin-left: 20px;
+	
+	float: right;
+}
+
+.text_box2_01 div:nth-child(2){
+	
+	color: #ffffff;
+	font-size: 18px;
+	font-family: Pretendard-Regular;
+	font-weight: 500;
+	background: #ffc303;
+	width: 100px;
+	height: 30px;
+	border-radius: 50px;
+	text-align: center;
+	padding-top: 5px;
+	margin-top: 14px;
+	
+	float: right;
+}
+
+.text_box2_02{
+	width: 450px;
+	text-align: right;
+	clear: both;
+	margin-top: 20px;
+	font-family: Pretendard-Regular;
+	font-size: 20px;
+	font-weight: 400;
+	
+	height: 400px;
+	line-height: 170%;
+
+
+}
+
+
+/* ---- 트레이너 3 시작 ---- */
+
+.trainer_box{
+	margin: 0 auto;
+	width: 1200px;
+	height: 650px;
+	padding-top: 40px;
+}
+
+
+.id_img_box{
+	width: 600px;
+	height: 650px;
+	padding-top: 50px;
+	padding-left: 50px;
+	float: left;
+}
+
+.id_img3{
+	width: 550px;
+	height: 550px;
+	background: #ffffff;
+	border-radius: 50%;
+	background-image: url("../images/trainer_img_09.png");
+	background-size: 750px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/* text box */
+
+
+
+.text_box{
+	width: 600px;
+	height: 650px;
+	padding-top: 100px;
+	padding-left: 80px;
+	float: left;
+	
+	
+}
+
+.text_box_01{
+	width: 450px;
+	height: 73px;
+	padding-top: 10px;
+	border-bottom: 2px solid #1c3761;
+	
+}
+
+.text_box_01 div:nth-child(1){
+	color: #1c3761;
+	font-size: 45px;
+	font-family: Pretendard-Regular;
+	font-weight: 600;
+	float: left;
+	
+	
+}
+
+.text_box_01 div:nth-child(2){
+	
+	color: #ffffff;
+	font-size: 18px;
+	font-family: Pretendard-Regular;
+	font-weight: 500;
+	background: #ffc303;
+	width: 100px;
+	height: 30px;
+	border-radius: 50px;
+	text-align: center;
+	padding-top: 5px;
+	
+	float: left;
+	
+	margin-top: 14px;
+	margin-left: 20px;
+}
+
+.text_box_02{
+	clear: both;
+	margin-top: 20px;
+	font-family: Pretendard-Regular;
+	font-size: 20px;
+	font-weight: 400;
+	
+	height: 400px;
+	line-height: 170%;
+
+
+}
+
+
+.text_box_02 li:nth-child(1), .text_box_02 li:nth-child(4){
+	font-size: 30px;
+	font-weight: 600;
+	padding: 15px 0;
+}
+
+
+
+.text_box_02 li:nth-child(2), .text_box_02 li:nth-child(3),
+.text_box_02 li:nth-child(5), .text_box_02 li:nth-child(6),
+.text_box_02 li:nth-child(7){
+	padding-left: 20px;
+	
+}
+
+.text_box_02 li:nth-child(3){
+	padding-bottom: 25px;
+}
+
+.text_box_02 li:nth-child(2)::before, .text_box_02 li:nth-child(3)::before,
+.text_box_02 li:nth-child(5)::before, .text_box_02 li:nth-child(6)::before,
+.text_box_02 li:nth-child(7)::before{
+	content: "·  "
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---- trainer end ---- */
+
+
+/* ---- container end ---- */
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer section*/
+.footer_wrap{
+	width: 100%;
+	background: #1c3761; 
+	padding:10px 0;
+}
+.footer{
+	width:1280px;
+	margin:0 auto;
+	font-size:14px;
+	text-align:center;
+	color:#fff;
+	
+}
+.top_footer{
+}
+.top_footer li{}
+.booter_footer{}
+.booter_footer li{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

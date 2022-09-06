@@ -28,28 +28,33 @@ a{
 /*header section*/
 .header_wrap{
    width: 100%;
+   height:90px;
    background: #1c3761;    
 }
 .header{
    width: 1280px;
-   height: 80px;
-    margin: 0 auto;    
-    
+   height: 90px;
+    margin: 0 auto;      
     display: flex;
     align-items: center;
-    justify-content: space-between;   
-    
+    justify-content: space-between;       
 }
+
 .header a{
    color:#fff;
 }
+
 .logo_section{
    width: 200px;
-   height: 50px;
-   background: #ccc;
+   height: 70px;   
+}
+
+.logo_section img{
+   width: auto;
+    height: 100%;
 }
 .right_section{
-   height:70px;
+   height:90px;
    display:flex;
    flex-direction: column;
    justify-content: space-around;
@@ -58,6 +63,8 @@ a{
    display:flex;
    justify-content: flex-end;
    font-size: 14px;
+   margin-top: 8px;
+    font-weight: bold;
 }
 .lognin_section li{
    margin:0 10px;
@@ -67,6 +74,7 @@ a{
 }
 .gnb li{
    margin:0 10px;
+   font-size: 17px;
 }
 
 
@@ -76,9 +84,100 @@ a{
 
 
 .contaeinr{
-	font-family: 'Pretendard-Regular';
-   width:100%;
-   margin:0 auto;
+	width:100%;
+	margin:0 auto;		
+	position:relative;
+    background: #fff;
+    font-family: 'Pretendard-Regular';
+}
+
+.contaeinr_img_section{
+	width:100%;
+	height:48vh;
+	background:url("../images/s삼골댕.jpg");
+    background-repeat: no-repeat;
+    background-size : cover; 
+    background-position-y: 30%;
+}
+
+.text_section{
+	width:100%;
+	height:150px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	color: #fff;
+	position: absolute;
+    top: 150px;
+}
+
+.cs_wrap{
+	width: 1280px;
+	margin:50px auto 0;	
+}
+
+.cs_title{
+	font-size: 50px;
+	letter-spacing: 10px;
+}	
+
+.cs_sub_text{
+	font-size: 20px;
+	margin:10px 0;
+	letter-spacing: 3px;
+}
+.cs_section h4{
+	font-size: 20px;
+}
+button{width: 300px; height : 40px; border-style:none;
+font-size : 18px; font-weight : bold; color:white; 
+background-color: #1c3761; cursor: pointer;
+border-radius: 5px;
+}
+
+
+.main_wrap{width: 800px; margin : 0 auto; height : 900px; 
+display : flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.contaeinr_img_section{
+	width:100%;
+	height:48vh;
+	background:url("../images/s삼골댕.jpg");
+    background-repeat: no-repeat;
+    background-size : cover; 
+    background-position-y: 30%;
+}
+
+.text_section{
+	width:100%;
+	height:150px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	color: #fff;
+	position: absolute;
+    top: 250px;
+}
+
+.cs_wrap{
+	width: 1280px;
+	margin:50px auto 0;	
+}
+
+.cs_title{
+	font-size: 50px;
+	letter-spacing: 10px;
+}	
+
+.cs_sub_text{
+	font-size: 20px;
+	margin:10px 0;
+	letter-spacing: 3px;
+}
+.cs_section h4{
+	font-size: 20px;
 }
 button{width: 350px; height : 50px; border-style:none;
 font-size : 18px; font-weight : bold; color:white; 
@@ -88,27 +187,29 @@ background-color: #1c3761; cursor: pointer;
 .c_main_img{background-image: url("../images/puppy_cut.jpg"); background-size: cover; height: 24.4vh;}
 
 
-.check_title{font-size: 30px; margin-bottom : 10px;}
+.check_title{font-size: 35px; margin-bottom : 10px; font-family: 'Pretendard-Regular';}
 .check_title ::after{ width : 70px; height : 5px; background-color : #cccccc; display : block; content : '';
 margin : 0 auto; margin-top : 20px; margin-bottom: 20px; 
 }
-.main_wrap{width: 800px; margin : 0 auto; height : 700px; 
-display : flex; flex-direction: column; align-items: center; justify-content: center;
-}
+
 .logo{ background-image : url("");
 		margin-bottom : 20px;}
-.content_box{width : 600px ; height : 350px; border: solid 1px #eeeeee; 
+.content_box{width : 600px ; height : 500px; border: solid 1px #eeeeee; 
 display: flex; align-items: center; padding-left : 50px; margin-bottom : 20px;
 }
-.content_box h3{font-size : 18px;}
+.content_box h3{font-size : 27px; font-family: 'Pretendard-Regular'; padding-left: 5px; color: #2c2c2c;}
 .content_box input{width : 14px; height : 14px; margin-right : 10px; cursor: pointer;}
-.check_all{display : flex; align-items: center; margin : 10px; margin-bottom : 20px;}
-.check_sub li{margin-left : 30px; font-size : 16px; display : flex; align-items: center; margin-bottom : 10px;}
-.check_sub{margin-bottom: 10px;}
+.check_all{display : flex; align-items: center; margin : 10px; margin-bottom : 30px;}
+.check_sub li{margin-left : 30px; font-size : 19px; display : flex; align-items: center; margin-bottom : 15px;}
+.check_sub{margin-bottom: 10px;
+font-family: 'Pretendard-Regular';
+font-weight: 100; line-height: 170%;
+color: #686868;
+}
 .btn_box{display : flex; flex-direction: column; align-items: center;}
 
 #keepgoing{margin-top : 20px;}
-#cancel{margin-top : 20px; ; background-color : white; border: 1px solid black; color : #1c3761}
+#cancel{margin-top : 20px; ; background-color : white; border: 1px solid black; color : #1c3761;}
 
 
 

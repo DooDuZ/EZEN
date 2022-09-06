@@ -12,6 +12,7 @@
  const email_checked = document.querySelector('#email_output')
  const btn_p = document.querySelector('#btn_p')
  const name_input = document.querySelector('#name_input')
+ const lastbtn = document.querySelector('#lastbtn')
  
  const submit_box = {}
  console.log(submit_box)
@@ -133,12 +134,8 @@ function submit_info(){
 		btn_p.textContent = '입력 정보를 확인해주세요.'
 		return
 	}
-	 localStorage.setItem(id_info.value, submit_box)
-	 console.log(localStorage)
+	 location.href='../HTML/index.html';
 }
-
-
-
 
 
 

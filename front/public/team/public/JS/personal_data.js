@@ -14,7 +14,6 @@ for(let i = 0 ; i<4 ; i++){
 
 
 
-
 check_all.addEventListener('change', ()=>{
 	select_all()	
 })

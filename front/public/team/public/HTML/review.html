@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<!-- css 초기화 : 모든 브라우저에서 동일하게 적용 -->
+	<link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+	
+	
+	
+	<link href="../CSS/review.css" rel="stylesheet">
+
+	<title> 댕댕이 유치원 후기게시판 </title>
+	
+
+</head>
+<body>
+
+		<div class="header_wrap">
+			<div class="header">
+				<div class="left_section">
+					<div class="logo_section">
+                		<a href="index.html">
+                     		<img src="../images/logo.png" alt="logo">
+                  		</a>
+               		</div><!-- logo_section -->
+				</div><!-- left_section -->
+				<div class="right_section">
+					<ul class="lognin_section">
+						<li><a href="sign_in.html">로그인</a></li>
+						<li><a href="personal_data.html">회원가입</a></li>
+					</ul>
+
+						
+					<ul class="gnb">
+						<li><a href="company_info.html">소개합니다</a></li>
+						<li><a href="trainer_introduce.html">훈련사소개</a></li>
+						<li><a href="curriculum.html">커리큘럼</a></li>
+						<li><a href="javascript:void(0)">상담신청</a></li>		
+						<li><a href="calendar.html">교육일정</a></li>
+						<li><a href="review.html">교육후기</a></li>
+						<li><a href="way_to_come.html">오시는길</a></li>								
+					</ul><!--  gnb-->
+				</div><!-- right_section -->			
+			</div><!-- header -->				
+		</div><!-- header_wrap -->
+		
+
+
+<main>
+
+	<div class="main_bg_img"> </div>
+	<div class="main_title"> 
+		<div class="main_title_01"> 교육후기 </div>
+		<div class="main_title_02"> Review </div>
+	</div>
+	
+</main>
+
+
+
+
+<article>
+
+	<div class="container">	<!-- 전체 감싸기 -->
+
+		<div class="title"> <!-- 상단 텍스트 -->
+			<div>댕댕이 유치원을 선택하는 이유!</div>
+			<div>견주님들의 리얼 후기</div>	
+		</div>
+	
+	
+	<div class="review_post">
+			
+		<div class="text">
+			<div>작성자</div>
+			<div>비밀번호</div>
+			<div>별점</div>
+			<div>제목</div>
+			<div>내용</div>
+			<div>사진첨부</div>
+		</div>
+			
+		<form>
+				
+			<div class="input_box">
+				<input class="post_name" type="text" placeholder="작성자">
+			</div>
+
+			<div class="input_box">
+				<input class="post_pw" type="password" placeholder="비밀번호">
+			</div>
+
+         <div class="input_box">   
+            <input class="star" type="radio" name="star" value="★★★★★"> <span>★★★★★</span>
+            <input class="star" type="radio" name="star" value="★★★★☆"> <span>★★★★☆</span>
+            <input class="star" type="radio" name="star" value="★★★☆☆"> <span>★★★☆☆</span>
+            <input class="star" type="radio" name="star" value="★★☆☆☆"> <span>★★☆☆☆</span>
+            <input class="star" type="radio" name="star" value="★☆☆☆☆"> <span>★☆☆☆☆</span>
+         </div>
+
+			<div class="input_box">
+				<input class="post_title" type="text" placeholder="제목입력">
+			</div>
+			
+			<div class="input_box">
+				<textarea class="post_text" rows="6" cols="90" maxlength="1000"> </textarea>
+			</div>
+
+			<div class="input_box">
+				<input class="post_img" type="file" accept=".jpg, .png, .gif">
+			</div>
+			
+			
+		<div class="btn_box">
+			<div class="input_btn">
+				<div class="submit">
+					<button type="button" onclick="리뷰입력()">등록</button>
+				</div>
+				
+				<div class="reset">
+					<input type="reset" value="다시입력">
+				</div>	
+			</div>	
+		</div>
+			
+			
+		</form>
+		
+		
+		
+	</div>
+		
+		
+		<div id="review_get">
+		
+			
+			<div class="review_get_box">
+				<div class="review_text">
+					<div class="text_01">
+						<div class="new_box">
+							<div class="new_text">NEW</div>
+						</div>
+						<div class="get_star">★★★★★</div>
+						<div class="get_name">김민지</div>
+						<div class="get_name2">견주님</div>
+					</div>
+					<div class="get_text">
+					가족들이 바빠지기 시작하면서 혼자 있을때 분리 불안도 심해지고 입질도 보여서 고민하던중
+					유치원 서비스랑 훈련도 함께 받을 수 있는 댕댕이 유치원을 알게되었어요!!
+					선생님들 다 친절하고 경력도 많으신 분들이라 믿음직하고 커리큘럼에 따라 체계적으로 교육해주시는거 같아서 맘 놓고 맡길 수 있어서 넘 조아요ㅠㅠㅠㅠ
+					</div>
+				</div>
+				
+				<div class="review_img">
+					<div class="get_img"> </div>
+				</div>	
+			</div>
+			
+		<!-- 
+			<div class="review_get_box">
+				<div class="review_text">
+					<div class="text_01">
+						<div class="new_box">
+							<div class="new_text">NEW</div>
+						</div>
+						<div class="get_star">★★★★★</div>
+						<div class="get_name">박재현</div>
+						<div class="get_name2">견주님</div>
+					</div>
+					<div class="get_text">
+					 초코 견주에요!! 댕댕이 유치원 쌤들덕에 초코 혼자 두지 않아도 되서 안심하고 돈벌러갑니다ㅠㅠㅠ
+					 퇴근할때 같이 집에오는데 하루종일 재밌게 노는지 밤에 항상 골아떨어져요ㅋㅋㅋㅋㅋㅋ 
+					</div>
+				</div>
+				
+				<div class="review_img">
+					<div class="get_img"></div>
+				</div>	
+			</div>
+		 -->	
+		 
+		</div>
+		
+		
+	
+	</div>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+<div class="footer_wrap">		
+			<div class="footer">
+				<ul class="top_footer">
+					<li>BMSMILE Co., Ltd.</li>
+					<li>Tel.1644-9603 |</li> 
+					<li>Email : contact@bmsmile.com |</li> 
+				</ul><!-- top_footer -->
+				<ul class="booter_footer">
+					<li>E-Commerce Registration : 2020-Seoul Gangnam-01687</li>
+					<li>Address : 4th floor, 8, Teheran-ro 44-gil, Gangnam-gu, Seoul, Republic of Korea |</li> 
+					<li>CEO : Bongsu ParkㅣPersonal Info Manager : Dongwook Lee |</li> 
+				
+				</ul><!-- booter_footer -->		
+			</div><!-- footer -->
+		</div><!-- footer_wrap -->
+
+
+
+
+
+
+
+
+
+
+
+<script src="../JS/review.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,56 +1,60 @@
-@charset "UTF-8";
+@charset "UTF-8";@charset "UTF-8";
 
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
-
-
-
-*{
-   margin:0;
-   padding:0;
-   box-sizing: border-box;
-}
-
-li{
-   list-style:none;
-}
-a{
-   text-decoration: none;
-   color: #000;
-}
-
 /*wrap*/
 
+.wrap{
+	/* width:1920px; */
+	margin:0 auto;	
+}
 
 /*header section*/
 .header_wrap{
    width: 100%;
+   height:90px;
    background: #1c3761;    
 }
 .header{
    width: 1280px;
-   height: 80px;
-    margin: 0 auto;    
-    
+   height: 90px;
+    margin: 0 auto;      
     display: flex;
     align-items: center;
-    justify-content: space-between;   
-    
+    justify-content: space-between;       
 }
+
 .header a{
    color:#fff;
 }
 .logo_section{
    width: 200px;
-   height: 50px;
-   background: #ccc;
+   height: 70px;   
+}
+
+.logo_section img{
+   width: auto;
+    height: 100%;
 }
 .right_section{
-   height:70px;
+   height:90px;
    display:flex;
    flex-direction: column;
    justify-content: space-around;
@@ -59,6 +63,8 @@ a{
    display:flex;
    justify-content: flex-end;
    font-size: 14px;
+   margin-top: 8px;
+    font-weight: bold;
 }
 .lognin_section li{
    margin:0 10px;
@@ -68,30 +74,93 @@ a{
 }
 .gnb li{
    margin:0 10px;
+   font-size: 17px;
 }
+
+/* ------------------------------------------------------------------------------------*/
 
 .contaeinr{
 	font-family: 'Pretendard-Regular';
-   width:100%;
-   margin:0 auto;
+   	width: 100%;
+  	margin: 0 auto;
+  	position : relative;
+  	
 }
 
-.main_wrap{width: 1280px; margin : 0 auto;}
-.main_wrap h3{margin-top : 10px; margin-bottom: 10px;}
-.logo, .id_box, .info_box , .btn_box{width : 480px; margin : 0 auto;}
+
+.contaeinr_img_section{
+	width:100%;
+	height:48vh;
+	background:url("../images/s삼골댕.jpg");
+    background-repeat: no-repeat;
+    background-size : cover; 
+    background-position-y: 30%;
+}
+
+.text_section{
+	width:100%;
+	height:150px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	color: #fff;
+	position: absolute;
+    top: 150px;
+}
+
+.cs_wrap{
+	width: 1280px;
+	margin:50px auto 0;	
+}
+
+.cs_title{
+	font-size: 50px;
+	letter-spacing: 10px;
+}	
+
+.cs_sub_text{
+	font-size: 20px;
+	margin:10px 0;
+	letter-spacing: 3px;
+}
+.cs_section h4{
+	font-size: 20px;
+}
+
+.main_wrap{width: 1280px; margin : 100px auto 200px auto;}
+.main_wrap h3{
+	margin-top : 30px;
+	margin-bottom: 10px;
+	font-family: Pretendard-Regular;
+	font-weight: 400;
+	font-size: 18px;
+	padding-left: 5px;
+	color: #686868;
+}
+.logo, .id_box, .info_box , .btn_box{width : 480px; margin : 0 auto;  }
 .logo{margin-top:30px; margin-bottom:30px;} 
 .logo_img{width : 250px; height : 100px; margin:0 auto;}
 .logo_img img{width : 100%; height : auto;}
 
-.id_box input{width : 480px; height : 40px;}
-.info_box input, select{width : 480px; height : 40px;}
+.id_box input{width : 480px; height : 50px; border: 1px solid #ccc; outline: none; padding-left: 15px; }
+.info_box input, select{width : 480px; height : 50px; border: 1px solid #ccc; outline: none; padding-left: 15px;}
 #birth_input{display: flex; justify-content: space-between;}
-#birth_box input, select{ width : 150px;}
-.sexuality select{width : 480px; height : 40px;}
-.btn_box{margin-top:20px; margin-bottom:30px;}
+#birth_box input, select{ width : 150px; padding-left: 15px; border: 1px solid #ccc; outline: none;}
+.sexuality select{width : 480px; height : 50px;} 
+.btn_box{margin-top:40px; margin-bottom:30px;}
 .btn_box span{color:white; font-size : 15px; font-weight: bold;}
-.btn_box button{ width : 480px; height : 40px; cursor : pointer;
+.btn_box button{ width : 480px; height : 60px; cursor : pointer;
 border-style : none; background-color: #1c3761;}
+
+.info_box{
+	margin-top: 40px;
+}
+
+.btn_box{
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
 
 /*footer section*/
 .footer_wrap{
@@ -107,3 +176,12 @@ border-style : none; background-color: #1c3761;}
    text-align:center;
    color:#fff;   
 }
+
+
+
+
+
+
+
+
+
