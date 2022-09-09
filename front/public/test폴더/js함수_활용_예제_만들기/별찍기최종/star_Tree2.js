@@ -281,8 +281,10 @@ for(let i=1 ; i<=5 ; i++) {
 	}
 }output +='\n';
 
-
-console.log(output)
+pushOutput()
+output = '';
+console.log(array)
+console.log(array[3])
 
 
 
