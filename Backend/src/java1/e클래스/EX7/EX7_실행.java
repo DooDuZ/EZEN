@@ -77,7 +77,7 @@ public class EX7_실행 {
 					String PW = input.next();
 					if(boardList[txt_numb].password.equals(PW)) {				
 						for(int i = txt_numb ; i<boardList.length ; i++) {
-							boardList[i]= boardList[i + 1];							
+							boardList[i]= boardList[i + 1];
 							if(boardList[i+1]==null){
 								break;
 							}
