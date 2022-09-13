@@ -31,7 +31,7 @@ public class EX7_실행 {
 						break;
 					}index++;
 				}
-				System.out.println(boardList[0].title);
+				System.out.println(boardList[0]);
 				System.out.println("글 등록이 완료 되었습니다.");				
 			}else if(sel_numb==2) {
 				System.out.println("=====List=====");
