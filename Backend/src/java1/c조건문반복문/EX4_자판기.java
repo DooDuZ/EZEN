@@ -81,7 +81,7 @@ public class EX4_자판기 {
 				}
 				selected1 = 0;
 				selected2 = 0;
-				selected3 = 0;					
+				selected3 = 0;
 				결제판단 = 1;
 			}
 		}//while end	
