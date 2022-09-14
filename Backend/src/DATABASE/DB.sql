@@ -148,3 +148,44 @@ UPDATE shop_db2.member SET mamber_addr = '경기 안산시 상록구 이동' whe
 -- 데이터 삭제
 
 DELETE FROM shop_db2.member WHERE member_ID = 'tess' ;
+
+
+
+create database shop_db3;
+
+/* db 선택 */
+use shop_db3; 
+
+create table shop_db3.member(
+	member_id char(8) primary key not null, 
+    member_name char(5) not null,
+    member_addr char(20)
+);
+
+SELECT * FROM shop_db3.member;
+
+/* 테이블 확인 */
+select * from member;
+
+/* 4 테이블에 데이터 추가 */
+
+/* 5 제품 테이블 생성 */
+
+create table product(
+	product_name char(4) primary key not null,
+    -- 필드명 char : 문자(4글자) primary key : 식별키 not null : 공백 불가
+    cost int not null,
+    make_date date ,
+    company char(5),
+    amount int not null
+);
+
+/* 7. Select */
+select * from member;
+select member_id from member;
+select member_id, member_name from member;
+select member_id, member_name, member_addr from member;
+select member_id as 아이디 from member; -- as : 별칭 [ 원본수정 x, 출력만 다르게 ]
+select member_id as 아이디, member_name as 이름, member_addr as 주소 from member;
+select * from member where member_id ='팔레트' ;
+
