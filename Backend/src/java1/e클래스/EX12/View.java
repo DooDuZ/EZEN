@@ -44,7 +44,7 @@ public class View {
 			System.out.println("글 등록 완료");
 		}else {
 			System.out.println("글 등록 실패");
-		}		
+		}
 	}
 	public static void view_board() {
 		System.out.println("======목록======");
