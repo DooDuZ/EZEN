@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		let answer = [];
+		let Num = prompt('숫자');
+		
+		function checkNum (){
+			if(Number(Num)>1000 || Number(Num)<1){
+				alert('1~1000사이의 숫자를 입력해주세요.')
+				return;
+			}
+			
+			for(let i = 1 ; i<=Number(Num) ; i++){
+				
+				let checkNum = false;
+				let tostring = `${i}`;				
+				if(tostring.length<=2){
+					checkNum = true;
+				}else{
+					let storage = [];					
+					for(let j = 0 ; j<tostring.length-1 ; j++){						
+						storage.push(Number(tostring[j]) - Number(tostring[j+1]));												
+					}
+					let count = 0;
+					for(let j = 0 ; j< storage.length ; j++){
+						if(storage[0]==storage[j]){
+							count++;
+						}
+					}
+					if(count==storage.length){
+						checkNum=true;
+					}
+				}				
+				if(checkNum){
+					answer.push(i);
+				}
+			}
+			console.log(answer.length);
+		}		
+		checkNum ();
+	
+	
+	</script>
+
+
+</body>
+</html>
