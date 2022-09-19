@@ -136,10 +136,11 @@ public class BoardDAO {
 						board.b_title = new_title;
 						board.b_content = new_content;
 						
-						sql = "insert into board(b_title, b_content) values(?,?)";
+						sql = "update board set b_title= ?,  b_content=? where b_no = ?;";
 						ps = con.prepareStatement(sql);
 						ps.setString(1, new_title);
 						ps.setString(2, new_content);
+						ps.setInt(3, b_no);
 						ps.execute();
 						return true;
 					}
@@ -151,6 +152,29 @@ public class BoardDAO {
 			}
 		// 5. 삭제 처리 메소드
 			boolean delete(int b_no, String b_password) {
+				BoardDTO board = null;
+				String sql = "select * from board where b_no=?";
+				try {
+					ps = con.prepareStatement(sql);
+					ps.setInt(1, b_no);
+					rs = ps.executeQuery();
+					
+					if(rs.next()) {
+						board = new BoardDTO(rs.getInt(1), rs.getString(2), rs.getString(3),
+								rs.getString(4), rs.getString(5), rs.getInt(6)); 
+					}
+					if(board.b_password.equals(b_password)) {
+						sql = "delete from boardtest.board where b_no = ?";
+						ps = con.prepareStatement(sql);
+						ps.setInt(1, b_no);
+						ps.execute();
+						return true;						
+					}
+					
+				} catch (Exception e) {
+					return false;
+				}
+				
 				return false;
 			}
 		

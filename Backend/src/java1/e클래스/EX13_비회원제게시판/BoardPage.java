@@ -86,11 +86,18 @@ public class BoardPage {
 			System.out.println("수정 완료");
 		}else {
 			System.out.println("경고) 수정 실패 [ 관리자 문의 ]");
-		}		
+		}
 	}
 	
 	void delete(int b_no) {
 		System.out.println("===>>> 삭제 페이지");
+		System.out.println("패스워드 : "); String b_password = input.next();
+		boolean board = control.delete(b_no , b_password);
+		if(board) {
+			System.out.println("삭제 완료");
+		}else {
+			System.out.println("경고) 삭제 실패 [ 관리자 문의 ]");
+		}
 	}
 	
 }

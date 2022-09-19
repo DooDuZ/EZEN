@@ -37,8 +37,12 @@ public class BoardControl {
 	}
 	// 5.
 	boolean delete(int b_no, String b_password) {
-		
-		return false;
+		boolean board = boardDAO.delete(b_no, b_password);
+		if(board) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 }

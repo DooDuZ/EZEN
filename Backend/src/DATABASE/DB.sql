@@ -122,6 +122,8 @@ SHOW databases;
 
 
 
+	*char -> 고정길이 // varchar -> 가변길이 (메모리 할당 차이)
+
 
 */
 
@@ -188,4 +190,193 @@ select member_id, member_name, member_addr from member;
 select member_id as 아이디 from member; -- as : 별칭 [ 원본수정 x, 출력만 다르게 ]
 select member_id as 아이디, member_name as 이름, member_addr as 주소 from member;
 select * from member where member_id ='팔레트' ;
+
+
+drop database market_db;
+drop database if exists market_db;
+
+create database market_db;
+
+use market_db;
+
+create table member (						-- (필드명 자료형 속성)
+	mem_id	char(8) not null primary key,
+    mem_name varchar(10) not null,
+    mem_number int not null,
+    addr char(2) not null,
+    phone1 char(3),
+    phone2 char(8),
+    height smallint,
+    debut_date date
+);
+
+select * from member;
+
+INSERT INTO member VALUES('TWC', '트와이스', 9, '서울', '02', '11111111', 167, '2015.10.19');
+INSERT INTO member VALUES('BLK', '블랙핑크', 4, '경남', '055', '22222222', 163, '2016.08.08');
+INSERT INTO member VALUES('WMN', '여자친구', 6, '경기', '031', '33333333', 166, '2015.01.15');
+INSERT INTO member VALUES('OMY', '오마이걸', 7, '서울', NULL, NULL, 160, '2015.04.21');
+INSERT INTO member VALUES('GRL', '소녀시대', 8, '서울', '02', '44444444', 168, '2007.08.02');
+INSERT INTO member VALUES('ITZ', '잇지', 5, '경남', NULL, NULL, 167, '2019.02.12');
+INSERT INTO member VALUES('RED', '레드벨벳', 4, '경북', '054', '55555555', 161, '2014.08.01');
+INSERT INTO member VALUES('APN', '에이핑크', 6, '경기', '031', '77777777', 164, '2011.02.10');
+INSERT INTO member VALUES('SPC', '우주소녀', 13, '서울', '02', '88888888', 162, '2016.02.25');
+INSERT INTO member VALUES('MMU', '마마무', 4, '전남', '061', '99999999', 165, '2014.06.19');
+
+
+create table buy(
+	num	int auto_increment not null primary key,
+    mem_id char(8) not null, 
+    prod_name char(6) not null, 
+    group_name char(4) ,
+    price int not null,
+    amount smallint not null,
+    foreign key(mem_id) references member(mem_id)	-- member 테이블의 mem_id(pk)필드와 연길 (관계)
+    /*
+		references = 참조
+		foreign key (외래키) references 테이블명 (기본키)
+    */
+);
+use market_db;
+
+select * from buy;
+
+INSERT INTO buy VALUES(NULL, 'BLK', '지갑', NULL, 30, 2);
+INSERT INTO buy VALUES(NULL, 'BLK', '맥북프로', '디지털', 1000, 1);
+INSERT INTO buy VALUES(NULL, 'APN', '아이폰', '디지털', 200, 1);
+INSERT INTO buy VALUES(NULL, 'MMU', '아이폰', '디지털', 200, 5);
+INSERT INTO buy VALUES(NULL, 'BLK', '청바지', '패션', 50, 3);
+INSERT INTO buy VALUES(NULL, 'MMU', '에어팟', '디지털', 80, 10);
+INSERT INTO buy VALUES(NULL, 'GRL', '혼공SQL', '서적', 15, 5);
+INSERT INTO buy VALUES(NULL, 'APN', '혼공SQL', '서적', 15, 2);
+INSERT INTO buy VALUES(NULL, 'APN', '청바지', '패션', 50, 1);
+INSERT INTO buy VALUES(NULL, 'MMU', '지갑', NULL, 30, 1);
+INSERT INTO buy VALUES(NULL, 'APN', '혼공SQL', '서적', 15, 1);
+INSERT INTO buy VALUES(NULL, 'MMU', '지갑', NULL, 30, 4);
+
+select * from member;
+
+select addr as 주소, debut_date as '데뷔 일자' , mem_name as '회원명' from member; -- 별칭 지정
+
+select * from member where mem_name ='블랙핑크';
+select * from member where mem_number = 4; 
+select mem_id, mem_name from member where height <= 162;
+select mem_name, height, mem_number from member where height >=165 and mem_number > 6;
+select mem_name, height, mem_number from member where height >=165 or mem_number > 6;
+
+select mem_name, height , mem_number from member where height between 163 and 165;
+select mem_name, height , mem_number from member where height >= 163 and 165 <= height;
+
+select mem_name, addr from member where addr = '경기' or addr='전남' or addr='경남';
+select mem_name, addr from member where addr  in( '경기', '전남', '경남');
+
+/*
+	like : 패턴 검색
+		-- % : 모든 문자 대응 vs _ : _개수만큼 문자 대응
+        -- 김% : 김으로 시작하는 모든 글자		vs		김_ : 김으로 시작하는 2글자
+        -- %김% : 김이 포함된 문자			vs		_김_ : 2번째 글자가 '김'인 3글자
+        -- %김 : 김으로 끝나는 모든 글자		vs		_김 : 김으로 끝나는 2글자
+*/
+select * from member where mem_name = '우주소녀';
+select * from member where mem_name like '우%';
+select * from member where mem_name like '__핑크';
+
+/*
+	where 조건식
+		1. 산술연산자 : 
+				1. + - * /
+                2. div : 몫
+                3. MOD : 나머지
+		2. 비교연산자
+				>= <= > < =(여기선 ==, === 아님) != <>(!=와 같음)
+		3. 논리연산자
+				AND OR NOT
+		4. 기타연산자
+				IN(값1, 값2, 값3 ...) -> OR과 같음
+                between 값1 and 값2  -> 값1~값2 사이에 존재하면
+                like -> 패턴 검색
+                % : 모든 문자 수 대응 / _ : _개수만큼 대응
+		5. NULL 관련 연산자
+				is null : null 이면 [필드명 = null(x) vs 필드명 is null(o)]
+                is not null : null이 아니면 [ 필드명!=null(x) vs 필드명 is not null(o)]
+
+*/
+
+/*
+	p.125 ORDER BY : 정렬
+		* SELECT * FROM 테이블명 ORDER BY 기준필드 ASC/DESC; [ ASC : 오름차순(생랼시) / DESC : 내림차순 ]
+
+*/
+
+select mem_id, mem_name, debut_date from member order by debut_date;
+select mem_id, mem_name, debut_date from member order by debut_date desc ;
+
+select mem_id, mem_name, debut_date, height from member where height>=164 order by height desc;
+/* 
+	다수정렬
+		첫번째 order by 실행 후, 같은 값 내에서 2번째 조건 실행
+*/
+select mem_id, mem_name, debut_date, height from member where height>=164 order by height desc, debut_date asc;
+
+/*
+
+*/
+
+-- 출력 개수 제한
+select * from member limit 3;
+select * from member limit 0, 3; -- 0부터 1씩 증가 3개
+select * from member limit 2, 3; -- 2부터 1씩 증가 3개
+
+select mem_name, height from member order by height desc limit 3, 2;
+
+-- 결과에서 중복 제거
+select addr from member;
+select distinct addr from member;
+
+
+-- 특정 필드 그룹
+select mem_id, amount from buy order by mem_id;
+-- 집계 함수
+select sum(amount) from buy;
+select avg(amount) from buy;
+select max(amount) from buy;
+select min(amount) from buy;
+select count(amount) from buy;		-- 수량의 레코드 개수
+select count(*) from buy;			-- 모든 레코드 개수 [null 포함]
+select count(distinct amount) from buy;
+
+-- 특정 집계
+select mem_id, sum(amount) from buy group by mem_id;
+select mem_id as 회원_아이디, sum(amount*price) as '총 구매금액' from buy group by mem_id;
+select mem_id, avg(amount) as 평균 from buy group by mem_id;
+select mem_id, count(phone1) as 연락처 from member group by mem_id;
+select mem_id, count(*) as 회원수 from member group by mem_id;
+
+
+-- having
+	-- where 일반조건 (그룹 전) vs having 그룹조건(그룹 후)
+select mem_id as '회원 아이디', sum(price * amount) as '총 구매급액'
+from buy
+where sum(price * amount) > 1000			-- sum은 group by 뒤에 와야함. 앞에 있는 경우 오류.
+group by mem_id;
+
+select mem_id as '회원 아이디', sum(price * amount) as '총 구매급액'
+from buy
+group by mem_id
+having sum(price * amount) > 1000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
