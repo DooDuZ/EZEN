@@ -1,4 +1,4 @@
-package Homework;
+package Homework.codingtest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
