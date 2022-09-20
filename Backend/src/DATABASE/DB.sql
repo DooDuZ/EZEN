@@ -366,6 +366,77 @@ group by mem_id
 having sum(price * amount) > 1000;
 
 
+use market_db;
+
+create table hongong1 ( toy_id int, toy_name char(4), age int);
+insert into hongong1 values(1, '우디',25); -- 넣으려는 값의 개수와 필드 수가 일치할 경우 필드 명 생략 가능
+
+select * from hongong1;
+
+insert into hongong1 (toy_id, toy_name) values (2, '버즈');
+
+insert into hongong1(toy_name, age, toy_id) values ('제시',20,3);
+
+CREATE TABLE HONGONG2(
+	toy_id int auto_increment primary key,
+    toy_name char(4),
+    age int
+);
+
+insert into hongong2 values( null, '보핍', 25 );
+select * from hongong2;
+insert into hongong2 values (3, '메롱', 26 );
+insert into hongong2 values (null, '뭐지', 27 );
+
+create table member_addr(mem_id char(8) not null, addr char(2));
+
+select mem_id, addr from member limit 5 ; 
+insert into member_addr select mem_id, addr from member limit 5; -- insert into 에서 value를 select로 찾은 데이터로 지정 가능
+select * from member_addr;
+
+select * from member;
+update member set addr = 'seoul' where addr='서울'; -- 오류 / [워크벤치 설정 변경(update/delete 사용 불가)] + [table addr 속성 char(2) 글자 수 오류]
+update member set addr = 'Se' where addr='서울';
+update member set addr = '서울' where addr='Se';
+
+update member set addr = '경기' , phone1 = '031' where addr='수도';
+update member set addr = '수도' , phone1 = '032' where addr='경기';
+
+/*
+	pk <----> fk [ 연결 ]
+		-- 연결이 되어있는 상태에서 삭제 시도 시 경고
+        -- 연결되어 있지 않은 테이블은 삭제 가능
+*/
+
+create table hongong4 ( 
+	tinyint_col tinyint,		-- 1바이트 +- 128 -> 범위 2^8
+    smallint_col smallint,		-- 2바이트 +- 30000 범위 2^16
+    int_col int,				-- 4바이트 +- 21억 범위 2^32
+    bigint_col bigint,			-- 8바이트 +- 많이 / 범위 2^64
+    char_col char(10),			-- char (1~255) 사이
+    varchar_col varchar(10),	-- varchar(1~16383) 사이
+    text_col text,				-- text(1~65535)
+    longtext_col longtext,		-- longtext(1~42억)
+    Blob_col blob,				-- blob(1~65535)
+    longblob_col longblob,		-- longblob(1~42억)
+    float_col float,			-- float : 소수점 7자리 표현
+    double_col double,			-- double : 소수점 15자리 표현
+    date_col date,				-- Date : 날짜 [yyyy-mm-dd]
+    time_col time,				-- time : 시간 [hh:mm:ss]
+    datetime_col datetime		-- datetime :날짜 시간 저장 [YYYY-MM-DD-HH-MM-SS]
+);
+
+
+/*
+	DB설계
+		제품 테이블
+		장바구니 테이블
+		회원 테이블
+
+*/
+
+create database 쿠팡DB;
+
 
 
 

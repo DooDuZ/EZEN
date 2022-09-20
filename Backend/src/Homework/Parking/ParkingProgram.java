@@ -1,16 +1,11 @@
 package Homework.Parking;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.Scanner;
 
-
 /*
- * 번아웃 온게 아직 진정이 안대서 맥주 4병 묵고 짰음니다... 용서해주십시어..
- * 차량 번호판 입력은 input = 센서가 처리해준다 ---> 그러나 난 센서 그딴거 없으니 손으로 입력하자 ...라고 생각하고 했음니다.
- *
- */
-
-/*
+	차량 번호판 입력은 input = 센서가 처리해준다 ---> 그러나 난 센서 그딴거 없으니 손으로 입력하자 ...라고 생각하고 했음니다.
+ 
  	1. 안내 문구 출력
  		* 프로그램 내용 출력 ex) =========주차장==========
  		* 사용자가 안내 받아야 할 내용 출력
@@ -41,12 +36,16 @@ public class ParkingProgram {
 		
 		boolean section = true;
 		int section_info = 0;
+		Date sec_enter = null;
 		boolean section2 = true;
 		int section2_info = 0;
+		Date sec2_enter = null;
 		boolean section3 = true;
 		int section3_info = 0;
+		Date sec3_enter = null;
 		boolean section4 = true;
 		int section4_info = 0;
+		Date sec4_enter = null;
 		
 		while(true) {
 			System.out.println("=========주차장 입장==========");
@@ -71,69 +70,197 @@ public class ParkingProgram {
 			}else {
 				System.out.println("[X]");
 			}
-			if(!section && !section2 && !section3 && !section4) {
-				System.out.println("주차 가능한 자리가 없습니다.");
-				return;
-			}
 			
-			System.out.println("차량 번호를 입력해주세요");
-			int car_info = input.nextInt();
-			if(car_info<1000 || car_info>9999) {
-				System.out.println("차량번호 4자리를 입력해 주세요.");
-				continue;
-			}else if(car_info==section_info || car_info==section2_info || car_info==section3_info || car_info==section4_info) {
-				System.out.println("[관리자 문의] 차량 번호 오류");
-				continue;
-			}
+			System.out.println("1. 입차\t2. 출차 ");
+			int enterExit = input.nextInt();
 			
-			System.out.println("주차를 원하는 자리를 입력해 주세요.");
-			int sel_section = input.nextInt();
-			if(sel_section==1) {
-				if(section) {
-					System.out.println("주차 완료");
-					section_info = car_info;
-					section = false;
-				}else {
-					System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+			if(enterExit==1) {
+				if(!section && !section2 && !section3 && !section4) {
+					System.out.println("주차 가능한 자리가 없습니다.");
 					continue;
 				}
-			}else if(sel_section==2) {
-				if(section2) {
-					System.out.println("주차 완료");
-					section2_info = car_info;
-					section2 = false;
-				}else {
-					System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+				System.out.println("차량 번호를 입력해주세요");
+				int car_info = input.nextInt();
+				if(car_info<1000 || car_info>9999) {
+					System.out.println("차량번호 4자리를 입력해 주세요.");
+					continue;
+				}else if(car_info==section_info || car_info==section2_info || car_info==section3_info || car_info==section4_info) {
+					System.out.println("[관리자 문의] 차량 번호 오류");
 					continue;
 				}
-			}else if(sel_section==3) {
-				if(section3) {
-					System.out.println("주차 완료");
-					section3_info = car_info;
-					section3 = false;
+				
+				System.out.println("주차를 원하는 자리를 입력해 주세요.");
+				int sel_section = input.nextInt();
+				if(sel_section==1) {
+					if(section) {
+						section_info = car_info;
+						section = false;
+						sec_enter = new Date();
+						System.out.println("주차 완료");
+						System.out.println("주차 시작 시간 : " + sec_enter);
+					}else {
+						System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+						continue;
+					}
+				}else if(sel_section==2) {
+					if(section2) {
+						section2_info = car_info;
+						section2 = false;
+						sec2_enter = new Date();
+						System.out.println("주차 완료");
+						System.out.println("주차 시작 시간 : " + sec2_enter);
+					}else {
+						System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+						continue;
+					}
+				}else if(sel_section==3) {
+					if(section3) {
+						section3_info = car_info;
+						section3 = false;
+						sec3_enter = new Date();
+						System.out.println("주차 완료");
+						System.out.println("주차 시작 시간 : " + sec3_enter);
+					}else {
+						System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+						continue;
+					}
+				}else if(sel_section==4) {
+					if(section4) {
+						section4_info = car_info;
+						section4 = false;
+						sec4_enter = new Date();
+						System.out.println("주차 완료");
+						System.out.println("주차 시작 시간 : " + sec4_enter);
+					}else {
+						System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+						continue;
+					}
 				}else {
-					System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+					System.out.println("유효한 번호가 아닙니다.");
 					continue;
 				}
-			}else if(sel_section==4) {
-				if(section4) {
-					System.out.println("주차 완료");
-					section4_info = car_info;
-					section4 = false;
+			}else if(enterExit==2) {
+				System.out.println("차량 번호를 입력해 주세요");
+				int car_info = input.nextInt();
+				if(car_info == section_info) {
+					System.out.println("1번 구역 출차 확인");
+					Date pay = new Date();
+					int payHours = pay.getHours();
+					int enterHours = sec_enter.getHours();
+
+					int payMinutes = pay.getMinutes();
+					int enterMinutes = sec_enter.getMinutes();
+
+					int price = ((payHours*60+payMinutes) - (enterHours*60+enterMinutes)) * 60;
+					if(price<1500) {
+						price = 1500 ;
+					}
+					System.out.println("결제 금액 : " + price + "원");
+					System.out.println("금액을 투입해 주세요 : ");
+					int payment = input.nextInt();
+					
+					if(price>payment) {
+						System.out.println("금액 부족");
+						continue;
+					}else if(price<=payment) {
+						System.out.println("[결제 완료] 거스름돈 : " + (payment-price) +"원");
+						System.out.println("=====Door Open=====");
+						System.out.println("=====안녕히 가세요=====");
+						section = true;
+						section_info = 0;
+						sec_enter = null;
+					}					
+				}else if(car_info == section2_info) {
+					System.out.println("2번 구역 출차 확인");
+					Date pay = new Date();
+					int payHours = pay.getHours();
+					int enterHours = sec2_enter.getHours();
+
+					int payMinutes = pay.getMinutes();
+					int enterMinutes = sec2_enter.getMinutes();
+
+					int price = ((payHours*60+payMinutes) - (enterHours*60+enterMinutes)) * 60;
+					if(price<1500) {
+						price = 1500 ;
+					}
+					System.out.println("결제 금액 : " + price + "원");
+					System.out.println("금액을 투입해 주세요 : ");
+					int payment = input.nextInt();
+					
+					if(price>payment) {
+						System.out.println("금액 부족");
+						continue;
+					}else if(price<=payment) {
+						System.out.println("[결제 완료] 거스름돈 : " + (payment-price) +"원");
+						System.out.println("=====Door Open=====");
+						System.out.println("=====안녕히 가세요=====");
+						section2 = true;
+						section2_info = 0;
+						sec2_enter = null;
+					}					
+				}else if(car_info == section3_info) {
+					System.out.println("3번 구역 출차 확인");
+					Date pay = new Date();
+					int payHours = pay.getHours();
+					int enterHours = sec3_enter.getHours();
+
+					int payMinutes = pay.getMinutes();
+					int enterMinutes = sec3_enter.getMinutes();
+
+					int price = ((payHours*60+payMinutes) - (enterHours*60+enterMinutes)) * 60;
+					if(price<1500) {
+						price = 1500 ;
+					}
+					System.out.println("결제 금액 : " + price + "원");
+					System.out.println("금액을 투입해 주세요 : ");
+					int payment = input.nextInt();
+					
+					if(price>payment) {
+						System.out.println("금액 부족");
+						continue;
+					}else if(price<=payment) {
+						System.out.println("[결제 완료] 거스름돈 : " + (payment-price) +"원");
+						System.out.println("=====Door Open=====");
+						System.out.println("=====안녕히 가세요=====");
+						section3 = true;
+						section3_info = 0;
+						sec3_enter = null;
+					}					
+				}else if(car_info == section4_info) {
+					System.out.println("4번 구역 출차 확인");
+					Date pay = new Date();
+					int payHours = pay.getHours();
+					int enterHours = sec4_enter.getHours();
+
+					int payMinutes = pay.getMinutes();
+					int enterMinutes = sec4_enter.getMinutes();
+
+					int price = ((payHours*60+payMinutes) - (enterHours*60+enterMinutes)) * 60;
+					if(price<1500) {
+						price = 1500 ;
+					}
+					System.out.println("결제 금액 : " + price + "원");
+					System.out.println("금액을 투입해 주세요 : ");
+					int payment = input.nextInt();
+					
+					if(price>payment) {
+						System.out.println("금액 부족");
+						continue;
+					}else if(price<=payment) {
+						System.out.println("[결제 완료] 거스름돈 : " + (payment-price) +"원");
+						System.out.println("[Door Open] 안녕히 가세요 \n");
+						section4 = true;
+						section4_info = 0;
+						sec4_enter = null;
+					}					
 				}else {
-					System.out.println("[주차 불가] 빈 자리를 선택해 주세요.");
+					System.out.println("해당 주차장에 없는 차량 입니다.");
 					continue;
 				}
 			}else {
-				System.out.println("유효한 번호가 아닙니다.");
+				System.out.println("[경고]알 수 없는 번호");
 				continue;
 			}
-			
-			
-			
-			
-		}
-		
-		
+		}		
 	}
 }
