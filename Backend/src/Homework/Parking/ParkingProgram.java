@@ -33,9 +33,6 @@ import java.util.Scanner;
  		* 출차 후 boolean 값 및 차량 정보 데이터 변경
  */
 
-
-
-
 public class ParkingProgram {
 
 	public static void main(String[] args) {
