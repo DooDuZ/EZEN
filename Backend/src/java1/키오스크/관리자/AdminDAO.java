@@ -64,15 +64,15 @@ public class AdminDAO {
 		return list;
 	}
 	// 3. 제품 등록
-	boolean inProduct(String pname, int pprice, String pcomment, int pamount, int mno) {
+	boolean inProduct(ProductDTO dto) {
 		String sql = "insert into product values(null,?,?,?,?,?)";
 		try {
 			ps = con.prepareStatement(sql);
-			ps.setString(1, pname);
-			ps.setInt(2, pprice);
-			ps.setString(3, pcomment);
-			ps.setInt(4, pamount);
-			ps.setInt(5, mno);			
+			ps.setString(1, dto.getPname());
+			ps.setInt(2, dto.getPprice());
+			ps.setString(3, dto.getPcomment());
+			ps.setInt(4, dto.getPamount());
+			ps.setInt(5, dto.getMno());			
 			ps.executeUpdate();
 			return true;
 		} catch (Exception e) {

@@ -1,7 +1,6 @@
 package java1.키오스크.관리자;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class AdminController {
 	
@@ -17,7 +16,8 @@ public class AdminController {
 	
 	// 제품 추가 로직
 	boolean inProduct(String pname, int pprice, String pcomment, int pamount, int mno) {
-		return AdminDAO.getInstance().inProduct(pname, pprice, pcomment, pamount, mno);				
+		ProductDTO dto = new ProductDTO(mno, pname, pprice, pcomment, pamount);
+		return AdminDAO.getInstance().inProduct(dto);
 	}
 	// 주문 확인 로직
 	void getOrder() {}

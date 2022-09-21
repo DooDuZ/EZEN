@@ -10,7 +10,7 @@ public class MenuDTO {
 	public MenuDTO(int mno, String menuname) {
 		this.mno = mno;
 		this.menuname = menuname;
-	}	
+	}
 	//메서드
 	public int getMno() {
 		return mno;
@@ -24,6 +24,4 @@ public class MenuDTO {
 	public void setMenuname(String menuname) {
 		this.menuname = menuname;
 	}
-	
-
 }
