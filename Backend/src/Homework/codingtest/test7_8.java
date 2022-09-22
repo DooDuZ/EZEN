@@ -9,8 +9,9 @@ public class test7_8 {
 		System.out.println("큰수1");
 		String number = input.next();
 		System.out.println("큰수2");
-		String number2 = input.next();
+		String number2 = input.next();		
 		
+
 		
 	}
 }

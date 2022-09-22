@@ -9,7 +9,7 @@ public class test7_7 {
 		System.out.println("설탕");
 		int N = input.nextInt();
 		
-		if(N==0 || N==1 || N==2 || N==4 || N==7) {
+		if( /*N==0 || N==1 || N==2 || */ N==4 || N==7) {
 			System.out.println(-1);
 		}		
 		else if(N%5==0) {
