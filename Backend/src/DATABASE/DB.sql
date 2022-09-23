@@ -271,7 +271,7 @@ select mem_name, addr from member where addr = '경기' or addr='전남' or addr
 select mem_name, addr from member where addr  in( '경기', '전남', '경남');
 
 /*
-	like : 패턴 검색
+	like : 패턴 검색 ---> = 아님...! like 후 '조건'
 		-- % : 모든 문자 대응 vs _ : _개수만큼 문자 대응
         -- 김% : 김으로 시작하는 모든 글자		vs		김_ : 김으로 시작하는 2글자
         -- %김% : 김이 포함된 문자			vs		_김_ : 2번째 글자가 '김'인 3글자
