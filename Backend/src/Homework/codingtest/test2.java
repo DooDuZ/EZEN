@@ -4,14 +4,24 @@ import java.util.Scanner;
 
 public class test2 {
     public static void main(String[] args){
-    	
-    	int[] arr = new int[10];
+
     	Scanner input = new Scanner(System.in);
     	
-    	int count = 0 ;
+    	int T = input.nextInt();
+    	float[] arr = new float[T];
     	
-    	for(int i = 0 ; i<10 ; i++) {
-    		int x = input.nextInt();    		
-    	}   	
+    	float max = 0;
+    	float sum = 0;
+    	
+    	for(int i = 0 ; i<T ; i++) {
+    		arr[i] = input.nextFloat();
+    		if(arr[i]>max) {
+    			max=arr[i];
+    		}
+    	}
+    	for(int i = 0 ; i<T ; i++) {
+    		sum += (arr[i]/max)*100;
+    	}
+    	System.out.println(sum/T);    	
     }
 }
