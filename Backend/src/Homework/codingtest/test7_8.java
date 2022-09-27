@@ -6,14 +6,87 @@ import java.util.Scanner;
 public class test7_8 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-
+		
 		String number = input.next();
 		String number2 = input.next();
 		
-		BigInteger bignum = new BigInteger(number);
-		BigInteger bignum2 = new BigInteger(number2);
+		int length ;
+		int length1 = number.length();
+		int length2 = number2.length();
+		boolean checkBigger = true;
 		
-		System.out.println(bignum.add(bignum2));
+		if(length1>length2) {
+			length = length1;
+		}else {
+			length = length2;
+			checkBigger=false;
+		}
+		
+		int[] arr = new int[length];
+		int[] arr2 = new int[length];
+		int[] arr3 = new int[length];
+		
+		int lengData = length1-length2;
+		
+		for(int i = 0 ; i<length ; i++) {
+			if(checkBigger) {
+				arr[i] = number.charAt(i)-'0';		// -'0'을 붙이지 않으면 유니 코드 값이 반환된다
+			}else {									// ex) 1->49 // 유니코드가 아스키코드 바탕이라 그런듯
+				if(i<lengData) {					// 정확히는 파일 인코딩 형식의 10진수 값이 나온다고 하는 것이 올바르다[0~127 까지만 아스키 코드와 동일]
+					arr[i] = 0;
+				}else {
+					arr[i] = number.charAt(i-lengData)-'0';
+				}
+			}
+		}
+		
+		for(int i = 0 ; i<length ; i++) {
+			if(!checkBigger) {
+				arr2[i] = number2.charAt(i)-'0';
+			}else {
+				if(i<lengData) {
+					arr2[i] = 0 ;
+				}else {
+					arr2[i] = number2.charAt(i-lengData)-'0';
+				}
+			}
+		}
+		
+		for(int tmp : arr) {
+			System.out.print(tmp);
+		}
+		System.out.println("");
+		for(int tmp : arr2) {
+			System.out.print(tmp);
+		}
+		
+		for(int i = length-1 ; i>=0 ; i--) {
+			if(i==0) {
+				arr3[i] += arr[i]+arr2[i]; 
+			}
+			else if(arr[i]+arr2[i]>=10) {
+				arr3[i-1]++;
+				arr3[i]+=(arr[i]+arr2[i])%10;
+			}else {
+				arr3[i] = arr[i]+arr2[i];
+			}
+		}
+		
+		System.out.println("");
+		for(int tmp : arr3) {
+			System.out.print(tmp);
+		}
+		
+		
+		/*
+			빅 인티저 사용
+			
+			BigInteger bignum = new BigInteger(number);
+			BigInteger bignum2 = new BigInteger(number2);
+			
+			System.out.println(bignum.add(bignum2));
+		
+		*/
 		
 		/*
 		 	문자열로 입력 받고 배열에 담아 각자 계산하기
