@@ -29,7 +29,13 @@ public class test8_2 {
 				answerCount++;
 			}
 		}
-
+		
+		for(int tmp : answer_box) {
+			if(tmp!=0) {
+				System.out.print(tmp + " ");
+			}
+		}
+		System.out.println("");
 		if(answerCount>0) {
 			int sum = 0;
 			int firstNum = 0;
