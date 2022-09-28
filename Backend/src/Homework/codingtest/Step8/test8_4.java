@@ -29,6 +29,9 @@ package Homework.codingtest.Step8;
 	* 결국 이거보다 경우의 수가 적을 수가 있나... 싶은데
 	* 계속 시간 초과란다
 	* 고민 더 해보기...! 
+	* 
+	* math.pow 사용해서 제곱근으로 계속 나누는 건 80퍼센트 대에서 오답으로 처리된다.
+	* 숫자가 아주 커지면서 시간초과 되는듯 함
 */
 
 import java.io.BufferedReader;
@@ -40,50 +43,40 @@ public class test8_4 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		StringBuilder sb = new StringBuilder();
 		
 		int a = Integer.parseInt(st.nextToken());
 		int b = Integer.parseInt(st.nextToken());
 		
-		int[] primeNumber = new int[b]; // 메모리낭비 엄청나다..!
-		/*
-		primeNumber[0] = 2;
-		primeNumber[1] = 3;
-		primeNumber[2] = 5;
-		primeNumber[3] = 7;
-		*/
-		int length = 0;
-		for(int j = 2 ; j<=b ; j++) {
-			int count = 0;
-			if(j==2 || j==3 || j==5 || j==7) {
-				primeNumber[length] = j;
-				length++;
-				if(j>=a && j<=b) {
-					System.out.println(j);
-				}
+		boolean[] primeNum = new boolean[b+1];
+		
+		primeNum[0] = true;
+		primeNum[1] = true;
+		
+		for(int i = 2 ; i<=Math.pow(b, 0.5) ; i++) {
+			if(primeNum[i]) {
+				continue;
 			}
-			for(int i = 0 ; primeNumber[i]!=0 ; i++) {
-				if(j%primeNumber[i]==0) {
-					count++;
-				}
-			}
-			if(count==0) {
-				length++;
-				primeNumber[length] = j;
-				if(j>=a && j<=b) {
-					System.out.println(j);
-				}
+			for(int j = i*i ; j<b+1 ; j+=i) {
+				primeNum[j] = true;
+			}						
+		}
+		for(int i = a ; i<=b ; i++) {
+			if(!primeNum[i]) {
+				sb.append(i).append("\n");
 			}
 		}
-		/*
-		for(int tmp : primeNumber) {
-			if(tmp>=a && tmp<=b) {
-				System.out.println(tmp);
-			}
-		}
-		*/
+		System.out.println(sb);
 	}
 }
 	
+/*
+for(int tmp : primeNumber) {
+	if(tmp>=a && tmp<=b) {
+		System.out.println(tmp);
+	}
+}
+*/
 		
 		/*
 		for(int i = a ; i<=b ; i++) {
