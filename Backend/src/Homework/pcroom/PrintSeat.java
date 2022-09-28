@@ -11,6 +11,8 @@ public class PrintSeat implements Runnable{
 	public void run() {
 		
 		while(OnOff) {
+			System.out.println("\033[H\033[2J");
+			System.out.flush();
 			System.out.println("1. 회원가입 2. 좌석선택 3. 로그인/로그아웃 4. 매출확인 5. 시간충전");
 			ArrayList<currentPcDTO> list = new ArrayList<>();
 			list = con.printSeat();
