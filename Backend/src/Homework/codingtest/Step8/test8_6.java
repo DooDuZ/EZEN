@@ -44,7 +44,7 @@ public class test8_6 {
 			int x = 0;
 			int y = 10000 ;
 			
-			for(int j = 0 ; j<=primeNumber.length/2 ; j++) {
+			for(int j = 0 ; j<=primeNumber.length ; j++) {
 				for(int k = 0 ; k<primeNumber.length ; k++) {
 					if((primeNumber[j]+primeNumber[k])==a && (primeNumber[k]-primeNumber[j]) < y-x && (primeNumber[k]-primeNumber[j])>0) {
 						x = primeNumber[j];
