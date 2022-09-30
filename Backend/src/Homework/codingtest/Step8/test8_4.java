@@ -66,17 +66,14 @@ public class test8_4 {
 				sb.append(i).append("\n");
 			}
 		}
+		
 		System.out.println(sb);
 	}
 }
 	
-/*
-for(int tmp : primeNumber) {
-	if(tmp>=a && tmp<=b) {
-		System.out.println(tmp);
-	}
-}
-*/
+
+
+
 		
 		/*
 		for(int i = a ; i<=b ; i++) {
