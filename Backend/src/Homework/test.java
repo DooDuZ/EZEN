@@ -6,7 +6,7 @@ public class test {
     	
     	String s = "adsfjadsfasdf";
     	
-    	char a = s.charAt(3);
+    	int a = s.charAt(3);
     	
     	System.out.println(a);
     	

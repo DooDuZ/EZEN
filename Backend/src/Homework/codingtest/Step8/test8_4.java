@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package Homework.codingtest.Step8;
 
 /* 
@@ -196,4 +196,4 @@ public class test8_4 {
 
 
 
->>>>>>> branch 'master' of https://github.com/DooDuZ/EZEN
+
