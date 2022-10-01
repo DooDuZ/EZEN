@@ -2,14 +2,13 @@ package Homework;
 	
 public class test {
     public static void main(String[] args){
-    	test tes = new test();
-    	tes.clearConsole();
+    	
+    	
+    	String s = "adsfjadsfasdf";
+    	
+    	char a = s.charAt(3);
+    	
+    	System.out.println(a);
+    	
     }
-    
-    
-    void clearConsole() {
-    	ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "cls");
-       // Process startProcess = pb.inheritIO();
-       // startProcess.waitFor();
-    }    
 }

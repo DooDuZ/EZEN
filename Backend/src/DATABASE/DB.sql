@@ -94,16 +94,28 @@ SHOW databases;
 				1. CREATE : 데이터베이스 DB / TABLE / 뷰 등을 생성할 때 사용
 						EX) CREATE TABLE 가계부();
 				2. ALTER : 데이터베이스 DB/테이블/뷰 등 수정할 때 사용
-						ALTER TABLE 가계부();
+						EX1) ALTER TABLE 테이블명 ADD COLUMN 필드명 데이터타입 제약조건
+						EX2) ALTER TABLE 테이블명 MODIFY COLUMN 필드명 새로운타입 새로운 제약조건
+						EX3) ALTER TABLE 테이블명 CHAGE COLUMN 기본필드명 NEW필드명 NEW타입 NEW제약조건
+						EX4) ALTER TABLE 테이블명 RENAME COLUMN 기존필드명 TO NEW필드명
+						EX5) ALTER TABLE 테이블명 DROP COLUMN 필드명
+						
+						[제약조건 수정]
+						EX6) ALTER TABLE 테이블명 ADD CONSTRAINT 제약조건명 제약조건[EX) PK,FK]
+							 ALTER TABLE 테이블명 DROP COLUMN
+						
                 3. DROP : 데이터베이스 DB/테이블/뷰 등 삭제
 						DROP TABLE 가계부();
                 4. RENAME : 데이터베이스 DB/테이블/뷰 등 이름 변경
                 5. TRUNCATE : 선택한 DB/테이블/뷰 데이터 초기화
-                
+               
+               -constraint 제약조건명 [ ex)pk, fk ] 필드명 references 기준테이블
                 
         2. DML : Data Manipulation L : 데이터베이스 조작어
 				1. SELECT : 표 출력
 						SELECT 필드명 FROM 테이블명
+							ㄴ 테이블명, 테이블명2 ... 테이블 2개 이상 검색 가능
+							ㄴ 2개 이상 검색하는 경우 조건식을 통해 필요한 값을 지정해줘야 불필요한 데이터가 출력되지 않는다							
                 2. INSERT : 레코드 추가
 						INSERT INTO 테이블명 VALUES(데이터1, 데이터2, 데이터3);
                 3. UPDATE : 값 수정
