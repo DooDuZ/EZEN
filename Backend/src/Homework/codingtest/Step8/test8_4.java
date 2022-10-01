@@ -52,7 +52,7 @@ public class test8_4 {
 		
 		primeNum[0] = true;
 		primeNum[1] = true;
-		
+		int count = 1;
 		for(int i = 2 ; i<=Math.pow(b, 0.5) ; i++) {
 			if(primeNum[i]) {
 				continue;
@@ -66,6 +66,7 @@ public class test8_4 {
 				sb.append(i).append("\n");
 			}
 		}
+		
 		System.out.println(sb);
 	}
 }
