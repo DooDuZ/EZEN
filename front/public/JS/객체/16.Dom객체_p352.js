@@ -64,8 +64,3 @@ input.addEventListener('keyup', (e)=> {				//input박스에 keyup이벤트 추�
 		addTodo()
 	}
 })
-
-
-
-
-
