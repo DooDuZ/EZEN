@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class test {
     public static void main(String[] args){
-    	Scanner input = new Scanner(System.in);    	
+    	Scanner input = new Scanner(System.in);
     	
     	System.out.println("등록할 인원 수 : ");
     	int length = input.nextInt();			// 친구 수 = 배열의 길이 입력받기
