@@ -1,4 +1,4 @@
-package Homework.stepx;
+package Homework.codingtest.stepx;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
