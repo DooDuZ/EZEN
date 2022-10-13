@@ -16,51 +16,67 @@ public class leetTest {
 		경우의 수를 고민하고 그 데이터를 구현했다는 점에서 제출값이 통과되고 아니고를 떠나
 		공부의 측면에서 유익하긴 했던 문제같습니다
 		다만,
-		풀지말고 걍 넘어가세요... 오역에 구태여 달려들 필요 없겠네요.
+		풀지말고 걍 넘어가세요... 오역인데 구태여 달려들 필요 없겠습니다.
+		푸시려면 글로 작성하기 어려우니
+		문제를 직접 해석하시거나, 제게 물어보시는 걸 권합니다.
+		
+		--오역 부분
+			마지막으로 더한 인덱스의 뒷부분과만 비교하는 문제였나봅니다.
+			
+			 
 	*/
 	public static void main(String[] args) {
+		// main은 항상 test용도입니다.
+		
 		leetTest lt = new leetTest();
 		int[] nums = {28,8,49,85,37,90,20,8};
-		System.out.println(lt.countQuadruplets(nums));		
+		System.out.println(lt.countQuadruplets(nums));
 	}
 	
 	public int countQuadruplets(int[] nums) {
         int answer = 0 ;
-		
-		ArrayList<Integer> list = new ArrayList<>();
-        for(int i = 0 ; i<nums.length ; i++) {
-        	if(!list.contains(nums[i])) {
-        		list.add(nums[i]);
-        	}
-        }
-        
+		/*
+			오역때문에 작성된 부분. 삭제...
+			
+			ArrayList<Integer> list = new ArrayList<>();
+	        for(int i = 0 ; i<nums.length ; i++) {
+	        	if(!list.contains(nums[i])) {
+	        		list.add(nums[i]);
+	        	}
+	        }
+        */
         for(int i = 0 ; i<nums.length-2; i++) {
         	for(int j = i+1; j<nums.length-1 ; j++) {
         		for(int k = j+1; k<nums.length ; k++) {
-        			if(indexOf(nums ,(nums[i]+nums[j]+nums[k]))>=0) {
-        				System.out.println(i+" "+j+" "+k);
-        				System.out.println(nums[i]+nums[j]+nums[k]);
-        				int count = 0;
-        				for(int x = 0; x<nums.length ; x++) {
-        					if(nums[x] == nums[i]+nums[j]+nums[k]){
-        						count++;
-        					}
-        				}        				
-        				answer += count;
+					/*
+					 * 습관적으로 indexOf를 만들었기 때문에 아주 비생산적으로 작성된 부분
+					 * if(indexOf(nums ,(nums[i]+nums[j]+nums[k]))>=0) {
+					 * System.out.println(i+" "+j+" "+k);
+					 * System.out.println(nums[i]+nums[j]+nums[k]); int count = 0; for(int x = k+1;
+					 * x<nums.length ; x++) { if(nums[x] == nums[i]+nums[j]+nums[k]){ count++; } }
+					 * answer += count; }
+					 */
+        			for(int l = k+1 ; l<nums.length ; l++) {
+        				if(nums[i]+nums[j]+nums[k]==nums[l]) {
+        					answer++;
+        				}
         			}
         		}
         	}
         }
 		return answer;
-    }	
-	int indexOf(int[] nums, int sum) {
-		for(int i = 0 ; i<nums.length; i++) {
-			if(nums[i]==sum) {
-				return i;
-			}
-		}			
-		return -1;
-	}
+    }
+	/*
+		역시 문제 해결보다는, indexOf를 사용하는 익숙함에 작성한 메서드. 주석처리.
+		int indexOf(int[] nums, int sum) {
+			for(int i = 0 ; i<nums.length; i++) {
+				if(nums[i]==sum) {
+					return i;
+				}
+			}			
+			return -1;
+		}
+	*/
 }
 
 /* 
