@@ -1,26 +1,29 @@
 package Homework.codingtest;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class test {
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
-				
-		String s = input.next();
 		
-		Map<String, String> map = new HashMap<>();
-		map.put("c=", "č");
-		map.put("c-", "ć");
-		map.put("dz=", "dž");
-		map.put("lj", "lj");
-		map.put("nj", "nj");
-		map.put("s=", "š");
-		map.put("z=", "ž");
+		int T = input.nextInt();
 		
-		int length = s.length();
+		String alpha = "abcdefghijklmnopqrstuvwxyz";
 		
+		int count = 0;
 		
+		for(int i = 0 ; i<T ; i++) {
+			String s = input.next();
+			if(s.length()==1) {
+				count++;
+				continue;
+			}
+			
+			boolean check = true;
+			
+			if(check) {
+				count++;
+			}
+		}		
 	}
 }
