@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class test2 {
 
 	public static void main(String[] args) {
-		test2 test = new test2();
-		int[] nums = {28,8,49,85,37,90,20,8};
-		System.out.println(nums[0]+nums[4]+nums[6]);
-		System.out.println(test.countQuadruplets(nums));		
+		byte a = -126;
+		
+		for(int i = 1 ; i<4; i++) {
+			a--;
+			System.out.println(a);
+		}		
 	}
 	
 	public int countQuadruplets(int[] nums) {
