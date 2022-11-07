@@ -208,3 +208,41 @@ limit 0 , 3 ;
             필드명 like 김__	: 김으로 시작하는 세글자 
             필드명 like _김_	: 두번째 글자가 '김'인 세글자 
 */
+
+-- select pstno from productstock pst, (select psno from productsize where pno = 10 and psize = 'XL') sub where pst.psno = sub.psno and pcolor = ? ; sub부분
+/*
+	서브쿼리
+    insert into cart( amount, pstno, mno) values( ?, select pstno from productstock pst, (select psno from productsize where pno = ? and psize = ?) sub where pst.psno = sub.psno and pcolor = ? , ?);
+
+*/
+
+select * from productsize;
+select * from cart;
+select * from cart c, productstock pst where c.pstno = pst.pstno and mno=3;
+select * from cart c, productstock pst , productsize ps
+where c.pstno = pst.pstno and pst.psno = ps.psno;
+
+select * from cart c, productstock pst, productsize ps, product p where c.pstno = pst.pstno and pst.psno = ps.psno and ps.pno = p.pno;
+
+
+select * from productstock;
+
+select 
+	c.cartno 장바구니번호,
+    c.pstno 재고번호,
+    p.pname 제품명,
+    p.pprice 가격,
+    p.pdiscount 할인율,
+    pst.pcolor 색상,
+    ps.psize 사이즈,
+    c.amount 구매예정수량
+from 
+	cart c,
+    productstock pst,
+    productsize ps,
+    product p
+where c.pstno = pst.pstno and pst.psno = ps.psno and ps.pno = p.pno;
+
+-- JOIN [ 관계[pf-fk]있을 경우에 2개 이상 테이블의 동일한 데이터 ]
+	-- 1. 테이블명 inner JOIN 테이블명 on pk필드 = fk필드
+    -- 2. 테이블명 natural join 테이블명
